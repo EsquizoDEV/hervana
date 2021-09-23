@@ -1,31 +1,25 @@
-import { NavBar } from './components/navigation/NavBar';
-import { Footer } from './components/core/Footer';
-import { ThemeProvider } from '@mui/material';
-import theme from './theme/mainTheme'
-import CarrouselStyled from './components/UXComponents/carrousel';
+import { Router, Switch, Route, Redirect } from 'react-router-dom'
+import history from './history';
+import { styled } from '@material-ui/styles'
+import { Paper } from '@material-ui/core'
+import LandingPage from './views/landing/LandingPage';
+
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
 const  App = () => {
-  
-
-  // const captionStyle = {
-  //   fontSize: '2em',
-  //   fontWeight: 'bold',
-  // }
-  // const slideNumberStyle = {
-  //   fontSize: '20px',
-  //   fontWeight: 'bold',
-  // }
-  
-  
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <NavBar />
-        <CarrouselStyled/>
-        <Footer />
-      </div>
-    </ThemeProvider>
+      
+   <Router history={history}>
+       <Switch>
+           <Route path="/" exaxt={true} component={LandingPage}></Route>
+       </Switch>
+   </Router>
   );
 }
 

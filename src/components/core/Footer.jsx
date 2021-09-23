@@ -6,7 +6,7 @@ export const Footer = () => {
             <Box 
                 elevation={3}
                 sx= {{
-                    "width": 300,
+                    "width": true,
                     "height": 300,
                     "bgcolor": 'primary.dark',
                     '&:hover': {

@@ -9,7 +9,6 @@ export const NavBar = () => {
             <Stack direction="row" spacing={2}>
                 <SimpleTextButton size="medium">Tengo un proyecto</SimpleTextButton>
                 <ListButton>Nosotros</ListButton>
-                {/* Boton que despliega lista */}
                 <SimpleTextButton size="medium">Nuestro enfoque</SimpleTextButton>
             </Stack>
         </div>

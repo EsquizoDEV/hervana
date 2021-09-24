@@ -3,7 +3,7 @@ import { Router, Switch, Route, Redirect } from 'react-router-dom'
 import history from './history.js'
 import LandingPage from './views/landing/LandingPage';
 import theme from './theme/mainTheme'
-
+import './index.css'
 
 const  App = () => {
 

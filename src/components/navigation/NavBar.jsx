@@ -4,11 +4,13 @@ import { GreenBorderButton } from '../core/OutlinedButton';
 import {ListButton}  from '../core/ListButton';
 import {CoreIconButton} from '../core/IconButton';
 import { SimpleButton } from '../core/SimpleButton';
-import {FacebookIcon} from '../core/svg/Facebook';
+import './index.css'
+import {ReactComponent as FacebookIcon} from '../../assets/svg/FACEBOOK.svg';
+
 
 export const NavBar = () => {
     return (
-        <div>
+        <div id="nav_container">
             <Stack direction="row" spacing={2}>
                 <GreenBorderButton size="medium">Tengo un proyecto</GreenBorderButton>
                 <ListButton>Nosotros</ListButton>

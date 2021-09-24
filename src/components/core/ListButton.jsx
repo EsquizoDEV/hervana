@@ -8,10 +8,10 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import {styled} from '@mui/material/styles';
+import colors from '../../utils/colorimetría'
 
 const ToggleButton = styled(Button)(({ theme }) => ({
-    color: "white",
-    backgroundColor: "#5F008B",
+    color: colors.white,
     '&:hover': {
         backgroundColor: "",
         color:"black"

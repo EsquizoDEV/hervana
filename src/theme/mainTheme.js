@@ -4,10 +4,12 @@ import colors from "../utils/colorimetría"
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#210D49",
+            main: colors.darkBlue,
+            // light: colors.limeGreen
         },
         secondary: {
-
+            main:colors.black,
+            light: colors.darkGreen
         }
     }
 })

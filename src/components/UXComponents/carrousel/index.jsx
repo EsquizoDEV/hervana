@@ -1,8 +1,18 @@
 import React from 'react'
-import Carrousel from './carrousel/Carrousel'
+import Carrousel from './Carrousel'
 import data from './data'
 
 export const CarrouselStyled = () => {
+
+    const captionStyle = {
+        fontSize: '2em',
+        fontWeight: 'bold',
+      }
+      const slideNumberStyle = {
+        fontSize: '20px',
+        fontWeight: 'bold',
+      }
+
     return (
         <div>
             <Carrousel

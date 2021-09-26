@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/material';
-import { Router, Switch, Route } from 'react-router-dom'
+import { Router, Switch, Route, BrowserRouter } from 'react-router-dom'
 import history from './history.js'
 import { lazy } from 'react';
 import theme from './theme/mainTheme'
@@ -24,11 +24,11 @@ const  App = () => {
         <Router history={history}>
             <HervanaSuspense> 
                 <Switch>
-                    <Route path="/"         exact component={LandingPage} ></Route>
-                    <Route path="/services" exact component={Services} ></Route>
-                    <Route path="/ourfocus" exact component={OurFocus} ></Route>
-                    <Route path="/aboutus"  exact component={AboutUs} ></Route>
-                    <Route path="/faq"      exact component={FAQ} ></Route>
+                    <Route path="/"         exact={true} component={LandingPage} ></Route>
+                    <Route path="/services" exact={true} component={Services} ></Route>
+                    <Route path="/ourfocus" exact={true} component={OurFocus} ></Route>
+                    <Route path="/aboutus"  exact={true} component={AboutUs} ></Route>
+                    <Route path="/faq"      exact={true} component={FAQ} ></Route>
                 </Switch>
             </HervanaSuspense>
         </Router>

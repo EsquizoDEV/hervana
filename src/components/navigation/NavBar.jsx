@@ -5,22 +5,33 @@ import {ListButton}  from '../core/ListButton';
 import {CoreIconButton} from '../core/IconButton';
 import { SimpleButton } from '../core/SimpleButton';
 import './index.css'
-import {ReactComponent as FacebookIcon} from '../../assets/svg/FACEBOOK.svg';
+import { lightBlue } from '@mui/material/colors';
+import { FacebookOutlined, LinkedIn, WhatsApp, Instagram } from '@mui/icons-material';
+import Logo from '../../assets/images/HERVANA LOGO.png'
 
 
 export const NavBar = () => {
     return (
         <div id="nav_container">
-            <Stack direction="row" spacing={2}>
+            <img id="logo" src={Logo}/>                
+
+            <Stack className="justify-content:center" direction="row" spacing={2}>
                 <GreenBorderButton size="medium">Tengo un proyecto</GreenBorderButton>
                 <ListButton>Nosotros</ListButton>
                 <SimpleButton size="medium">Servicios</SimpleButton>
                 <SimpleButton size="medium">Nuestro enfoque</SimpleButton>
                 <SimpleButton size="medium">FAQ</SimpleButton>
-                <CoreIconButton size="medium">
-                    <FacebookIcon/>
+                <CoreIconButton id="face_icon" size="medium">
+                    <FacebookOutlined sx={{color:lightBlue[50]}}/>
                 </CoreIconButton>
-                <CoreIconButton size="medium">
+                <CoreIconButton id="linkedin_icon" size="medium">
+                    <LinkedIn sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                <CoreIconButton id="whatsapp_icon" size="medium">
+                    <WhatsApp sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                <CoreIconButton id="insta_icon" size="medium">
+                    <Instagram sx={{color:lightBlue[50]}}/>
                 </CoreIconButton>
             </Stack>
         </div>

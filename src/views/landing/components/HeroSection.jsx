@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const HeroSection = () => {
     return (
-        <Box sx={{ flexGrow: 0 }}>
+        <Box sx={{ flexGrow: 1 }}>
            <Grid container spacing={2}>
                 <Grid item xs={12} md={5}>
                     {

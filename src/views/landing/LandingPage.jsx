@@ -12,10 +12,10 @@ const  LandingPage = () => {
   return (
       
     <div className="App">
-       <Box sx={{ flexGrow: 0 }}>
            <NavBar />
+       <Box sx={{ flexGrow: 0 }}>
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                     <HeroSection />
                 </Grid>
                 <Grid item xs={12}>

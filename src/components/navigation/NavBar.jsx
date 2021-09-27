@@ -13,16 +13,17 @@ import Logo from '../../assets/images/HERVANA LOGO.png'
 import { MainMenu } from './components/MainMenu';
 import { SocialMenu } from './components/SocialMenu';
 import { BrowserRouter as Router, Link }  from 'react-router-dom';
+import { Box } from '@mui/system';
 
 export const NavBar = () => {
     return (
         <div id="nav_container">
             <MenuIcon id="menu-icon"/>
 
-            <Stack id="items-container" direction="row" alignItems="center" justifyContent="" spacing={2}>
-                <div>
+            <Stack id="items-container" direction="row" alignItems="center" spacing={2}>
+                <Box sx={{backgroundColor:'#101111', height:'60px' }}>
                     <img id="logo" src={Logo}/>                
-                </div>
+                </Box>
 
                 <Router>
                 <GreenBorderButton size="small">Tengo un proyecto</GreenBorderButton>

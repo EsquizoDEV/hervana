@@ -1,8 +1,7 @@
+import * as React from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
-import * as React from 'react';
-
 import { withRouter } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
@@ -16,20 +15,23 @@ const  LandingPage = () => {
       
     <div id="body">
        {/* <Box sx={{ flexGrow: 0 }}> */}
-            <NavBar />
-            <Grid container>
-                <Grid item xs={6}>
-                    <HeroSection />
+            <NavBar id="nav" />
+            <Grid id="main-container" container>
+                
+                <Grid id="hero-item" item xs={8} md={8} lg={8}>
+                    <HeroSection id="hero-component"  />
                 </Grid>
-                <Grid item xs={12}>
-                    <Pillars />
+                
+                <Grid  id="pillars-item" item xs={12}>
+                    <Pillars id="pillars-component" />
                 </Grid>
-                <Grid item xs={12}>
-                    <Processes />
-                </Grid>
-                <Grid item xs={12}>
-                    <Footer />
-                </Grid>
+
+                    <Processes id="process-component" />
+                {/* <Grid id="process-item" item xs={12}>
+                </Grid> */}
+                    <Footer id="footer-component" />
+                {/* <Grid id="footer-item" item xs={12}>
+                </Grid> */}
             </Grid>
         {/* </Box> */}
       

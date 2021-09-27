@@ -4,6 +4,7 @@ import * as React from 'react';
 import { ImgCard } from '../../../components/UXComponents/Cards/Card';
 import { ImgInfoCardR } from '../../../components/UXComponents/Cards/InfoCardR';
 import { ImgInfoCardL } from '../../../components/UXComponents/Cards/InfoCardL';
+import { Box } from '@mui/system';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -16,18 +17,10 @@ const Item = styled(Paper)(({ theme }) => ({
 const Pillars = () => {
 
     return (
-        <Grid container spacing={10}>
-            <Grid item xs={12}>
-                <Item>
-                    <ImgInfoCardR/>
-                </Item>
-            </Grid>
-            <Grid item xs={12}>
-                <Item>
-                    <ImgInfoCardL/>
-                </Item>
-            </Grid>
-        </Grid>
+        <Box>
+            <ImgInfoCardL/>
+            <ImgInfoCardR/>
+        </Box>
     )
 }
 

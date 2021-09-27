@@ -8,15 +8,16 @@ import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
 import Processes from './components/Processes';
 import CarrouselStyled from '../../components/UXComponents/carrousel/index'
+import './index.css'
 
 
 const  LandingPage = () => {
   return (
       
-    <div className="App">
-           <NavBar />
-       <Box sx={{ flexGrow: 0 }}>
-            <Grid container spacing={2}>
+    <div id="body">
+       {/* <Box sx={{ flexGrow: 0 }}> */}
+            <NavBar />
+            <Grid container>
                 <Grid item xs={6}>
                     <HeroSection />
                 </Grid>
@@ -27,13 +28,10 @@ const  LandingPage = () => {
                     <Processes />
                 </Grid>
                 <Grid item xs={12}>
-                    <CarrouselStyled />
-                </Grid>
-                <Grid item xs={12}>
                     <Footer />
                 </Grid>
             </Grid>
-        </Box>
+        {/* </Box> */}
       
       
     </div>

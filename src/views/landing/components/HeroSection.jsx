@@ -1,37 +1,40 @@
-import { styled } from '@mui/material/styles';
-import { Grid, Box, Paper } from '@mui/material';
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import { Grid, Box, Container } from '@mui/material';
 import greenhouse from '../../../assets/images/Greenhouse1.png';
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+import {
+    createTheme,
+    responsiveFontSizes,
+    ThemeProvider,
+  } from '@mui/material/styles';
+  import Typography from '@mui/material/Typography';
+  
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 
 const HeroSection = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-           <Grid container spacing={2}>
-                <Grid item xs={12} md={5}>
-                    {
-                    // * Imagen Greenhouse
-                    }
-                    <div className="flex flex-center ml-4"> 
-                        <img src={greenhouse} alt="Greenhouse"/>
-                    </div>
-                </Grid>
-                <Grid item xs={12} md={7}>
-                    {
-                    // * Textos
-                    }  
-                    <div className="flex flex-center ml-4"> 
-                        <h1>TEXTO GRANDE</h1>
-                        <Item><p><h3>TEXTO ABAJO NDFVFAOFUVNNDVNVKFLNL</h3></p></Item>
-                    </div>
-                </Grid>
+        <Box sx={{ display:'flex', border:1 }}>
+            {
+            // * Imagen Greenhouse
+            }
+            <Grid> 
+                <img src={greenhouse} alt="Greenhouse"/>
+            </Grid>
+            {
+            // * Textos
+            }  
+            <Grid> 
+                <Typography style={{color:"white", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                <Typography style={{color: "#1CF445",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
+                
+                <Typography>Hervana Group es una empresa de conocimiento y socio estratégico que provee “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
+                    enfoque “tailor made”. Esto nos permite adaptarnos a tus
+                    necesidades dependiendo la fase de tu proyecto. Lo que nos
+                    define es nuestra cultura empresarial y aplicación de innovación
+                    y analítica basada en datos.
+                </Typography>
             </Grid>
         </Box>
     )

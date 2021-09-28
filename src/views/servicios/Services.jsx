@@ -3,6 +3,7 @@ import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
 import * as React from 'react';
 import AtomHero from './components/AtomHero';   
+import ServicesCarousel from './components/ServicesCarousel';
 
 
 const Services = () => {
@@ -18,7 +19,7 @@ const Services = () => {
                     <AtomHero />
                 </Grid>
                 <Grid item xs={12}>
-                    
+                    <ServicesCarousel />
                 </Grid>
                 <Grid item xs={12}>
                     <Footer />

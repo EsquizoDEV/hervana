@@ -18,11 +18,13 @@ const  LandingPage = () => {
             <NavBar id="nav" />
             <Grid id="main-container" container>
                 
-                <Grid id="hero-item" item xs={8} md={8} lg={8}>
-                    <HeroSection id="hero-component"  />
+                <Grid id="hero-container" container spacing={1} >
+                        <Grid sx={{}} id="hero-item-container" item xs={12} md={12} lg={12}>
+                            <HeroSection id="hero-component"  />
+                        </Grid>
                 </Grid>
                 
-                <Grid  id="pillars-item" item xs={12}>
+                <Grid  id="pillars-item" container>
                     <Pillars id="pillars-component" />
                 </Grid>
 

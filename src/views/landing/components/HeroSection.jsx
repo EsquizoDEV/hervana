@@ -15,65 +15,60 @@ theme = responsiveFontSizes(theme);
 
 const HeroSection = () => {
     return (
-    <Box id="box-header-container">
-        <Box sx={{display:'flex', marginTop:20, justifyContent:"center"}}>
+    <Box sx={
+        {
+            position:"relative",
+            zIndex:999,
+            bottom:-250
+        }
+    } id="box-header-container">
+        <Box sx={{display:'flex', justifyContent:"center", zIndex:2}}>
                 
                 {
                 // * Imagen Greenhouse
                 }
-                    <img src={greenhouse} alt="Greenhouse"/>
+                    <img style={{height:500}} src={greenhouse} alt="Greenhouse"/>
                 {
                 // * Textos
                 }  
 
-            <Box  sx={
+            <Box component="span" sx={
                 { 
+                    marginLeft:10,
                     display:'block',
                     width:700
                 }}>
-                <Typography style={{color:"white", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
 
-                <Typography variant="h6" style={{color: "#1CF445",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
-                <Typography style={{fontWeight: 'bold'}} variant="body1">
-                    Hervana Group es una empresa de conocimiento y socio estratégico que provee 
-                    “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
-                    enfoque “tailor made”. Esto nos permite adaptarnos a tus
-                    necesidades dependiendo la fase de tu proyecto. Lo que nos
-                    define es nuestra cultura empresarial y aplicación de innovación
-                    y analítica basada en datos.
-                </Typography>
+                    <Typography sx={{marginTop:"100px"}} style={{color:"white", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                    <Typography variant="h6" sx={{marginBottom:"200px"}} style={{color: "#1CF445",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
+                    <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold'}} variant="body1">
+                        Hervana Group es una empresa de conocimiento y socio estratégico que provee 
+                        “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
+                        enfoque “tailor made”. Esto nos permite adaptarnos a tus
+                        necesidades dependiendo la fase de tu proyecto. Lo que nos
+                        define es nuestra cultura empresarial y aplicación de innovación
+                        y analítica basada en datos.
+                    </Typography>
 
-                <Button variant="outlined" style={
-                    {
-                        position: 'absolute',
-                        right:0,
-                        borderColor:"#101111", 
-                        fontWeight:"bold",
-                        width:200
-                    }}
-                >
-                        Tengo un proyecto
+                    <Box sx={{
+                        
+                        display:'flex',
+                        justifyContent:'flex-end',
+                        width:'full'
+                        }}>
 
-                </Button>
+                        <Button variant="outlined" style={
+                            {
+                                borderColor:"#101111", 
+                                fontWeight:"bold",
+                                width:200
+                            }}
+                        >
+                                Tengo un proyecto
+
+                        </Button>
+                    </Box>
             </Box> 
-
-                    
-        </Box>
-
-        <Box sx={
-            {
-                backgroundColor:"white", 
-                height:450,
-                // aligItems:"right",
-                }}>
-            
-            <Box component="div" sx={
-                {
-                    width:300
-                }}>
-               
-            </Box>
-            
         </Box>
     </Box>
     )

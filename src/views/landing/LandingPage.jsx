@@ -18,9 +18,20 @@ const  LandingPage = () => {
             <NavBar id="nav" />
             <Grid id="main-container" container>
                 
-                <Grid id="hero-container" container spacing={1} >
+                <Grid sx={{marginBottom:"565px"}} id="hero-container" container spacing={1} >
                         <Grid sx={{}} id="hero-item-container" item xs={12} md={12} lg={12}>
                             <HeroSection id="hero-component"  />
+                            <Box component='div' sx={
+                                {
+                                    position:"absolute",
+                                    backgroundColor:"white", 
+                                    height:400,
+                                    width:'100%',
+                                    zIndex:3
+                                    // aligItems:"right",
+                                }}>
+                                
+                            </Box>
                         </Grid>
                 </Grid>
                 

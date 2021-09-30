@@ -11,8 +11,18 @@ import { Box } from '@mui/system';
 
 export const ImgInfoCardR = (props) => {
   return (
-    <Card sx={{ display:'flex', maxWidth: 730, backgroundColor:'#2D302E' }}>
-     <Box sx={{display:'flex', flexDirection:'column', border:'solid 1px', borderColor:'#1CF445', backgroundColor:'#2D302E' }}>
+    <Card sx={{
+      display:'flex', 
+      maxWidth: 730,
+      marginBottom: '50px'
+      }}>
+     <Box sx={{
+       display:'flex', 
+       flexDirection:'column', 
+       border:'solid 1px', 
+       borderColor:'#1CF445', 
+       backgroundColor:'#2D302E',
+        }}>
         <CardContent sx={{backgroundColor:'#2D302E'}}>
             <Typography style={{fontWeight: 'bold', color:"white"}} gutterBottom variant="h5" component="div">
                 Enfoque hacia la digitalización

@@ -17,9 +17,14 @@ const Item = styled(Paper)(({ theme }) => ({
 const Pillars = () => {
 
     return (
-        <Box>
+        <Box sx={{
+           
+        }}>
+            {/* Configurar componentes para poder pasar los parametros con el contenido (img, text) y no tener que crear 4 componentes */}
+            <ImgInfoCardR/>
             <ImgInfoCardL/>
             <ImgInfoCardR/>
+            <ImgInfoCardL/>
         </Box>
     )
 }

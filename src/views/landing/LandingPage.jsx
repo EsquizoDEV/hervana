@@ -35,13 +35,17 @@ const  LandingPage = () => {
                         </Grid>
                 </Grid>
                 
-                <Grid  id="pillars-item" container>
+                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
                     <Pillars id="pillars-component" />
                 </Grid>
 
+                <Grid id="process-item" sx={{
+                    display:'flex', 
+                    justifyContent:'center',
+                    marginTop:'80px'
+                    }} container xs={12} md={12} lg={12} xl={12}>
                     <Processes id="process-component" />
-                {/* <Grid id="process-item" item xs={12}>
-                </Grid> */}
+                </Grid>
                     <Footer id="footer-component" />
                 {/* <Grid id="footer-item" item xs={12}>
                 </Grid> */}

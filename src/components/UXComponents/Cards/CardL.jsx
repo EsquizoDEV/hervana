@@ -9,9 +9,16 @@ import Img from '../../../assets/images/Paso 1.png'
 import { Box } from '@mui/system';
 
 
-export const ImgCard = (props) => {
+export const ImgCardL = (props) => {
   return (
     <Card sx={{boxShadow:"", display:'flex', maxWidth: 730, justifyContent: 'space-between', backgroundColor:"#101111"}}>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        width="480"
+        height="280"
+        image={Img}
+      />
      <Box sx={{display:'flex', flexDirection:'column'}}>
         <CardContent>
             <Typography style={{fontWeight: 'bold', color:"#1CF445"}} gutterBottom variant="h5" component="div">
@@ -29,13 +36,6 @@ export const ImgCard = (props) => {
             </Typography>
         </CardContent>
      </Box>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        width="480"
-        height="280"
-        image={Img}
-      />
     </Card>
   );
 }

@@ -11,21 +11,26 @@ import { Box } from '@mui/system';
 
 export const ImgInfoCardL = (props) => {
   return (
-    <Card sx={{ display:'flex', maxWidth: 730, backgroundColor:'#2D302E' }}>
+    <Card sx={{
+        display:'flex', 
+        maxWidth: 730, 
+        backgroundColor:'#2D302E', 
+        marginBottom: '50px',
+        }}>
         <CardMedia
             sx={{border:"solid 1px", borderColor:"white", backgroundColor:'#2D302E' }}
             component="img"
             alt="green iguana"
-            width="480"
+            width="auto"
             height="280"
             image={Img}
         />
-        <Box sx={{display:'flex', flexDirection:'column', border:'solid 1px', borderColor:'#1CF445', backgroundColor:'#2D302E' }}>
-            <CardContent sx={{backgroundColor:'#2D302E'}}>
-                <Typography style={{fontWeight: 'bold', color:"white"}} gutterBottom variant="h5" component="div">
+        <Box sx={{display:'flex', flexDirection:'column', border:'solid 1px', borderColor:'#1CF445', backgroundColor:'white' }}>
+            <CardContent sx={{backgroundColor:'white'}}>
+                <Typography style={{fontWeight: 'bold', color:"black"}} gutterBottom variant="h5" component="div">
                     Enfoque hacia la digitalización
                 </Typography>
-                <Typography style={{color:"white"}} variant="body2" color="text.secondary">
+                <Typography style={{color:"black"}} variant="body2" color="text.secondary">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
@@ -33,7 +38,7 @@ export const ImgInfoCardL = (props) => {
                 ea commodo consequat. Duis autem vel eum iriure dolor in hen
                 </Typography>
                 <CardActions sx={{justifyContent: 'flex-end'}}>
-                    <Button sx={{color:"white"}} size="small">Learn More</Button>
+                    <Button sx={{color:"black"}} size="small">Learn More</Button>
                 </CardActions>
             </CardContent>
         </Box>

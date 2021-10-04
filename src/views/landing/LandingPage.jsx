@@ -24,7 +24,7 @@ const  LandingPage = () => {
                             <Box component='div' sx={
                                 {
                                     position:"absolute",
-                                    backgroundColor:"white", 
+                                    backgroundColor:"black", 
                                     height:400,
                                     width:'100%',
                                     zIndex:3
@@ -44,7 +44,9 @@ const  LandingPage = () => {
                     justifyContent:'center',
                     marginTop:'80px'
                     }} container xs={12} md={12} lg={12} xl={12}>
+                        
                     <Processes id="process-component" />
+                    
                 </Grid>
                     <Footer id="footer-component" />
                 {/* <Grid id="footer-item" item xs={12}>

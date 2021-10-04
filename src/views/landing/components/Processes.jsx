@@ -22,7 +22,7 @@ const Processes = () => {
     return (
         <Box>
             <Box component="div" sx={{display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h3" style={{fontWeight:'bold', color:'white'}}>Nuestro proceso</Typography>
+                <Typography variant="h2" style={{fontWeight:'bold', color:'black'}}>Nuestro proceso</Typography>
             </Box>
 
             <Grid item xd={12} md={12} lg={12}>

@@ -11,16 +11,16 @@ import { Box } from '@mui/system';
 
 export const ImgCard = (props) => {
   return (
-    <Card sx={{boxShadow:"", display:'flex', maxWidth: 730, justifyContent: 'space-between', backgroundColor:"#101111"}}>
+    <Card elevation="0" sx={{boxShadow:"", display:'flex', maxWidth: 730, justifyContent: 'space-between', backgroundColor:"transparent"}}>
      <Box sx={{display:'flex', flexDirection:'column'}}>
         <CardContent>
-            <Typography style={{fontWeight: 'bold', color:"#1CF445"}} gutterBottom variant="h5" component="div">
+            <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445"}} gutterBottom variant="h4" component="div">
                Paso 1
             </Typography>
-            <Typography style={{fontWeight: 'bold', color:'white'}} gutterBottom variant="h5" component="div">
+            <Typography style={{fontWeight: 'bold', color:'black'}} gutterBottom variant="h5" component="div">
                Discutimos tu proyecto a profundidad
             </Typography>
-            <Typography style={{color:'white'}} variant="body2" color="text.secondary">
+            <Typography style={{color:'black', fontWeight:"bold"}} variant="body2" color="text.secondary">
             En una llamada de descubrimiento
             entendemos hacia dónde quieres llevar tu
             negocio y cuáles son las barreras y

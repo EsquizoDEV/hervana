@@ -39,9 +39,9 @@ const HeroSection = () => {
                     width:700
                 }}>
 
-                    <Typography sx={{marginTop:"100px"}} style={{color:"white", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
-                    <Typography variant="h6" sx={{marginBottom:"200px"}} style={{color: "#1CF445",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
-                    <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold'}} variant="body1">
+                    <Typography sx={{marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                    <Typography variant="h6" sx={{marginBottom:"200px"}} style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
+                    <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold', color:"white"}} variant="body1">
                         Hervana Group es una empresa de conocimiento y socio estratégico que provee 
                         “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
                         enfoque “tailor made”. Esto nos permite adaptarnos a tus
@@ -57,10 +57,12 @@ const HeroSection = () => {
                         width:'full'
                         }}>
 
-                        <Button variant="outlined" style={
+                        <Button variant="filled" style={
                             {
-                                borderColor:"#101111", 
+                                backgroundColor:"white",
+                                color:"black",
                                 fontWeight:"bold",
+                                borderRadius:"30px",
                                 width:200
                             }}
                         >

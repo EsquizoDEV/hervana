@@ -7,41 +7,61 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Img from '../../../assets/images/Enfoque a la digitalización.png'
 import { Box } from '@mui/system';
+import {ThemeProvider, createTheme} from '@mui/material/styles'
 
+const theme = createTheme({
+  components:{
+    MuiCard:{
+      styleOverrides:{  
+        root:{
+          backgroundColor: "transparent",
+        }
+      }
+    }
+  }
+})
 
 export const ImgInfoCardL = (props) => {
   return (
-    <Card sx={{
+    <ThemeProvider theme={theme}>
+      <Card sx={{
         display:'flex', 
-        maxWidth: 730, 
-        backgroundColor:'#2D302E', 
-        marginBottom: '50px',
-        }}>
+        }} elevation="0">
         <CardMedia
-            sx={{border:"solid 1px", borderColor:"white", backgroundColor:'#2D302E' }}
-            component="img"
-            alt="green iguana"
-            width="auto"
-            height="280"
-            image={Img}
+          sx={{
+            border:"solid 1px", 
+            borderColor:"white", 
+            backgroundColor:'#2D302E',
+            borderRadius:"180px", 
+            position:"relative", 
+            right:"40px",
+            top:"20px"
+            
+          }}
+          component="img"
+          alt="green iguana"
+          width="480"
+          height="280"
+          image={Img}
         />
-        <Box sx={{display:'flex', flexDirection:'column', border:'solid 1px', borderColor:'#1CF445', backgroundColor:'white' }}>
-            <CardContent sx={{backgroundColor:'white'}}>
-                <Typography style={{fontWeight: 'bold', color:"black"}} gutterBottom variant="h5" component="div">
-                    Enfoque hacia la digitalización
-                </Typography>
-                <Typography style={{color:"black"}} variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                ea commodo consequat. Duis autem vel eum iriure dolor in hen
-                </Typography>
-                <CardActions sx={{justifyContent: 'flex-end'}}>
-                    <Button sx={{color:"black"}} size="small">Learn More</Button>
-                </CardActions>
-            </CardContent>
-        </Box>
-    </Card>
+         <Box sx={{
+        display:'flex', 
+        flexDirection:'column', 
+      }}>
+          <CardContent sx={{opacity:"1", position:"relative",width:"500px"}}>
+              <Typography style={{color:"black"}} variant="body2" color="text.secondary">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+              exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+              ea commodo consequat. Duis autem vel eum iriure dolor in hen
+              </Typography>
+              <CardActions sx={{justifyContent: 'flex-end'}}>
+                  <Button sx={{color:"black", fontWeight:"bold", fontSize:"20px"}} size="small">Learn More</Button>
+              </CardActions>
+          </CardContent>
+      </Box>
+      </Card>
+    </ThemeProvider>
   );
 }

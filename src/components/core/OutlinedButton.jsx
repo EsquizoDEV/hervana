@@ -4,9 +4,10 @@ import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
 
 const OutlinedButton = styled(Button)(({ theme }) => ({
-    color: colors.limeGreen,
-    borderColor: colors.limeGreen,
-    backgroundColor: "transparent",
+    color: colors.black,
+    backgroundColor: colors.limeGreen,
+    fontSize:"15px",
+    fontWeight:"bold",
     '&:hover': {
         backgroundColor: "",
     }
@@ -15,7 +16,7 @@ const OutlinedButton = styled(Button)(({ theme }) => ({
 export const GreenBorderButton = (props) => {
     return (
         <div>
-            <OutlinedButton variant="outlined" size={props.size}>{props.children}</OutlinedButton>            
+            <OutlinedButton sx={{borderRadius:"30px"}} variant="filled" size={props.size}>{props.children}</OutlinedButton>            
         </div>
     )
 }

@@ -21,7 +21,7 @@ export const NavBar = () => {
             <MenuIcon id="menu-icon"/>
 
             <Stack id="items-container" direction="row" alignItems="center" spacing={2}>
-                <Box sx={{backgroundColor:'#101111', height:'60px' }}>
+                <Box sx={{backgroundColor:'white', height:'60px' }}>
                     <img id="logo" src={Logo}/>                
                 </Box>
 

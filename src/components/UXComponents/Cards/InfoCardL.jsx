@@ -15,6 +15,7 @@ const theme = createTheme({
       styleOverrides:{  
         root:{
           backgroundColor: "transparent",
+          overflow:"visible"
         }
       }
     }
@@ -26,16 +27,13 @@ export const ImgInfoCardL = (props) => {
     <ThemeProvider theme={theme}>
       <Card sx={{
         display:'flex', 
-        }} elevation="0">
+        }} elevation={0}>
         <CardMedia
           sx={{
             border:"solid 1px", 
             borderColor:"white", 
             backgroundColor:'#2D302E',
             borderRadius:"180px", 
-            position:"relative", 
-            right:"40px",
-            top:"20px"
             
           }}
           component="img"

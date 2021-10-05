@@ -2,7 +2,7 @@ import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
 import * as React from 'react';
-import AtomHero from './components/AtomHero';   
+// import AtomHero from './components/AtomHero';   
 
 
 const ProjectInput = () => {

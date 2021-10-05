@@ -10,9 +10,7 @@ import { lightBlue } from '@mui/material/colors';
 import { FacebookOutlined, LinkedIn, WhatsApp, Instagram } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from '../../assets/images/HERVANA LOGO.png'
-import { MainMenu } from './components/MainMenu';
-import { SocialMenu } from './components/SocialMenu';
-import { BrowserRouter as Router, Link }  from 'react-router-dom';
+import { BrowserRouter as Router }  from 'react-router-dom';
 import { Box } from '@mui/system';
 
 export const NavBar = () => {
@@ -22,7 +20,7 @@ export const NavBar = () => {
 
             <Stack id="items-container" direction="row" alignItems="center" spacing={2}>
                 <Box sx={{backgroundColor:'white', height:'60px' }}>
-                    <img id="logo" src={Logo}/>                
+                    <img alt="hervana-logo" id="logo" src={Logo}/>                
                 </Box>
 
                 <Router>

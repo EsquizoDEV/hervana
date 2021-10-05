@@ -2,11 +2,9 @@ import * as React from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
-import { withRouter } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
 import Processes from './components/Processes';
-import CarrouselStyled from '../../components/UXComponents/carrousel/index'
 import './index.css'
 
 
@@ -43,7 +41,7 @@ const  LandingPage = () => {
                     display:'flex', 
                     justifyContent:'center',
                     marginTop:'80px'
-                    }} container xs={12} md={12} lg={12} xl={12}>
+                    }} container spacing={1}>
                         
                     <Processes id="process-component" />
                     

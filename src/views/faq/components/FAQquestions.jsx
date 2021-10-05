@@ -1,10 +1,12 @@
-import { Grid, Box } from '@mui/material';
-import * as React from 'react';
+import React from 'react'
 
-
-
-const FAQquestions = () => {
-
+export const FAQquestions = () => {
+    return (
+        <div>
+            
+        </div>
+    )
 }
+
 
 export default FAQquestions

@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import { Grid, Box, Container, Button } from '@mui/material';
+import {Box,Button} from '@mui/material';
 import greenhouse from '../../../assets/images/Greenhouse1.png';
 import {
     createTheme,
     responsiveFontSizes,
-    ThemeProvider,
   } from '@mui/material/styles';
   import Typography from '@mui/material/Typography';
   

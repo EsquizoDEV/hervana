@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/material';
-import { Router, Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Router, Switch, Route} from 'react-router-dom'
 import history from './history.js'
 import { lazy } from 'react';
 import theme from './theme/mainTheme'

@@ -15,9 +15,10 @@ const theme = createTheme({
       styleOverrides:{  
         root:{
           backgroundColor: "transparent",
+          overflow:"visible"
         }
       }
-    }
+    },
   }
 })
 
@@ -30,7 +31,7 @@ export const ImgInfoCardR = (props) => {
         display:'flex', 
         maxWidth: 730,
         marginBottom: '50px',
-        }} elevation="0">
+        }} elevation={0}>
       <Box sx={{
         display:'flex', 
         flexDirection:'column', 
@@ -53,14 +54,12 @@ export const ImgInfoCardR = (props) => {
             border:"solid 1px", 
             borderColor:"white", 
             backgroundColor:'#2D302E',
-            borderRadius:"180px", 
-            position:"relative", 
-            right:"40px",
-            top:"20px"
+            borderRadius:"50%",
+
             
           }}
           component="img"
-          alt="green iguana"
+          alt=""
           width="480"
           height="280"
           image={Img}

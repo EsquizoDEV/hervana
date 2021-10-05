@@ -5,7 +5,7 @@ import '../../../assets/svg/FACEBOOK.svg'
 export const FacebookIcon = () => {
     return (
         <SvgIcon >
-            <path d="../../../assets/svg/FACEBOOK.svg"/>
+            <path d=""/>
         </SvgIcon>
     )
 }

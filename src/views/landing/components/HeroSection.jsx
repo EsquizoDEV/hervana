@@ -1,39 +1,78 @@
-import { styled } from '@mui/material/styles';
-import { Grid, Box, Paper } from '@mui/material';
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import { Grid, Box, Container, Button } from '@mui/material';
 import greenhouse from '../../../assets/images/Greenhouse1.png';
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+import {
+    createTheme,
+    responsiveFontSizes,
+    ThemeProvider,
+  } from '@mui/material/styles';
+  import Typography from '@mui/material/Typography';
+  
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 
 const HeroSection = () => {
     return (
-        <Box sx={{ flexGrow: 0 }}>
-           <Grid container spacing={2}>
-                <Grid item xs={12} md={5}>
-                    {
-                    // * Imagen Greenhouse
-                    }
-                    <div className="flex flex-center ml-4"> 
-                        <img src={greenhouse} alt="Greenhouse"/>
-                    </div>
-                </Grid>
-                <Grid item xs={12} md={7}>
-                    {
-                    // * Textos
-                    }  
-                    <div className="flex flex-center ml-4"> 
-                        <h1>TEXTO GRANDE</h1>
-                        <Item><p><h3>TEXTO ABAJO NDFVFAOFUVNNDVNVKFLNL</h3></p></Item>
-                    </div>
-                </Grid>
-            </Grid>
+    <Box sx={
+        {
+            position:"relative",
+            zIndex:999,
+            bottom:-250
+        }
+    } id="box-header-container">
+        <Box sx={{display:'flex', justifyContent:"center", zIndex:2}}>
+                
+                {
+                // * Imagen Greenhouse
+                }
+                    <img style={{height:500}} src={greenhouse} alt="Greenhouse"/>
+                {
+                // * Textos
+                }  
+
+            <Box component="span" sx={
+                { 
+                    marginLeft:10,
+                    display:'block',
+                    width:700
+                }}>
+
+                    <Typography sx={{marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                    <Typography variant="h6" sx={{marginBottom:"200px"}} style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
+                    <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold', color:"white"}} variant="body1">
+                        Hervana Group es una empresa de conocimiento y socio estratégico que provee 
+                        “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
+                        enfoque “tailor made”. Esto nos permite adaptarnos a tus
+                        necesidades dependiendo la fase de tu proyecto. Lo que nos
+                        define es nuestra cultura empresarial y aplicación de innovación
+                        y analítica basada en datos.
+                    </Typography>
+
+                    <Box sx={{
+                        
+                        display:'flex',
+                        justifyContent:'flex-end',
+                        width:'full'
+                        }}>
+
+                        <Button variant="filled" style={
+                            {
+                                backgroundColor:"white",
+                                color:"black",
+                                fontWeight:"bold",
+                                borderRadius:"30px",
+                                width:200
+                            }}
+                        >
+                                Tengo un proyecto
+
+                        </Button>
+                    </Box>
+            </Box> 
         </Box>
+    </Box>
     )
 }
 

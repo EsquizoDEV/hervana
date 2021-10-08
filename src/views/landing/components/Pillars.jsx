@@ -1,17 +1,12 @@
 import {Typography } from '@mui/material';
 import * as React from 'react';
-// import { ImgCard } from '../../../components/UXComponents/Cards/Card';
 import { ImgInfoCardR } from '../../../components/UXComponents/Cards/InfoCardR';
 import { ImgInfoCardL } from '../../../components/UXComponents/Cards/InfoCardL';
+import Img1 from '../../../assets/images/Enfoque a la digitalización.png'
+import Img2 from '../../../assets/images/Sustentabilidad.png'
+import Img3 from '../../../assets/images/Greenhouse1.png'
+import Img4 from '../../../assets/images/Cannabis Latam.png'
 import { Box } from '@mui/system';
-
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
 
 const Pillars = () => {
 
@@ -34,7 +29,19 @@ const Pillars = () => {
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"370px"}} gutterBottom variant="h3" component="div">
                     Enfoque hacia la <br/> digitalización
                 </Typography>
-                <ImgInfoCardR/>
+                
+                <ImgInfoCardR 
+                content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                
+                media={Img1}
+
+                side="right"
+                
+              />
             </Box>
 
             {/* Circulo de adorno 2*/}
@@ -52,7 +59,17 @@ const Pillars = () => {
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     Sustentabilidad
                 </Typography>
-                <ImgInfoCardL/>
+                <ImgInfoCardR
+                content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                
+                media={Img2}
+
+                side="left"
+                />
             </Box>
 
             {/* Circulo de adorno 3*/}
@@ -70,7 +87,17 @@ const Pillars = () => {
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"350px"}} gutterBottom variant="h3" component="div">
                     Cannabis Latam
                 </Typography>
-                <ImgInfoCardR/>
+                <ImgInfoCardR
+                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                 exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                 ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                 
+                 media={Img3}
+ 
+                 side="right"
+                />
             </Box>
 
              {/* Circulo de adorno 4*/}
@@ -88,7 +115,17 @@ const Pillars = () => {
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     Agtech
                 </Typography>
-                <ImgInfoCardL/>
+                <ImgInfoCardR
+                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                 exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                 ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                 
+                 media={Img4}
+ 
+                 side="left"
+                />
             </Box>
         </Box>
     )

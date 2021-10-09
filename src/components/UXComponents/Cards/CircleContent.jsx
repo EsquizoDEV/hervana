@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Img from '../../../assets/images/Enfoque a la digitalización.png'
 import { Box } from '@mui/system';
 import {ThemeProvider, createTheme} from '@mui/material/styles'
 

@@ -24,7 +24,10 @@ export const NavBar = () => {
                 </Box>
 
                 <Router>
-                <GreenBorderButton size="small">Tengo un proyecto</GreenBorderButton>
+                <GreenBorderButton size="small" onClick={()=> {
+                    history.push("/proyecto");
+                    window.location.reload();
+                }}>Tengo un proyecto</GreenBorderButton>
                 
                 <ListButton>Nosotros</ListButton>
                 

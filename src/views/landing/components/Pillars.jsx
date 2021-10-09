@@ -1,7 +1,6 @@
 import {Typography } from '@mui/material';
 import * as React from 'react';
-import { ImgInfoCardR } from '../../../components/UXComponents/Cards/InfoCardR';
-import { ImgInfoCardL } from '../../../components/UXComponents/Cards/InfoCardL';
+import { ImgInfoCardR } from '../../../components/UXComponents/Cards/CircleContent';
 import Img1 from '../../../assets/images/Enfoque a la digitalización.png'
 import Img2 from '../../../assets/images/Sustentabilidad.png'
 import Img3 from '../../../assets/images/Greenhouse1.png'

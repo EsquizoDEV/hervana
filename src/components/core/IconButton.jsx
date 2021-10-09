@@ -4,7 +4,7 @@ import {IconButton} from '@mui/material'
 
 export const CoreIconButton = (props) => {
     return (
-        <div>
+        <div className="hide-on-mobile">
             <IconButton variant="icon" size={props.size}>
                 {props.children}
             </IconButton>

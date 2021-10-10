@@ -64,7 +64,7 @@ const ProjectInput = () => {
   const [status, setStatus] = useState(false)
   const [name,setName] = useState("")
   const [mail,setMail] = useState("")
-  const [valid, setValid] = useState(false)
+  const [valid, setValid] = useState(true)
   const [phone,setPhone] = useState("")
   const [msg,setMsg] = useState("")
   const [open, setOpen] = React.useState(false);
@@ -92,23 +92,24 @@ const ProjectInput = () => {
 
   const handleSend = (e) => { 
     e.preventDefault();
-    axios.post('http://localhost:8000/hervana-af5fd/us-central1/api/project', {
-      project: {
-        name:name,
-        mail: mail,
-        phone:phone,
-        description:msg
-      }
-    }).then(res => {
-      console.log(res)
-      if(res.status === 201 && res.data.message === "Proyecto registrado exitosamente"){
-        setStatus(true)
-        handleOpen()
-      } else {
-        setStatus(false)
-        handleOpen()
-      }      
-    })
+      axios.post('http://localhost:8000/hervana-af5fd/us-central1/api/project', {
+        project: {
+          name:name,
+          mail: mail,
+          phone:phone,
+          description:msg
+        }
+      }).then(res => {
+        console.log(res)
+        if(res.status === 201 && res.data.message === "Proyecto registrado exitosamente"){
+          setStatus(true)
+          handleOpen()
+        } else {
+          setStatus(false)
+          handleOpen()
+        }      
+      })
+
   }
   return (
       
@@ -187,8 +188,7 @@ const ProjectInput = () => {
                   backgroundColor:"white", 
                   borderRadius:"0"
                   }
-                  } required onChange={(e)=> setName(e.target.value)} label="Nombre"/>
-
+                  } required FormHelperTextProps={<p>Llena este dato</p>} onChange={(e)=> setName(e.target.value)} label="Nombre"/>
               <TextField 
               variant="filled" 
               sx={

@@ -6,6 +6,7 @@ import {
     responsiveFontSizes,
   } from '@mui/material/styles';
   import Typography from '@mui/material/Typography';
+import history from '../../../history';
   
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
@@ -62,6 +63,10 @@ const HeroSection = () => {
                                 fontWeight:"bold",
                                 borderRadius:"30px",
                                 width:200
+                            }}
+                            onClick={() => {
+                                history.push("/proyecto")
+                                window.location.reload()
                             }}
                         >
                                 Tengo un proyecto

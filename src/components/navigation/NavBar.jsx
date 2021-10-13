@@ -20,7 +20,10 @@ export const NavBar = () => {
 
             <Stack id="items-container" direction="row" alignItems="center" spacing={2}>
                 <Box sx={{backgroundColor:'white', height:'60px' }}>
-                    <img alt="hervana-logo" id="logo" src={Logo}/>                
+                    <img alt="hervana-logo" id="logo" onClick={()=> {
+                        history.push('/');
+                        window.location.reload()
+                    }} src={Logo}/>                
                 </Box>
 
                 <Router>

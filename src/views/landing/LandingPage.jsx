@@ -16,7 +16,7 @@ const  LandingPage = () => {
             <NavBar id="nav" />
             <Grid id="main-container" container>
                 
-                <Grid sx={{marginBottom:"565px"}} id="hero-container" container spacing={1} >
+                <Grid sx={{marginBottom:"200px"}} id="hero-container" container spacing={1} >
                         <Grid sx={{}} id="hero-item-container" item xs={12} md={12} lg={12}>
                             <HeroSection id="hero-component"  />
                             <Box component='div' sx={
@@ -33,14 +33,13 @@ const  LandingPage = () => {
                         </Grid>
                 </Grid>
                 
-                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
+                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center', height:"2500px"}}  id="pillars-item" container>
                     <Pillars id="pillars-component" />
                 </Grid>
 
                 <Grid id="process-item" sx={{
                     display:'flex', 
                     justifyContent:'center',
-                    marginTop:'80px'
                     }} container spacing={1}>
                         
                     <Processes id="process-component" />

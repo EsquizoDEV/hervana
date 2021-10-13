@@ -1,6 +1,6 @@
 import {Typography } from '@mui/material';
 import * as React from 'react';
-import { ImgInfoCardR } from '../../../components/UXComponents/Cards/CircleContent';
+import { ImgInfoCard } from '../../../components/UXComponents/Cards/CircleContent';
 import Img1 from '../../../assets/images/Enfoque a la digitalización.png'
 import Img2 from '../../../assets/images/Sustentabilidad.png'
 import Img3 from '../../../assets/images/Greenhouse1.png'
@@ -20,16 +20,16 @@ const Pillars = () => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                right:"130px"
+                right:"130px",
+                top:"270px"
             }}>
             </Box>
-            {/* Configurar componentes para poder pasar los parametros con el contenido (img, text) y no tener que crear 4 componentes */}
-            <Box sx={{position:"relative", bottom:"300px",}}>
+            <Box sx={{position:"relative", bottom:"30px",}}>
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"370px"}} gutterBottom variant="h3" component="div">
                     Enfoque hacia la <br/> digitalización
                 </Typography>
                 
-                <ImgInfoCardR 
+                <ImgInfoCard 
                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
@@ -58,7 +58,7 @@ const Pillars = () => {
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     Sustentabilidad
                 </Typography>
-                <ImgInfoCardR
+                <ImgInfoCard
                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
@@ -79,14 +79,15 @@ const Pillars = () => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                right:"130px"
+                right:"130px",
+                bottom:"270px"
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"300px"}}>
+            <Box sx={{position:"relative", bottom:"570px"}}>
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"350px"}} gutterBottom variant="h3" component="div">
                     Cannabis Latam
                 </Typography>
-                <ImgInfoCardR
+                <ImgInfoCard
                  content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
@@ -108,13 +109,14 @@ const Pillars = () => {
                 height:"400px",
                 position:'relative',
                 left:"540px",
+                bottom:"550px"
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"300px", display:"block"}}>
+            <Box sx={{position:"relative", bottom:"870px", display:"block"}}>
                 <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     Agtech
                 </Typography>
-                <ImgInfoCardR
+                <ImgInfoCard
                  content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 

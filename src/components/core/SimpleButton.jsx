@@ -5,13 +5,25 @@ import colors from '../../utils/colorimetría'
 
 
 const StyledTextButton = styled(Button)(() => ({
-    color:colors.white
+    color:colors.white,
+    '&:hover': {
+        color:colors.limeGreen
+    } 
 }))
 
 export const SimpleButton = (props) => {
     return (
         <div>
-            <StyledTextButton variant="text" onClick={props.onClick} size={props.size}>{props.children}</StyledTextButton>
+            <StyledTextButton 
+            type={props.type} 
+            sx={props.sx} 
+            variant={props.variant} 
+            onClick={props.onClick} 
+            size={props.size}
+            >
+                {props.children}
+                
+            </StyledTextButton>
             
         </div>
     )

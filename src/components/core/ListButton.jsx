@@ -14,7 +14,7 @@ const ToggleButton = styled(Button)(({ theme }) => ({
     color: colors.white,
     '&:hover': {
         backgroundColor: "",
-        color:"black"
+        color:colors.limeGreen,
     }
 }));
 
@@ -56,7 +56,7 @@ export const ListButton = (props) => {
     return (
         <div>
             <ToggleButton
-             id="list-textButton"
+             id="list-about-us"
              ref={anchorRef}
              onClick={handleToggle}
              endIcon={<KeyboardArrowDown/>}

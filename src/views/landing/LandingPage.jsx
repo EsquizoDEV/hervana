@@ -7,35 +7,34 @@ import Pillars from './components/Pillars';
 import Processes from './components/Processes';
 import './index.css'
 import ResponsiveNavBar from '../../components/navigation/ResponsiveNavBar';
+import { useMediaQuery } from '@material-ui/core';
 
+import { useTheme } from '@material-ui/core/styles';
+  
 
 const  LandingPage = () => {
-  return (
+    
+    let theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    
+    return (
       
-    <div id="body">
-       {/* <Box sx={{ flexGrow: 0 }}> */}
+        <div id="body">
+            <NavBar sx={{zIndex: 9999}} id="nav" theme={theme} isMobile={isMobile} />
             <Grid id="main-container" container>
-                <Grid item xs={12}>
-                    <NavBar id="nav" />
-                    {/* <ResponsiveNavBar id="nav" /> */}
-                </Grid>
                 <Grid item xs={12} sx={{marginBottom:"565px"}} id="hero-container" container spacing={1} >
-                        <Grid sx={{}} id="hero-item-container" item xs={12} md={12} lg={12}>
-                            <HeroSection id="hero-component"  />
-                        </Grid>
-                        <Grid item sm={12} md={6} lg={6}>
-                            <Box component='div' sx={
-                                {
-                                    position:"absolute",
-                                    backgroundColor:"black", 
-                                    height:400,
-                                    width:'100%',
-                                    zIndex:3
-                                    // aligItems:"right",
-                                }}>
-                                
-                            </Box>
-                        </Grid>
+                    <Grid sx={{}} id="hero-item-container" item sm={12} md={12}>
+                        <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
+                    </Grid>
+                    <Grid item sm={12} md={12}>
+                        <Box component='div' sx={{
+                            position:"absolute",
+                            backgroundColor:"black", 
+                            height:400,
+                            width:'100%',
+                            zIndex:3
+                        }} />
+                    </Grid>
                 </Grid>
                 
                 <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
@@ -55,14 +54,9 @@ const  LandingPage = () => {
                 <Grid item xs={12}> 
                     <Footer id="footer-component" />
                 </Grid>
-                {/* <Grid id="footer-item" item xs={12}>
-                </Grid> */}
             </Grid>
-        {/* </Box> */}
-      
-      
-    </div>
-  );
+        </div>
+    );
 }
 
 export default LandingPage;

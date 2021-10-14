@@ -7,7 +7,7 @@ import Img3 from '../../../assets/images/Greenhouse1.png'
 import Img4 from '../../../assets/images/Cannabis Latam.png'
 import { Box } from '@mui/system';
 
-const Pillars = () => {
+const PillarsM = () => {
 
     return (
         <Box sx={{
@@ -130,4 +130,4 @@ const Pillars = () => {
     )
 }
 
-export default Pillars;
+export default PillarsM;

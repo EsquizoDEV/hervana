@@ -9,14 +9,14 @@ const OutlinedButton = styled(Button)(({ theme }) => ({
     fontSize:"15px",
     fontWeight:"bold",
     '&:hover': {
-        backgroundColor: "",
+        backgroundColor: colors.white,
     }
 }));
 
 export const GreenBorderButton = (props) => {
     return (
         <div>
-            <OutlinedButton sx={{borderRadius:"30px"}} variant="filled" size={props.size}>{props.children}</OutlinedButton>            
+            <OutlinedButton onClick={props.onClick} sx={{borderRadius:"30px"}} variant="filled" size={props.size}>{props.children}</OutlinedButton>            
         </div>
     )
 }

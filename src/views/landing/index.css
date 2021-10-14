@@ -1,3 +1,21 @@
 #body {
-    background-color: "white"
+    background-color: "white";
+    display: inline-block;
+    position: relative;
+    width: "100%";
+}
+
+#main-container {
+    display: inline-block;
+    position: relative;
+    width: "100%";
+    z-index: -1;
+}
+
+#nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 9999;
 }

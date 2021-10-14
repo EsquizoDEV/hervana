@@ -15,15 +15,12 @@ import Logo from '../../../assets/images/HERVANA LOGO.png'
 const MainMenu = ({ isMobile, classes }) => {
     return (
         <Router>
-            
-            
-
             { isMobile
             ?   <>
                     <HamburgerListButton>
                         <Icon>menu</Icon>
                     </HamburgerListButton>
-                    <Box className={classes.logo} sx={{backgroundColor:"#101111"}}>
+                    <Box className={classes.logo} sx={{backgroundColor:"#101111", alignItems:'left'}}>
                         <img alt="hervana-logo" id="logo" src={Logo}/>                
                     </Box>
                 </>

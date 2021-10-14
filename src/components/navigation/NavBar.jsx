@@ -31,9 +31,15 @@ export const NavBar = ({ isMobile, theme }) => {
     const classes = useStyles();
     return (
         <div id="nav_container" >
-            <MenuIcon id="menu-icon"/>
+            {/* <MenuIcon id="menu-icon"/> */}
 
-            <Stack id="items-container" direction="row" alignItems="center" spacing={2} className={classes.container}>
+            <Stack 
+                id="items-container" 
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+                className={classes.container}
+            >
                 <MainMenu isMobile={isMobile} classes={classes} />
                 { isMobile
                 ? undefined 

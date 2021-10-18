@@ -3,12 +3,7 @@ import { Footer } from '../../components/core/Footer';
 import { Grid } from '@mui/material';
 import * as React from 'react';
 import AtomHero from './components/AtomHero';   
-<<<<<<< HEAD
-import ServicesCarousel from './components/ServicesCarousel';
-
-=======
 import SwipeableTextMobileStepper from '../../components/UXComponents/carrousel/Carrousel'
->>>>>>> landingPage
 
 const Services = () => {
   return (
@@ -21,13 +16,8 @@ const Services = () => {
                 <Grid sx={{marginTop:"50px"}} item xs={12}>
                     <AtomHero id="hero-atom" />
                 </Grid>
-<<<<<<< HEAD
-                <Grid item xs={12}>
-                    <ServicesCarousel />
-=======
                 <Grid container sx={{marginTop:"100px",paddingRight:"400px", paddingLeft:"400px"}}>
                     <SwipeableTextMobileStepper />
->>>>>>> landingPage
                 </Grid>
                 <Grid item xs={12}>
                     <Footer />

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { Grid, Box } from '@mui/material';
-import * as React from 'react';
-
-
-
-const FAQquestions = () => {
-
-    return (
-        <div></div>
-    )
-
-=======
 import React from 'react'
 
 export const FAQquestions = () => {
@@ -19,7 +6,6 @@ export const FAQquestions = () => {
             
         </div>
     )
->>>>>>> landingPage
 }
 
 

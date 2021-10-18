@@ -2,11 +2,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
-<<<<<<< HEAD
-import { Grid, Box } from '@mui/material';
-import * as React from 'react';  
-import ProjectForm from './components/ProjectForm';
-=======
 import { Box, Grid, TextField, Typography } from '@mui/material';
 import './index.css'
 import { SimpleButton } from '../../components/core/SimpleButton';
@@ -63,7 +58,6 @@ function ChildModal() {
     </React.Fragment>
   );
 }
->>>>>>> landingPage
 
 
 const ProjectInput = () => {
@@ -119,22 +113,6 @@ const ProjectInput = () => {
   }
   return (
       
-<<<<<<< HEAD
-    <div className="App">
-       <Box sx={{ flexGrow: 0 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={12}>
-                    <NavBar />
-                </Grid>
-                <Grid item xs={12}>
-                    <ProjectForm />    
-                </Grid>
-                <Grid item xs={12}>
-                    <Footer />
-                </Grid>
-            </Grid>
-        </Box>
-=======
     <div className="project_input">
        <NavBar />
 
@@ -252,7 +230,6 @@ const ProjectInput = () => {
             
           </Box>
       </Grid>
->>>>>>> landingPage
       
       
     </div>

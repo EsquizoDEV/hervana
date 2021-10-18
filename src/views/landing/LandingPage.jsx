@@ -29,15 +29,17 @@ const  LandingPage = () => {
                     <div className="py-3"></div>
                     <Grid item sm={12} md={12}>
                         <Box component='div' sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
                             position:"relative",
                             backgroundColor:"black", 
-                            height:400,
+                            height:300,
                             width:'100%',
                             zIndex:3,
                             paddingBlock: 10
                             
                         }}>
-                            <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold', color:"white"}} variant="body1">
+                            <Typography  sx={{marginBottom:"20px", width: isMobile ? "80%" : "60%", marginTop:"40px"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
                                 Hervana Group es una empresa de conocimiento y socio estratégico que provee 
                                 “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
                                 enfoque “tailor made”. Esto nos permite adaptarnos a tus
@@ -54,11 +56,13 @@ const  LandingPage = () => {
 
                                 <Button variant="filled" style={
                                     {
+                                        marginTop: '120px',
                                         backgroundColor:"white",
                                         color:"black",
                                         fontWeight:"bold",
                                         borderRadius:"30px",
-                                        width:200
+                                        width:200,
+                                        maxHeight:"60px"
                                     }}
                                 >
                                         Tengo un proyecto
@@ -69,8 +73,8 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                {true ? <><Grid sx={{width:'auto', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
-                    <Pillars id="pillars-component" />
+                <Grid sx={{width:'auto', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
+                    <Pillars isMobile={isMobile} id="pillars-component" />
                 </Grid>
 
                 <Grid item id="process-item" sx={{
@@ -83,9 +87,9 @@ const  LandingPage = () => {
                         
                     <Processes id="process-component" />
                     
-                </Grid></>: undefined}
+                </Grid>
                 <Grid item xs={12}> 
-                    <Footer id="footer-component" />
+                    <Footer isMobile={isMobile} id="footer-component" />
                 </Grid>
             </Grid>
         </div>

@@ -7,7 +7,7 @@ import Img3 from '../../../assets/images/Greenhouse1.png'
 import Img4 from '../../../assets/images/Cannabis Latam.png'
 import { Box } from '@mui/system';
 
-const Pillars = () => {
+const Pillars = ({ isMobile }) => {
 
     return (
         <Box sx={{
@@ -17,8 +17,8 @@ const Pillars = () => {
                 border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
-                width:"400px",
-                height:"400px",
+                width: isMobile ? "auto" : "400px",
+                height: isMobile ? "auto" : "400px",
                 position:'relative',
                 right:"130px"
             }}>

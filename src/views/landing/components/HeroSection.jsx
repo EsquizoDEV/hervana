@@ -22,15 +22,19 @@ const HeroSection = ({ isMobile, theme }) => {
                 alignItems={isMobile ? 'stretch' : "center"}
                 sx={{marginBottom: 25}}
             > 
-                <Grid item sm={12} md={6}> 
+                <Grid item sm={12} md={6} xs={{
+                    display:'flex',
+                    alignItems: 'center',
+                }}> 
                 {
                 // * Imagen Greenhouse
                 }
                     <img 
                         style={{
                             alignSelf: 'center',
-                            height: isMobile ? '100%' : '100%',
-                            paddingLeft: isMobile ? '20px' : '100px'
+                            maxWidth: isMobile ? "90%" : "80%",
+                            width: isMobile ? 'auto' : '100%',
+                            marginLeft: isMobile ? "10px" : "10%"
                         }} 
                         src={greenhouse} 
                         alt="Greenhouse"/>
@@ -41,7 +45,7 @@ const HeroSection = ({ isMobile, theme }) => {
                 <Grid item sm={12} md={6}> 
                     <Box component="span" sx={{ 
                         display:'block',
-                        width: isMobile ? 'match' : 700
+                        width: isMobile ? 'auto' : 'auto'
                     }}>
 
                         <Typography paragraph sx={{ marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>

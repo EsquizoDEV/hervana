@@ -8,7 +8,7 @@ export const Footer = () => {
                 sx= {{
                     "width": true,
                     "height": 300,
-                    "bgcolor": 'primary.dark',
+                    "bgcolor": 'primary.main',
                     '&:hover': {
                       "backgroundColor": 'primary.main',
                       "opacity": [0.9, 0.8, 0.7],

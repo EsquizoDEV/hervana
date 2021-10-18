@@ -1,39 +1,55 @@
+import * as React from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
-import * as React from 'react';
-
-import { withRouter } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
 import Processes from './components/Processes';
-import CarrouselStyled from '../../components/UXComponents/carrousel/index'
+import './index.css'
 
 
 const  LandingPage = () => {
   return (
       
-    <div className="App">
-           <NavBar />
-       <Box sx={{ flexGrow: 0 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={6}>
-                    <HeroSection />
+    <div id="body">
+       {/* <Box sx={{ flexGrow: 0 }}> */}
+            <NavBar id="nav" />
+            <Grid id="main-container" container>
+                
+                <Grid sx={{marginBottom:"200px"}} id="hero-container" container spacing={1} >
+                        <Grid sx={{}} id="hero-item-container" item xs={12} md={12} lg={12}>
+                            <HeroSection id="hero-component"  />
+                            <Box component='div' sx={
+                                {
+                                    position:"absolute",
+                                    backgroundColor:"black", 
+                                    height:400,
+                                    width:'100%',
+                                    zIndex:3
+                                    // aligItems:"right",
+                                }}>
+                                
+                            </Box>
+                        </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                    <Pillars />
+                
+                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center', height:"2500px"}}  id="pillars-item" container>
+                    <Pillars id="pillars-component" />
                 </Grid>
-                <Grid item xs={12}>
-                    <Processes />
+
+                <Grid id="process-item" sx={{
+                    display:'flex', 
+                    justifyContent:'center',
+                    }} container spacing={1}>
+                        
+                    <Processes id="process-component" />
+                    
                 </Grid>
-                <Grid item xs={12}>
-                    <CarrouselStyled />
-                </Grid>
-                <Grid item xs={12}>
-                    <Footer />
-                </Grid>
+                    <Footer id="footer-component" />
+                {/* <Grid id="footer-item" item xs={12}>
+                </Grid> */}
             </Grid>
-        </Box>
+        {/* </Box> */}
       
       
     </div>

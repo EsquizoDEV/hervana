@@ -1,13 +1,19 @@
 #nav_container {
-    width: 100%;
+    /* width: auto; */
     height: 60px;
     display:flex;
     align-items: center ;
-    background-color: #210D49;
-    margin-bottom: 30px;
+    background-color: #101111;
+    overflow: hidden;
+
+
     
 }
 
+#items-container div {
+    display:block;
+    float:left;
+}
 #logo {
     margin-left:30px;
     margin-right:70px;
@@ -15,3 +21,9 @@
     width:150px;
 }
 
+
+#menu-icon{
+    display:none;
+
+
+}

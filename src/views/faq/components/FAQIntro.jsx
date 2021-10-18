@@ -1,4 +1,3 @@
-import { Grid, Box } from '@mui/material';
 import * as React from 'react';
 import faqlogo from '../../../assets/svg/FAQ.svg';
 

@@ -8,47 +8,70 @@ import './index.css'
 import history from "../../history"
 import { lightBlue } from '@mui/material/colors';
 import { FacebookOutlined, LinkedIn, WhatsApp, Instagram } from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu'
 import Logo from '../../assets/images/HERVANA LOGO.png'
-import { BrowserRouter as Router, Link }  from 'react-router-dom';
+import { BrowserRouter as Router }  from 'react-router-dom';
+import { Box } from '@mui/system';
 
 export const NavBar = () => {
     return (
         <div id="nav_container">
-            <img id="logo" src={Logo}/>                
+            <MenuIcon id="menu-icon"/>
 
-            <Stack className="justify-content:center" direction="row" spacing={2}>
+            <Stack id="items-container" direction="row" alignItems="center" spacing={2}>
+                <Box sx={{backgroundColor:'white', height:'60px' }}>
+                    <img alt="hervana-logo" id="logo" onClick={()=> {
+                        history.push('/');
+                        window.location.reload()
+                    }} src={Logo}/>                
+                </Box>
+
                 <Router>
-                    <Link to="/services" />
-                    
-                    <Link to="/ourfocus" />
-                    <GreenBorderButton size="medium">Tengo un proyecto</GreenBorderButton>
-                    <ListButton>Nosotros</ListButton>
-                    <SimpleButton size="medium" onClick={() => {
-                        history.push("/services");
-                        window.location.reload();
-                    }}>Servicios</SimpleButton>
-                    <SimpleButton size="medium" onClick={() => {
-                        history.push("/ourfocus")
-                        window.location.reload();
-                    }}>Nuestro enfoque</SimpleButton>
-                    <SimpleButton size="medium" onClick={() => {
-                        history.push("/faq")
-                        window.location.reload();    
-                    }}>FAQ</SimpleButton>
-                    <CoreIconButton id="face_icon" size="medium">
-                        <FacebookOutlined sx={{color:lightBlue[50]}}/>
-                    </CoreIconButton>
-                    <CoreIconButton id="linkedin_icon" size="medium">
-                        <LinkedIn sx={{color:lightBlue[50]}}/>
-                    </CoreIconButton>
-                    <CoreIconButton id="whatsapp_icon" size="medium">
-                        <WhatsApp sx={{color:lightBlue[50]}}/>
-                    </CoreIconButton>
-                    <CoreIconButton id="insta_icon" size="medium">
-                        <Instagram sx={{color:lightBlue[50]}}/>
-                    </CoreIconButton>
-                </Router>
+                <GreenBorderButton size="small" onClick={()=> {
+                    history.push("/proyecto");
+                    window.location.reload();
+                }}>Tengo un proyecto</GreenBorderButton>
+                
+                <ListButton>Nosotros</ListButton>
+                
+                <SimpleButton size="small" onClick={() => {
+                    history.push("/services");
+                    window.location.reload();
+                }}>Servicios</SimpleButton>
+                
+                <SimpleButton size="small" onClick={() => {
+                    history.push("/ourfocus")
+                    window.location.reload();
+                }}>Nuestro enfoque</SimpleButton>
+                
+                <SimpleButton size="small" onClick={() => {
+                    history.push("/faq")
+                    window.location.reload();    
+                }}>FAQ</SimpleButton>
+                
+                <CoreIconButton id="face_icon" size="medium">
+                    <FacebookOutlined sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                <CoreIconButton id="linkedin_icon" size="medium">
+                    <LinkedIn sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                <CoreIconButton id="whatsapp_icon" size="medium">
+                    <WhatsApp sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                <CoreIconButton id="insta_icon" size="medium">
+                    <Instagram sx={{color:lightBlue[50]}}/>
+                </CoreIconButton>
+                
+            </Router>    
+
+
+                {/* <MainMenu/>
+                
+                
+                
+                <SocialMenu/> */}
             </Stack>
+
             
         </div>
     )

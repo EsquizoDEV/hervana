@@ -17,6 +17,7 @@ export const SimpleButton = (props) => {
             variant={props.variant} 
             onClick={props.onClick} 
             size={props.size}
+            disabled={props.disabled}
             >
                 {props.children}
                 

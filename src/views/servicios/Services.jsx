@@ -16,7 +16,7 @@ const Services = () => {
                 <Grid sx={{marginTop:"50px"}} item xs={12}>
                     <AtomHero id="hero-atom" />
                 </Grid>
-                <Grid container sx={{marginTop:"100px",paddingRight:"400px", paddingLeft:"400px"}}>
+                <Grid container sx={{marginTop:"100px",paddingRight:"250px", paddingLeft:"250px"}}>
                     <SwipeableTextMobileStepper />
                 </Grid>
                 <Grid item xs={12}>

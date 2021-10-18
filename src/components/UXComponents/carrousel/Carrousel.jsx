@@ -15,6 +15,11 @@ import { styled } from '@mui/system';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const MobileStepperStyled = styled(MobileStepper)`
+    .MuiMobileStepper-dots {
+      position:relative;
+      top:90px;
+    }
+    
     .MuiMobileStepper-dot{
       background-color: black;
       width: 20px;
@@ -48,7 +53,7 @@ function SwipeableTextMobileStepper() {
   return (
     <Box sx={{ display:'flex',maxWidth: "100%", height:"500px",flexGrow: 1, border:"solid 2px black" }}>
       <AutoPlaySwipeableViews
-        style={{width:"900px", backgroundColor:"black"}}
+        style={{width:900, backgroundColor:"black"}}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -62,8 +67,8 @@ function SwipeableTextMobileStepper() {
                 sx={{
                   height: 500,
                   display: 'block',
-                  overflow: '',
-                  width: 499,
+                  overflow: 'hidden',
+                  width: 500,
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -72,52 +77,57 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-        <Paper
-            square
-            elevation={1}
-            sx={{
-            height: "auto",
-            width:"100%",
-            }}
-        >
-            <Typography variant="h2" style={{fontSize:"3vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
-            <div>
-              <ul>
-                {images[activeStep].label.map((bullet)=> (
-                  <li style={{listStyle:'none'}}><Typography variant="body1" style={{fontWeight:"bold"}}>{bullet}</Typography></li>
-                ))}
-              </ul>
-            </div>
-        <MobileStepperStyled
-            steps={maxSteps}
-            position="static"
-            activeStep={activeStep}
-            nextButton={
-            <Button
-                size="small"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-            >
-                Next
-                {theme.direction === 'rtl' ? (
-                <KeyboardArrowLeft />
-                ) : (
-                <KeyboardArrowRight />
-                )}
-            </Button>
-            }
-            backButton={
-            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                {theme.direction === 'rtl' ? (
-                <KeyboardArrowRight />
-                ) : (
-                <KeyboardArrowLeft />
-                )}
-                Back
-            </Button>
-            }
-        />
-        </Paper>
+          <Paper
+              square
+              elevation={0}
+              sx={{
+              height: "400px",
+              width:"100%",
+              display:"flex",
+              flexDirection:"column",
+
+              }}
+          >
+            <Box sx={{height:"400px", paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
+              <Typography variant="h2" style={{fontSize:"3vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
+              <div>
+                <ul>
+                  {images[activeStep].label.map((bullet, key)=> (
+                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontWeight:"bold"}}>{bullet}</Typography></li>
+                  ))}
+                </ul>
+              </div>
+            </Box>
+          <MobileStepperStyled
+              variant="dots"
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              nextButton={
+              <Button
+              sx={{position:"relative", bottom:"200px"}}
+                  size="small"
+                  onClick={handleNext}
+                  disabled={activeStep === maxSteps - 1}
+              >
+                  {theme.direction === 'rtl' ? (
+                  <KeyboardArrowLeft />
+                  ) : (
+                  <KeyboardArrowRight />
+                  )}
+              </Button>
+              }
+              backButton={
+              <Button  sx={{position:"relative", bottom:"200px"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
+                  {theme.direction === 'rtl' ? (
+                  <KeyboardArrowRight />
+                  ) : (
+                  <KeyboardArrowLeft />
+                  )}
+              </Button>
+              }
+          />
+          </Paper>
       </Box>
   );
 }

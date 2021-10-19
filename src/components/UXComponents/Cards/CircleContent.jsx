@@ -22,7 +22,7 @@ const theme = createTheme({
 })
 
 
-export const ImgInfoCardR = (props) => {
+export const ImgInfoCard = (props) => {
   return (
 
     <ThemeProvider theme={theme}>
@@ -31,7 +31,7 @@ export const ImgInfoCardR = (props) => {
       {
         display:'flex', 
         maxWidth: 730,
-        marginBottom: '50px',
+        marginBottom: '10px',
       } 
       : 
       {display:'flex'}} elevation={0}>

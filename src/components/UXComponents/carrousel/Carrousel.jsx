@@ -1,217 +1,135 @@
+import { Box } from '@mui/material';
+import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import {images} from './data.js' 
+import { styled } from '@mui/system';
 
-import React, { useEffect, useState } from 'react'
-import Swipe from 'react-easy-swipe';
-import './styles/index.css';
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function Carousel({
-  data,
-  time,
-  width,
-  height,
-  captionStyle,
-  slideNumberStyle,
-  radius,
-  slideNumber,
-  style,
-  captionPosition,
-  dots,
-  automatic,
-  pauseIconColor,
-  pauseIconSize,
-  slideBackgroundColor,
-  slideImageFit,
-  thumbnails,
-  thumbnailWidth
-}) {
+const MobileStepperStyled = styled(MobileStepper)`
+    .MuiMobileStepper-dots {
+      position:relative;
+      top:90px;
+    }
+    
+    .MuiMobileStepper-dot{
+      background-color: black;
+      width: 20px;
+      height:20px
+    }
 
-  //Initialize States
-  const [slide, setSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [change, setChange] = useState(0);
+  .MuiMobileStepper-dotActive {
+    background-color: #1CF445
 
-  //Function to change slide
-  const addSlide = (n) => {
-    if (slide + n >= data.length)
-      setSlide(0);
-    else if (slide + n < 0)
-      setSlide(data.length - 1);
-    else
-      setSlide(slide + n);
   }
 
-  //Start the automatic change of slide
-  useEffect(() => {
-    if (automatic) {
-      var index = slide;
-      const interval = setInterval(() => {
-        if (!isPaused) {
+`
 
-          setSlide(index);
-          index++;
-          if (index >= data.length)
-            index = 0;
-          if (index < 0)
-            index = data.length - 1;
-        }
-      }, time ? time : 2000);
-      return () => { clearInterval(interval); };
-    }
+function SwipeableTextMobileStepper() {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
 
-  }, [isPaused, change]);
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
 
-  function scrollTo(el) {
-    const elLeft = el.offsetLeft + el.offsetWidth;
-    const elParentLeft = el.parentNode.offsetLeft + el.parentNode.offsetWidth;
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
-    // check if element not in view
-    if (elLeft >= elParentLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scroll({ left: elLeft - elParentLeft, behavior: 'smooth' })
-    } else if (elLeft <= el.parentNode.offsetLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scroll({ left: el.offsetLeft - el.parentNode.offsetLeft, behavior: 'smooth' })
-    }
-  }
-
-  //Listens to slide state changes
-  useEffect(() => {
-    var slides = document.getElementsByClassName("carousel-item");
-    var dots = document.getElementsByClassName("dot");
-
-
-    var slideIndex = slide;
-    var i;
-    for (i = 0; i < data.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    //If thumbnails are enabled
-    if (thumbnails) {
-      var thumbnailsArray = document.getElementsByClassName("thumbnail");
-      for (i = 0; i < thumbnailsArray.length; i++) {
-        thumbnailsArray[i].className = thumbnailsArray[i].className.replace(" active-thumbnail", "");
-      }
-      if (thumbnailsArray[slideIndex] !== undefined)
-        thumbnailsArray[slideIndex].className += " active-thumbnail";
-      scrollTo(document.getElementById(`thumbnail-${slideIndex}`));
-    }
-
-    if (slides[slideIndex] !== undefined)
-      slides[slideIndex].style.display = "block";
-    if (dots[slideIndex] !== undefined)
-      dots[slideIndex].className += " active";
-  }, [slide, isPaused]);
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
 
   return (
-    <div style={style} className="box">
-      <div style={{
-        maxWidth: width ? width : "600px",
-        maxHeight: height ? height : "400px",
-      }}
+    <Box sx={{ display:'flex',maxWidth: "100%", height:"500px",flexGrow: 1, border:"solid 2px black" }}>
+      <AutoPlaySwipeableViews
+        style={{width:900, backgroundColor:"black"}}
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
       >
-        <Swipe
-          onSwipeRight={() => { addSlide(-1); setChange(!change) }}
-          onSwipeLeft={() => { addSlide(1); setChange(!change) }}
-        >
-          <div
-            className="carousel-container"
-            style={{
-              maxWidth: width ? width : "600px",
-              height: height ? height : "400px",
-              backgroundColor: slideBackgroundColor ? slideBackgroundColor : "darkgrey",
-              borderRadius: radius,
-            }}
-          >
-            {
-              data.map((item, index) => {
-                return (
-                  <div
-                    className="carousel-item fade"
-                    style={{
-                      maxWidth: width ? width : "600px",
-                      maxHeight: height ? height : "400px"
-                    }}
-                    onMouseDown={e => {
-                      automatic &&
-                        setIsPaused(true);
-                    }}
-                    onMouseUp={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
-                    onMouseLeave={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
-                    onTouchStart={e => {
-                      automatic &&
-                        setIsPaused(true);
-                    }}
-                    onTouchEnd={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
-                    key={index}>
-                    {slideNumber &&
-                      <div className="slide-number" style={slideNumberStyle}>{index + 1} / {data.length}</div>
-                    }
-                    <img src={item.image} alt={item.caption} className="carousel-image" style={{
-                      borderRadius: radius,
-                      objectFit: slideImageFit ? slideImageFit : "cover",
-                    }}
-                    />
-                    {isPaused &&
-                      <div className="pause-icon pause" style={{
-                        color: pauseIconColor ? pauseIconColor : "white",
-                        fontSize: pauseIconSize ? pauseIconSize : "40px"
-                      }}>II</div>}
-                    <div className={`carousel-caption-${captionPosition ? captionPosition : "bottom"}`} style={captionStyle} dangerouslySetInnerHTML={{ __html: item.caption }}></div>
-
-                  </div>
-                );
-              })
-            }
-
-            <a className="prev" onClick={(e) => { addSlide(-1); setChange(!change) }}>&#10094;</a>
-            <a className="next" onClick={(e) => { addSlide(1); setChange(!change) }}>&#10095;</a>
-            {dots &&
-              <div className="dots">
-                {
-                  data.map((item, index) => {
-                    return (
-                      <span className="dot" key={index} onClick={(e) => { setSlide(index); setChange(!change); }}></span>
-                    );
-                  })
-                }
-              </div>
-            }
+        {images.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <Box
+                component="img"
+                sx={{
+                  height: 500,
+                  display: 'block',
+                  overflow: 'hidden',
+                  width: 500,
+                }}
+                src={step.imgPath}
+                alt={step.label}
+              />
+            ) : null}
           </div>
+        ))}
+      </AutoPlaySwipeableViews>
+          <Paper
+              square
+              elevation={0}
+              sx={{
+              height: "400px",
+              width:"100%",
+              display:"flex",
+              flexDirection:"column",
 
-        </Swipe>
-
-
-      </div>
-      {thumbnails &&
-        <div className="thumbnails" id="thumbnail-div" style={{ maxWidth: width }}>
-          {
-            data.map((item, index) => {
-              return (
-                <img
-                  width={thumbnailWidth ? thumbnailWidth : "100px"}
-                  src={item.image}
-                  alt={item.caption}
-                  className="thumbnail"
-                  id={`thumbnail-${index}`}
-                  key={index}
-                  onClick={(e) => { setSlide(index); setChange(!change) }}
-                />
-              )
-            })
-          }
-        </div>
-      }
-    </div >
-  )
+              }}
+          >
+            <Box sx={{height:"400px", paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
+              <Typography variant="h2" style={{fontSize:"3vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
+              <div>
+                <ul>
+                  {images[activeStep].label.map((bullet, key)=> (
+                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontWeight:"bold"}}>{bullet}</Typography></li>
+                  ))}
+                </ul>
+              </div>
+            </Box>
+          <MobileStepperStyled
+              variant="dots"
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              nextButton={
+              <Button
+              sx={{position:"relative", bottom:"200px"}}
+                  size="small"
+                  onClick={handleNext}
+                  disabled={activeStep === maxSteps - 1}
+              >
+                  {theme.direction === 'rtl' ? (
+                  <KeyboardArrowLeft />
+                  ) : (
+                  <KeyboardArrowRight />
+                  )}
+              </Button>
+              }
+              backButton={
+              <Button  sx={{position:"relative", bottom:"200px"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
+                  {theme.direction === 'rtl' ? (
+                  <KeyboardArrowRight />
+                  ) : (
+                  <KeyboardArrowLeft />
+                  )}
+              </Button>
+              }
+          />
+          </Paper>
+      </Box>
+  );
 }
 
-export default Carousel
+export default SwipeableTextMobileStepper

@@ -61,23 +61,27 @@ function ChildModal() {
 
 
 const ProjectInput = () => {
+  const [state, setState] = useState({})
   const [status, setStatus] = useState(false)
-  const [name,setName] = useState("")
-  const [mail,setMail] = useState("")
-  const [valid, setValid] = useState(true)
-  const [phone,setPhone] = useState("")
-  const [msg,setMsg] = useState("")
-  const [open, setOpen] = React.useState(false);
+  const [disable, setDisable] = useState(false)
+  const [open, setOpen] = useState(false);
   
 
+  const handleChange = ((e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    })
+  })
+  
   const emailValidator = (value) => {
     let emailInput = value; 
     const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
     
-    if(regex.test(emailInput)) {
-      setValid(true)
+    if (regex.test(emailInput)){
+      return true
     } else {
-      setValid(false)
+      return false
     }
     
   }
@@ -85,32 +89,44 @@ const ProjectInput = () => {
     setOpen(true);
   };
   const handleClose = () => {
-    setOpen(false)
-    history.push("/")
-    window.location.reload();
+    if(status){
+      setOpen(false)
+      history.push("/")
+      window.location.reload();
+      return
+    }
+    setOpen(false) 
   };
 
   const handleSend = (e) => { 
     e.preventDefault();
+    if(emailValidator(state.email)){
+      setDisable(true)
       axios.post('http://localhost:8000/hervana-af5fd/us-central1/api/project', {
-        project: {
-          name:name,
-          mail: mail,
-          phone:phone,
-          description:msg
-        }
+      project: {
+        name:state.name,
+        mail: state.email,
+        phone:state. phone,
+        description:state.msg
+      }
       }).then(res => {
-        console.log(res)
         if(res.status === 201 && res.data.message === "Proyecto registrado exitosamente"){
           setStatus(true)
           handleOpen()
         } else {
           setStatus(false)
+          setDisable(false)
           handleOpen()
         }      
       })
+    } else { 
+        setStatus(false)
+        handleOpen()
+    }
+     
 
   }
+
   return (
       
     <div className="project_input">
@@ -188,7 +204,7 @@ const ProjectInput = () => {
                   backgroundColor:"white", 
                   borderRadius:"0"
                   }
-                  } required FormHelperTextProps={<p>Llena este dato</p>} onChange={(e)=> setName(e.target.value)} label="Nombre"/>
+                  } required name="name" FormHelperTextProps={<p>Llena este dato</p>} onChange={handleChange} label="Nombre"/>
               <TextField 
               variant="filled" 
               sx={
@@ -199,8 +215,9 @@ const ProjectInput = () => {
                   }
                   } 
                   required 
-                  onChange={(e)=> emailValidator(e.target.value)} 
-                  helperText={valid ? null : "Introduce un correo electrónico válido"} 
+                  name="email"
+                  onChange={handleChange} 
+                  helperText={emailValidator(state.email)? null : "Introduce un correo electrónico válido"} 
                   label="Correo"/>
 
               <TextField 
@@ -211,7 +228,7 @@ const ProjectInput = () => {
                   backgroundColor:"white", 
                   borderRadius:"0"
                   }
-                  } required onChange={(e)=> setPhone(e.target.value)} label="Teléfono"/>
+                  } required type="number" name="phone" onChange={handleChange} label="Teléfono"/>
 
               <TextField 
               multiline 
@@ -222,9 +239,9 @@ const ProjectInput = () => {
                   backgroundColor:"white", 
                   borderRadius:"0"
                 }
-                } required onChange={(e)=> setMsg(e.target.value)} label="Mensaje"/>
+                } required name="msg" onChange={handleChange} label="Mensaje"/>
                 
-                <SimpleButton id="submit_button" type="submit" sx={{backgroundColor:"#29ABE2", width:"120px"}} variant="filled">Enviar</SimpleButton>
+                <SimpleButton disabled={disable} id="submit_button" type="submit" sx={{backgroundColor:"#29ABE2", width:"120px"}} variant="filled">Enviar</SimpleButton>
             </Box>
             
             

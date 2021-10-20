@@ -6,9 +6,7 @@ import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
 import Processes from './components/Processes';
 import './index.css'
-import ResponsiveNavBar from '../../components/navigation/ResponsiveNavBar';
 import { useMediaQuery } from '@material-ui/core';
-
 import { useTheme } from '@material-ui/core/styles';
   
 
@@ -20,9 +18,9 @@ const  LandingPage = () => {
     return (
       
         <div id="body">
-            <NavBar sx={{zIndex: 9999}} id="nav" theme={theme} isMobile={isMobile} />
             <Grid id="main-container" container>
-                <Grid item xs={12} sx={{marginBottom:"565px"}} id="hero-container" container spacing={1} >
+            <NavBar sx={{}} id="nav" theme={theme} isMobile={isMobile} />
+                <Grid item xs={12} sx={{marginBottom:""}} id="hero-container" container spacing={1} >
                     <Grid sx={{}} id="hero-item-container" item sm={12} md={12}>
                         <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
                     </Grid>
@@ -73,7 +71,7 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                <Grid sx={{width:'auto', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
+                <Grid sx={{width:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
                     <Pillars isMobile={isMobile} id="pillars-component" />
                 </Grid>
 
@@ -81,8 +79,6 @@ const  LandingPage = () => {
                     width:'auto', 
                     display:'flex', 
                     justifyContent:'center',
-                    marginTop:'80px',
-                    marginBottom:'80px',
                     }} container spacing={1}>
                         
                     <Processes id="process-component" />

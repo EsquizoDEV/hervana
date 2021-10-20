@@ -1,5 +1,4 @@
 import React from 'react'
-import Stack from '@mui/material/Stack'
 import {GreenBorderButton} from '../../core/OutlinedButton'
 import {ListButton} from '../../core/ListButton'
 import {SimpleButton} from '../../core/SimpleButton'

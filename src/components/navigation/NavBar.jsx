@@ -1,7 +1,6 @@
 import React from 'react';
 import Stack from '@mui/material/Stack';
 import './index.css'
-import MenuIcon from '@mui/icons-material/Menu' 
 import { makeStyles } from '@material-ui/core/styles'
 import MainMenu from './components/MainMenu';
 import SocialMenu from './components/SocialMenu'

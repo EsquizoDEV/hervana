@@ -17,7 +17,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const MobileStepperStyled = styled(MobileStepper)`
     .MuiMobileStepper-dots {
       position:relative;
-      top:90px;
+      top:40px;
     }
     
     .MuiMobileStepper-dot{
@@ -77,6 +77,7 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+      <Box style={{width:"100%"}}>
           <Paper
               square
               elevation={0}
@@ -84,20 +85,21 @@ function SwipeableTextMobileStepper() {
               height: "400px",
               width:"100%",
               display:"flex",
-              flexDirection:"column",
+              flexDirection:"column"
 
               }}
           >
-            <Box sx={{height:"400px", paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
-              <Typography variant="h2" style={{fontSize:"3vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
+            <Box sx={{paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
+              <Typography variant="h2" style={{fontSize:"2vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
               <div>
                 <ul>
                   {images[activeStep].label.map((bullet, key)=> (
-                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontWeight:"bold"}}>{bullet}</Typography></li>
+                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontSize:"20px",fontWeight:"bold"}}>{bullet}</Typography></li>
                   ))}
                 </ul>
               </div>
             </Box>
+          </Paper>
           <MobileStepperStyled
               variant="dots"
               steps={maxSteps}
@@ -127,7 +129,7 @@ function SwipeableTextMobileStepper() {
               </Button>
               }
           />
-          </Paper>
+      </Box>
       </Box>
   );
 }

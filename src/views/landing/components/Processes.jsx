@@ -40,7 +40,7 @@ const Processes = () => {
                 left={true} 
                 title={"Paso 2"} 
                 subtitle={"Trabajamos en una propuesta enfocada a resolver tus problemáticas"} 
-                content={"Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento: - Horticultura protegida y AgTech - Transformación digital, analítica de datos e inteligencia de negocios - Estrategia y desarrollo de negocios - Industria de Cannabis"} 
+                content={<div>Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento: <ul style={{listStyle:'none'}}><li>- Horticultura protegida y AgTech</li> <li>- Transformación digital</li> <li>- analítica de datos e inteligencia de negocios</li> <li>- Estrategia y desarrollo de negocios</li> <li>- Industria de Cannabis</li></ul></div>} 
                 img={ImgSt2}/>
             </Grid>
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>

@@ -11,7 +11,7 @@ import { KeyboardArrowDown } from '@material-ui/icons';
 import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
 import history from '../../history'
-import { ListButton } from './ListButton';
+// import { ListButton } from './ListButton';
 import { SimpleButton } from './SimpleButton';
 
 const ToggleButton = styled(Button)(({ theme }) => ({
@@ -29,7 +29,7 @@ export const HamburgerListButton = (props) => {
     
     const handleToggle = e => {
         console.log(e)
-        if (e.target.id != 'list-about-us') {
+        if (e.target.id !== 'list-about-us') {
             setOpen((prevOpen) => !prevOpen)
         }
     }

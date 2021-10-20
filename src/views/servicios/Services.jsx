@@ -10,9 +10,7 @@ const Services = () => {
       
     <div className="App">
             <Grid id="main-container-services" container spacing={2}>
-                <Grid item xs={12}>
-                    <NavBar />
-                </Grid>
+                <NavBar />
                 <Grid sx={{marginTop:"50px"}} item xs={12}>
                     <AtomHero id="hero-atom" />
                 </Grid>

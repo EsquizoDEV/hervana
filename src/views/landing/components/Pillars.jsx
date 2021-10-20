@@ -21,12 +21,12 @@ const Pillars = ({ isMobile }) => {
                 height: isMobile ? "auto" : "400px",
                 position:'relative',
                 right:"130px",
-                top:"270px"
+                top:"300px"
             }}>
             </Box>
             <Box sx={{position:"relative", bottom:"30px",}}>
-                <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"370px"}} gutterBottom variant="h3" component="div">
-                    Enfoque hacia la <br/> digitalización
+                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"370px"}} gutterBottom variant="h3" component="div">
+                    <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
                 </Typography>
                 
                 <ImgInfoCard 
@@ -51,12 +51,12 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                left:"540px",
+                left:"700px",
             }}>
             </Box>
             <Box sx={{position:"relative", bottom:"300px"}}>
-                <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
-                    Sustentabilidad
+                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
+                    <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Sustentabilidad</div>
                 </Typography>
                 <ImgInfoCard
                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -79,13 +79,13 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                right:"130px",
+                right:"70px",
                 bottom:"270px"
             }}>
             </Box>
             <Box sx={{position:"relative", bottom:"570px"}}>
-                <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", width:"350px"}} gutterBottom variant="h3" component="div">
-                    Cannabis Latam
+                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"350px"}} gutterBottom variant="h3" component="div">
+                    <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Cannabis Latam</div>
                 </Typography>
                 <ImgInfoCard
                  content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -108,13 +108,13 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                left:"540px",
+                left:"700px",
                 bottom:"550px"
             }}>
             </Box>
             <Box sx={{position:"relative", bottom:"870px", display:"block"}}>
-                <Typography style={{fontWeight: 'bold', color:"black", backgroundColor:"#1CF445", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
-                    Agtech
+                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black",display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
+                    <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
                 </Typography>
                 <ImgInfoCard
                  content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed

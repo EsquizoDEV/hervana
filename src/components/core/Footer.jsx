@@ -1,4 +1,4 @@
-import { Icon, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
 import colors from '../../utils/colorimetría';
 import SocialMenu from '../navigation/components/SocialMenu'
@@ -12,15 +12,11 @@ export const Footer = ({ isMobile }) => {
                     "width": true,
                     "height": 300,
                     "bgcolor": colors.black,
-                    '&:hover': {
-                      "backgroundColor": 'primary.main',
-                      "opacity": [0.9, 0.8, 0.7],
-                    },
                 }}
             >
                 <Stack
                     direction="column"
-                    justifyContent="space-around"
+                    justifyContent="space-between"
                     alignItems="stretch"
                     spacing={2}
                 >

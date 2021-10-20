@@ -1,11 +1,11 @@
-#nav_container {
+/* #nav_container {
     width: auto;
     height: 60px;
     display:flex;
     align-items: center ;
     background-color: #101111;
     overflow: hidden; 
-}
+} */
 
 #items-container div {
     display:block;

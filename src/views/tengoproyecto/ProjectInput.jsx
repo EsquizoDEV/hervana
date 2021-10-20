@@ -106,7 +106,7 @@ const ProjectInput = () => {
       project: {
         name:state.name,
         mail: state.email,
-        phone:state. phone,
+        phone:state.phone,
         description:state.msg
       }
       }).then(res => {
@@ -246,6 +246,7 @@ const ProjectInput = () => {
             
             
           </Box>
+          <Footer/>
       </Grid>
       
       

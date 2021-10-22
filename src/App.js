@@ -9,7 +9,8 @@ import HervanaSuspense from './components/HervanaSuspense/HervanaSuspense.jsx';
 const LandingPage = lazy(() => import("./views/landing/LandingPage"));
 const Services    = lazy(() => import("./views/servicios/Services"));
 const OurFocus    = lazy(() => import("./views/enfoque/OurFocus"));
-const AboutUs     = lazy(() => import("./views/nosotros/AboutUs"));
+const Team     = lazy(() => import("./views/nosotros/pages/Team"));
+const History     = lazy(() => import("./views/nosotros/pages/NuestraHistoria"));
 const FAQ         = lazy(() => import("./views/faq/FAQ"));
 const ProjectInput    = lazy(() => import("./views/tengoproyecto/ProjectInput"));
 
@@ -23,7 +24,8 @@ const  App = () => {
                     <Route path="/proyecto" exact={true} component={ProjectInput}></Route>
                     <Route path="/services" exact={true} component={Services} ></Route>
                     <Route path="/ourfocus" exact={true} component={OurFocus} ></Route>
-                    <Route path="/aboutus"  exact={true} component={AboutUs} ></Route>
+                    <Route path="/team"  exact={true} component={Team} ></Route>
+                    <Route path="/historia"  exact={true} component={History} ></Route>
                     <Route path="/faq"      exact={true} component={FAQ} ></Route>
                 </Switch>
             </HervanaSuspense>

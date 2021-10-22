@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: `1px solid #101111`,
         fontWeight: "bold",
         padding: "0px 20px",
-        boxSizing: "border-box"
+        boxSizing: "border-box",
+        cursor:"pointer"
     }
 }))
 

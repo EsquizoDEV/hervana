@@ -7,7 +7,6 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
 import { Icon } from '@mui/material'
 import { Box } from '@mui/system'
-
 import Logo from '../../../assets/images/HERVANA LOGO.png'
 
 
@@ -19,12 +18,20 @@ const MainMenu = ({ isMobile, classes }) => {
                     <HamburgerListButton>
                         <Icon>menu</Icon>
                     </HamburgerListButton>
-                    <Box className={classes.logo} sx={{backgroundColor:"#101111", alignItems:'left'}}>
+                    <Box onClick={
+                        ()=>{
+                        history.push('/'); 
+                        window.location.reload();}
+                        } className={classes.logo} sx={{backgroundColor:"#101111", alignItems:'left'}}>
                         <img alt="hervana-logo" id="logo" src={Logo}/>                
                     </Box>
                 </>
             :   <>
-                    <Box className={classes.logo} sx={{backgroundColor:"#101111"}}>
+                    <Box onClick={
+                        ()=>{
+                        history.push('/'); 
+                        window.location.reload();}
+                        } className={classes.logo} sx={{backgroundColor:"#101111"}}>
                         <img alt="hervana-logo" id="logo" src={Logo}/>                
                     </Box>
                     <GreenBorderButton size="small" onClick={()=> {

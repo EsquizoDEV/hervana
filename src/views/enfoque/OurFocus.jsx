@@ -27,7 +27,7 @@ const OurFocus = () => {
 
                 <NavBar theme={theme} isMobile={isMobile} />    
                 
-                <Grid sx={{backgroundColor:"black", hight:"100%"}} container>
+                <Grid sx={{backgroundColor:"black", height:"100%"}} container>
                   <FocusHeader/>
                 </Grid>
 

@@ -1,14 +1,17 @@
 import * as React from 'react';
-import faqlogo from '../../../assets/svg/FAQ.svg';
+import { Grid,Typography } from '@mui/material';
 
 
 const FAQIntro = () => {
 
     return (
-        <div>
-            <img src={faqlogo} alt="FAQLOGO"></img>
-            <h1>Aqui pon tus pregunaas</h1>
-        </div>
+        <Grid container sx={{backgroundColor:"black", height:"40vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
+            <Grid item sx={{marginTop:"40px"}}>
+                <Typography sx={{padding:"50px", color:"white", fontSize:"100px", fontWeight:"bold"}} variant="h1">
+                    FAQ
+                </Typography>
+            </Grid>
+        </Grid>
     )
 
 }

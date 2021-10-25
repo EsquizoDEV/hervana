@@ -1,19 +1,28 @@
-import {Typography } from '@mui/material';
 import * as React from 'react';
+import { useEffect } from 'react';
+import {Typography } from '@mui/material';
 import { ImgInfoCard } from '../../../components/UXComponents/Cards/CircleContent';
 import Img1 from '../../../assets/images/Enfoque a la digitalización.png'
 import Img2 from '../../../assets/images/Sustentabilidad.png'
 import Img3 from '../../../assets/images/Greenhouse1.png'
 import Img4 from '../../../assets/images/Cannabis Latam.png'
 import { Box } from '@mui/system';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Pillars = ({ isMobile }) => {
+
+    useEffect(()=> {
+        Aos.init({duration:1000, offset:120})
+    },[])
 
     return (
         <Box sx={{
         }}>
             {/* Circulo de adorno 1*/}
-            <Box id="PillarRightImage" sx={{
+            <Box id="PillarRightImage" 
+            data-aos="fade-left"
+            sx={{
                 border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
@@ -24,7 +33,9 @@ const Pillars = ({ isMobile }) => {
                 top:"300px"
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"30px",}}>
+            <Box 
+            data-aos="fade-left"
+            sx={{position:"relative", bottom:"30px",}}>
                 <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"370px"}} gutterBottom variant="h3" component="div">
                     <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
                 </Typography>
@@ -44,7 +55,9 @@ const Pillars = ({ isMobile }) => {
             </Box>
 
             {/* Circulo de adorno 2*/}
-            <Box id="PillarLeftImage" sx={{
+            <Box id="PillarLeftImage" 
+            data-aos="fade-right"
+            sx={{
                 border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
@@ -54,7 +67,9 @@ const Pillars = ({ isMobile }) => {
                 left:"700px",
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"300px"}}>
+            <Box 
+            data-aos="fade-right"
+            sx={{position:"relative", bottom:"300px"}}>
                 <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Sustentabilidad</div>
                 </Typography>
@@ -72,7 +87,9 @@ const Pillars = ({ isMobile }) => {
             </Box>
 
             {/* Circulo de adorno 3*/}
-            <Box id="PillarRightImage" sx={{
+            <Box id="PillarRightImage" 
+            data-aos="fade-left"
+            sx={{
                 border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
@@ -83,7 +100,9 @@ const Pillars = ({ isMobile }) => {
                 bottom:"270px"
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"570px"}}>
+            <Box 
+            data-aos="fade-left"
+            sx={{position:"relative", bottom:"570px"}}>
                 <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"350px"}} gutterBottom variant="h3" component="div">
                     <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Cannabis Latam</div>
                 </Typography>
@@ -101,7 +120,9 @@ const Pillars = ({ isMobile }) => {
             </Box>
 
              {/* Circulo de adorno 4*/}
-            <Box id="PillarLeftImage" sx={{
+            <Box id="PillarLeftImage" 
+            data-aos="fade-right"
+            sx={{
                 border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
@@ -112,7 +133,9 @@ const Pillars = ({ isMobile }) => {
                 bottom:"550px"
             }}>
             </Box>
-            <Box sx={{position:"relative", bottom:"870px", display:"block"}}>
+            <Box 
+            data-aos="fade-right"
+            sx={{position:"relative", bottom:"870px", display:"block"}}>
                 <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black",display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
                     <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
                 </Typography>

@@ -11,17 +11,25 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from '../../../components/core/Footer';
-import CannabisLatam from '../../../assets/images/Enfoque a la digitalización.png'
+import CannabisLatam from '../../../assets/images/Enfoque a la digitalización.png';
+import user from '../../../assets/images/14.jpg'
+import getData from './getData';
 
-
+const users = async () => {
+    let images;
+    images = await getData()
+    return images
+}
 
 const Team = () => {
     const [expanded, setExpanded] = React.useState(false);
+    const [imgUser, setImgUser] = React.useState('')
+
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     }
-
+    
     let theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -71,22 +79,232 @@ const Team = () => {
                         </Accordion>
                     </Box>
 
-                    <Box sx={{width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+                    <Box sx={{marginBottom:"20vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
                       <Typography variant="h2" style={{fontWeight:"bold", fontSize:""}}>
                           Managers
                       </Typography>
-                      <Box sx={{paddingLeft:"20vw", paddingRight:"20vw"}}>
-                        <Card>
-                          <CardContent>
-                            <Typography>
-                              
-                            </Typography>
-                          </CardContent>
-                          <CardMedia/>
-                        </Card>
+                      <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%", display:"flex", justifyContent:"center"}}>
+                        <Box sx={{width:"50%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="h3" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                    Francisco Cambero                              
+                                </Typography>
+                                <Typography variant="body2" style={{display:"flex", justifyContent:"center"}}>
+                                    AgTech Futurist & Digital lead                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"50%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="h3" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                    Eduardo Martínez                              
+                                </Typography>
+                                <Typography variant="body2" style={{display:"flex", justifyContent:"center"}}>
+                                    Strategist & Digital Catalyst                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                      </Box>
+                      <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%", display:"flex", justifyContent:"center"}}>
+                        <Box sx={{width:"50%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="h3" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                    Oliver Lederman                            
+                                </Typography>
+                                <Typography variant="body2" style={{display:"flex", justifyContent:"center"}}>
+                                    Industry Expert & Project                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"50%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="h3" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                    Carlos Cambero                              
+                                </Typography>
+                                <Typography variant="body2" style={{display:"flex", justifyContent:"center"}}>
+                                    Plan scientist & Growing Master                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
                       </Box>
                     </Box>
-
+                    <Box sx={{width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+                      <Typography variant="h2" style={{fontWeight:"bold", fontSize:""}}>
+                          Advisory board
+                      </Typography>
+                      <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%", display:"flex", flexWrap:"wrap",justifyContent:"center"}}>
+                        <Box sx={{width:"30%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="body2" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                    Alekos Martínez                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"30%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="body2" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                    Daniel Ender                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"30%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="body2" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                    Juan Manuel Cancino                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"30%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="body2" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                    Marisol Fonseca                              
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                        <Box sx={{width:"30%"}}>
+                            <Card
+                                elevation={0}
+                            >
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <CardMedia
+                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                    component="img"
+                                    alt="leader"
+                                    image={user}
+                                    width="200px"
+                                    height="200px"
+                                    />
+                                </div>
+                            <CardContent>
+                                <Typography variant="body2" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                    Alonso Peñelas                             
+                                </Typography>
+                            </CardContent>
+                            <CardMedia/>
+                            </Card>
+                        </Box>
+                      </Box>
+                    </Box>
                 </Grid>
             </Box>
         </div>

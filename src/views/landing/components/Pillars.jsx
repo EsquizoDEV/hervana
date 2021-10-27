@@ -13,7 +13,7 @@ import 'aos/dist/aos.css'
 const Pillars = ({ isMobile }) => {
 
     useEffect(()=> {
-        Aos.init({duration:1000, offset:120})
+        Aos.init({duration:1000, offset:300})
     },[])
 
     return (

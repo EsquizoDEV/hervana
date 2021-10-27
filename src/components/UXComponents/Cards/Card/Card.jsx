@@ -42,7 +42,7 @@ export const ImgCardComponent = (props) => {
         component="img"
         alt="green iguana"
         image={props.props.img}
-        sx={{maxWidth:"480px", maxHeight:"280px"}}
+        sx={{maxWidth:"500px", maxHeight:"auto"}}
       /></Grid>}
     </Card>
   );

@@ -6,11 +6,15 @@ import { NavBar } from '../../components/navigation/NavBar';
 import {FocusHeader} from './components/FocusHeader';
 import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
-import paneles from '../../assets/svg/Creación de páneles de control.svg'
-import AI from '../../assets/svg/Inteligencia artificial.svg'
-import robot from '../../assets/svg/Robótica.svg'
+import paneles from '../../assets/Artboard 63.png'
+import robotica from '../../assets/Artboard 64.png'
+import AI from '../../assets/Artboard 65.png'
 import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
 import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
+import hands from '../../assets/Robótica.png'
+import panelesInvernadero from '../../assets/Creación de páneles de control.png'
+import latam from '../../assets/Inteligencia artificial.png'
+import digital from '../../assets/Artboard 60.png'
 
 //* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)
 
@@ -63,6 +67,7 @@ const OurFocus = () => {
                   <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>  
                   <TextOnImage 
                     imagePosition="left" 
+                    img={hands}
 
                     text={
                       ` La agricultura en ambientes controlados es
@@ -108,7 +113,8 @@ const OurFocus = () => {
                     
                     <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div> 
                     <TextOnImage 
-                      imagePosition="right" 
+                      imagePosition="right"
+                      img={panelesInvernadero} 
                       text={`
                       Combinar el conocimiento profundo de las
                       recetas de cultivo, principios de plant
@@ -121,12 +127,12 @@ const OurFocus = () => {
                   </Box>
                     
                   <Box sx={{display:"flex", paddingRight:"100px",paddingLeft:"100px",justifyContent:"space-between", width:"100%",alignItems:"space-between"}}>
-                    <Box sx={{width:"30%",  display:"flex", flexDirection:"column", alignItems:"center"}}>
+                    <Box sx={{width:"30%",  display:"flex", flexDirection:"column", alignItems:"center",}}>
                       <Typography variant="body2" style={{fontWeight:"bold", fontSize:"30px"}}>
                         Creación de paneles de control en la nube
                       </Typography>
                       {/* //*Aqui van los svg que no sirven */}
-                      <img src={transDigital} style={{width:"80%"}} alt="paneles"/>
+                      <img src={paneles} style={{width:"80%"}} alt="paneles"/>
                     </Box>
 
                     <Box sx={{width:"30%", display:"flex", flexDirection:"column", alignItems:"center"}}>
@@ -134,7 +140,7 @@ const OurFocus = () => {
                         Robótica
                       </Typography>
                       {/* //*Aqui van los svg que no sirven */}
-                      <img src={transDigital} style={{width:"80%"}} alt="paneles"/>
+                      <img src={robotica} style={{width:"80%"}} alt="paneles"/>
                     </Box>
                     <Box>
 
@@ -144,7 +150,7 @@ const OurFocus = () => {
                         Inteligencia artificial
                       </Typography>
                       {/* //*Aqui van los svg que no sirven */}
-                      <img src={transDigital} style={{width:"80%"}} alt="paneles"/>
+                      <img src={AI} style={{width:"80%"}} alt="paneles"/>
                     </Box>
                   </Box>
 
@@ -219,7 +225,8 @@ const OurFocus = () => {
                   
                     <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>  
                     <TextOnImage 
-                      imagePosition="left" 
+                      imagePosition="left"
+                      img={latam} 
 
                       text={
                       ` Los productores en Latam pueden
@@ -270,6 +277,7 @@ const OurFocus = () => {
                     <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div> 
                     <TextOnImage 
                       imagePosition="right"
+                      img={digital}
                       text={`
                         Definimos la estrategia de transformación
                         digital como una estrategia que coordina

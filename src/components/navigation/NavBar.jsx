@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "bold",
         padding: "0px 20px",
         boxSizing: "border-box",
-        cursor:"pointer"
+        cursor:"pointer",
+        zIndex:999
     }
 }))
 

@@ -5,8 +5,8 @@ import {
 import { ImgCard } from '../../../components/UXComponents/Cards/CardIndex';
 import ImgSt1 from '../../../assets/images/Paso 1.png'
 import ImgSt2 from '../../../assets/images/Paso 2.png'
-import ImgSt3 from '../../../assets/images/Paso 3.png'
-import ImgSt4 from '../../../assets/images/Paso 4.png'
+import ImgSt3 from '../../../assets/Paso 3.png'
+import ImgSt4 from '../../../assets/Paso 4.png'
 import { Box } from '@mui/system';
 
 // const Item = styled(Paper)(({ theme }) => ({

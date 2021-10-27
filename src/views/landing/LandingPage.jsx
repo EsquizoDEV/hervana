@@ -8,6 +8,7 @@ import Processes from './components/Processes';
 import './index.css'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
+import history from '../../history';
   
 
 const  LandingPage = () => {
@@ -29,15 +30,17 @@ const  LandingPage = () => {
                         <Box component='div' sx={{
                             display: 'flex',
                             justifyContent: 'center',
+                            alignItems:"center",
                             position:"relative",
-                            backgroundColor:"black", 
-                            height:300,
+                            backgroundColor:"black",
+                            bottom:"300px", 
+                            height:600,
                             width:'100%',
-                            zIndex:3,
+                            zIndex:2,
                             paddingBlock: 10
                             
                         }}>
-                            <Typography  sx={{marginBottom:"20px", width: isMobile ? "80%" : "60%", marginTop:"40px"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
+                            <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
                                 Hervana Group es una empresa de conocimiento y socio estratégico que provee 
                                 “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
                                 enfoque “tailor made”. Esto nos permite adaptarnos a tus
@@ -52,7 +55,9 @@ const  LandingPage = () => {
                                 width:'full'
                             }}>
 
-                                <Button variant="filled" style={
+                                <Button variant="filled" 
+                                onClick={ window.location.reload}
+                                style={
                                     {
                                         marginTop: '120px',
                                         backgroundColor:"white",
@@ -60,7 +65,8 @@ const  LandingPage = () => {
                                         fontWeight:"bold",
                                         borderRadius:"30px",
                                         width:200,
-                                        maxHeight:"60px"
+                                        maxHeight:"60px",
+                                        zIndex:100
                                     }}
                                 >
                                         Tengo un proyecto

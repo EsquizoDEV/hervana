@@ -1,7 +1,5 @@
 import React from 'react'
-
 import {Box, Typography} from '@mui/material'
-import sustentabilidad from '../../../assets/images/Sustentabilidad.png'
 
 
 const TextOnImage = (props)=> {
@@ -15,7 +13,7 @@ const TextOnImage = (props)=> {
                     paddingRight:"100px",
                 }
                 }>
-              {props.imagePosition === "left" ? <img style={{width:"60%", height:"90%", position:"absolute"}} src={sustentabilidad} alt="sustentabilidad"/> : null}
+              {props.imagePosition === "left" ? <img style={{width:"60%", height:"90%", position:"absolute"}} src={props.img} alt="sustentabilidad"/> : null}
               <Box sx={{
                 marginTop:"50px",
                 height:`350px`,
@@ -47,7 +45,7 @@ const TextOnImage = (props)=> {
               </Box>
               {props.imagePosition === "right" ?
               <div style={{width:"100vw", height:"100%",display:"flex", justifyContent:"flex-end", position:"absolute"}}>
-                  <img style={{width:"60%", height:"90%", position:"relative" ,right:"12vw"}} src={sustentabilidad} alt="sustentabilidad"/>
+                  <img style={{width:"60%", height:"90%", position:"relative" ,right:"12vw"}} src={props.img} alt="sustentabilidad"/>
               </div>
                 : null}
             </Box>

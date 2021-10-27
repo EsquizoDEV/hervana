@@ -8,8 +8,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from '../../../components/core/Footer';
-import CannabisLatam from '../../../assets/images/Enfoque a la digitalización.png'
-
+import Amsterdam from '../../../assets/Ámsterdam.png'
 
 
 const NuestraHistoria = () => {
@@ -98,7 +97,7 @@ const NuestraHistoria = () => {
                     </Box>
                     {/*             La foto no corresponde. No está en los archivos            */}
                     <Box sx={{width:"100%", height:"60vh"}}>
-                        <img src={CannabisLatam} style={{width:"100%", height:"100%"}}/>
+                        <img src={Amsterdam} style={{width:"100%", height:"100%"}}/>
                     </Box>
                     <Grid item xs={12} md={12} lg={12} xl={12}>
                         <Footer isMobile={isMobile}/>

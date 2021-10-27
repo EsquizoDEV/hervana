@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Box, Grid} from '@mui/material';
-import greenhouse from '../../../assets/images/Greenhouse1.png';
-  import Typography from '@mui/material/Typography';
+import agTech from '../../../assets/Naturaleza y tecnología.png';
+import Typography from '@mui/material/Typography';
 
 
 
@@ -10,11 +10,11 @@ const HeroSection = ({ isMobile, theme }) => {
     <Box sx={
         {
             position:"relative",
-            zIndex:999,
+            zIndex:998,
             bottom:-150
         }
     } id="box-header-container">
-        <Box sx={{display:'flex', justifyContent:"center", zIndex:2}}>
+        <Box sx={{display:'flex', justifyContent:"center", zIndex:996}}>
             <Grid 
                 container
                 direction="row"
@@ -36,7 +36,7 @@ const HeroSection = ({ isMobile, theme }) => {
                             width: isMobile ? 'auto' : '100%',
                             marginLeft: isMobile ? "10px" : "10%"
                         }} 
-                        src={greenhouse} 
+                        src={agTech} 
                         alt="Greenhouse"/>
                 {
                 // * Textos

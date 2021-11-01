@@ -79,6 +79,7 @@ export const HamburgerListButton = (props) => {
                 role={undefined}
                 placement="bottom-start"
                 transition
+                style={{zIndex:999}}
              >
                  {({TransitionProps, placement}) => (
                      <Grow

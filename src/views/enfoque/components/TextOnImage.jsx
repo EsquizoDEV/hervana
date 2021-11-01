@@ -21,8 +21,8 @@ const TextOnImage = (props)=> {
                 alignItems:"center",
                 width:`100%`,
                 position:`${props.imagePosition === "right" ? "relative" : "relative" }`,
-                paddingLeft:`${props.imagePosition === "right" ? false : "900px"}`,
-                paddingRight:`${props.imagePosition === "right" ? "900px" : false}`,
+                paddingLeft:`${props.imagePosition === "right" ? false : "40vw"}`,
+                paddingRight:`${props.imagePosition === "right" ? "40vw" : false}`,
                 zIndex:`${props.imagePosition === "right" ? 10 : false}`
 
               }}>

@@ -38,7 +38,6 @@ const  LandingPage = () => {
                             bottom:"300px", 
                             height:600,
                             width:'100%',
-                            zIndex:2,
                             paddingBlock: 10
                             
                         }}>
@@ -59,7 +58,10 @@ const  LandingPage = () => {
                             }}>
 
                                 <Button variant="filled" 
-                                onClick={ window.location.reload}
+                                onClick={()=> {
+                                    history.push('/proyecto'); 
+                                    window.location.reload();
+                                }}
                                 style={
                                     {
                                         marginTop: '120px',
@@ -69,7 +71,7 @@ const  LandingPage = () => {
                                         borderRadius:"30px",
                                         width:200,
                                         maxHeight:"60px",
-                                        zIndex:100
+                                        zIndex:999
                                     }}
                                 >
                                         Tengo un proyecto

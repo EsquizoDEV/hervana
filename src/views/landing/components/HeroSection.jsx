@@ -32,7 +32,7 @@ const HeroSection = ({ isMobile, theme }) => {
                     <img 
                         style={{
                             alignSelf: 'center',
-                            maxWidth: isMobile ? "90%" : "90%",
+                            maxWidth: isMobile ? "90%" : "80%",
                             width: isMobile ? 'auto' : '100%',
                             marginLeft: isMobile ? "10px" : "10%"
                         }} 

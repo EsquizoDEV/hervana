@@ -15,7 +15,7 @@ const MainMenu = ({ isMobile, classes }) => {
         <Router>
             { isMobile
             ?   <>
-                    <HamburgerListButton>
+                    <HamburgerListButton sx={{zIndex: 9999}}>
                         <Icon>menu</Icon>
                     </HamburgerListButton>
                     <Stack

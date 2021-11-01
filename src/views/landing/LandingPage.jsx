@@ -38,7 +38,8 @@ const  LandingPage = () => {
                             bottom:"300px", 
                             height:600,
                             width:'100%',
-                            paddingBlock: 10
+                            paddingBlock: 10,
+                            zindex:10
                             
                         }}>
                             <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px", marginX:"5%"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">

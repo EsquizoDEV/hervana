@@ -67,8 +67,8 @@ const NuestraHistoria = () => {
                         </Accordion>
                     </Box>
 
-                    <Box sx={{display:"flex", width:"100%"}}>
-                        <Box sx={{borderRight:"2px solid white",height:"60vh",width:"50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
+                    <Box sx={{display:"flex", flexDirection:isMobile ? "column" : "row", width:"100%"}}>
+                        <Box sx={{borderRight:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
                             <Typography variant="h3" sx={{color:"white"}}>Misión</Typography>
                             <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white"}}>
                             Aplicar innovación y conocimiento
@@ -81,7 +81,8 @@ const NuestraHistoria = () => {
                             sustentable.
                             </Typography>
                         </Box>
-                        <Box sx={{borderLeft:"2px solid white",height:"60vh",width:"50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
+                        {isMobile ? <div><br /></div> : null}
+                        <Box sx={{borderLeft:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
                             <Typography variant="h3" sx={{color:"white"}}>Visión</Typography>
                             <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white"}}>
                             Que Latinoamérica sea pionera en

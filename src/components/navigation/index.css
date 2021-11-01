@@ -18,6 +18,9 @@
     width:150px;
 }
 
+#nav_container {
+    z-index: 9999;
+}
 
 #menu-icon{
     display:none;

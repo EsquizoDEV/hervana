@@ -5,6 +5,10 @@
     z-index: 995;
 }
 
+#body {
+    overflow: hidden;
+}
+
 /* #nav {
     position: fixed;
     top:0;

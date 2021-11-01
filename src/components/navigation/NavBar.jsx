@@ -8,7 +8,8 @@ import SocialMenu from './components/SocialMenu'
 const useStyles = makeStyles((theme) => ({
     logo:{
         "height": "60px",
-        "background-color": "#101111"
+        "background-color": "#101111",
+        "alignSelf": "center",
     },
     container: {
         position: "fixed",
@@ -37,7 +38,7 @@ export const NavBar = ({ isMobile, theme }) => {
             <Stack 
                 id="items-container" 
                 direction="row"
-                justifyContent="space-between"
+                justifyContent={isMobile ? "flex-start" : "space-evenly"}
                 alignItems="center"
                 className={classes.container}
             >

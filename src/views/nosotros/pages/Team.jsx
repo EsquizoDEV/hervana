@@ -84,7 +84,7 @@ const Team = () => {
                           Managers
                       </Typography>
                       <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%", display:"flex", justifyContent:"center"}}>
-                        <Box sx={{width:"50%"}}>
+                        <Box sx={{width:"100%"}}>
                             <Card
                                 elevation={0}
                             >
@@ -109,7 +109,7 @@ const Team = () => {
                             <CardMedia/>
                             </Card>
                         </Box>
-                        <Box sx={{width:"50%"}}>
+                        <Box sx={{width:"100%"}}>
                             <Card
                                 elevation={0}
                             >
@@ -305,6 +305,10 @@ const Team = () => {
                         </Box>
                       </Box>
                     </Box>
+
+                    <Grid item xs={12}> 
+                        <Footer isMobile={isMobile} id="footer-component" />
+                    </Grid>
                 </Grid>
             </Box>
         </div>

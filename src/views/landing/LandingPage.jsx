@@ -4,6 +4,7 @@ import { Footer } from '../../components/core/Footer';
 import { Grid, Box, Typography, Button } from '@mui/material';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
+import PillarsM from './components/PillarsM';
 import Processes from './components/Processes';
 import './index.css'
 import { useMediaQuery } from '@material-ui/core';
@@ -25,9 +26,10 @@ const  LandingPage = () => {
                     <Grid sx={{}} id="hero-item-container" item sm={12} md={12}>
                         <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
                     </Grid>
-                    <div className="py-3"></div>
+                    <div className="py-5"></div>
                     <Grid item sm={12} md={12}>
                         <Box component='div' sx={{
+                            
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems:"center",
@@ -40,7 +42,7 @@ const  LandingPage = () => {
                             paddingBlock: 10
                             
                         }}>
-                            <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
+                            <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px", marginX:"5%"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
                                 Hervana Group es una empresa de conocimiento y socio estratégico que provee 
                                 “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
                                 enfoque “tailor made”. Esto nos permite adaptarnos a tus
@@ -52,7 +54,8 @@ const  LandingPage = () => {
                             <Box sx={{  
                                 display:'flex',
                                 justifyContent:'flex-end',
-                                width:'full'
+                                width:'full',
+                                marginRight: "5%"
                             }}>
 
                                 <Button variant="filled" 
@@ -77,8 +80,11 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                <Grid sx={{width:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
-                    <Pillars isMobile={isMobile} id="pillars-component" />
+                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
+                    {isMobile 
+                        ?   <PillarsM id="pillars-component" />
+                        :   <Pillars isMobile={isMobile} id="pillars-component" />
+                    }
                 </Grid>
 
                 <Grid item id="process-item" sx={{
@@ -87,7 +93,7 @@ const  LandingPage = () => {
                     justifyContent:'center',
                     }} container spacing={1}>
                         
-                    <Processes id="process-component" />
+                    <Processes isMobile={isMobile} id="process-component" />
                     
                 </Grid>
                 <Grid item xs={12}> 

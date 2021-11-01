@@ -34,8 +34,9 @@ const Pillars = ({ isMobile }) => {
             }}>
             </Box>
             <Box 
-            data-aos="fade-left"
-            sx={{position:"relative", bottom:"30px",}}>
+                data-aos="fade-left"
+                sx={{position:"relative", bottom:"30px",}}
+            >
                 <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"370px"}} gutterBottom variant="h3" component="div">
                     <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
                 </Typography>

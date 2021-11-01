@@ -16,6 +16,7 @@ import panelesInvernadero from '../../assets/Creación de páneles de control.pn
 import latam from '../../assets/Inteligencia artificial.png'
 import digital from '../../assets/Artboard 60.png'
 
+
 //* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)
 
 
@@ -26,10 +27,10 @@ const OurFocus = () => {
   return (
       
     <div className="App">
+        <NavBar theme={theme} isMobile={isMobile} />    
        <Box sx={{ flexGrow: 0 }}>
             <Grid container spacing={2}>
 
-                <NavBar theme={theme} isMobile={isMobile} />    
                 
                 <Grid sx={{backgroundColor:"black", height:"100%"}} container>
                   <FocusHeader/>

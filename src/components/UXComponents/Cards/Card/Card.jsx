@@ -12,12 +12,15 @@ export const ImgCardComponent = (props) => {
 
   return (
     <Card elevation={0} sx={{display:'flex',width:"1200px", backgroundColor:"transparent", marginTop:"60px"}}>
-        {props.props.left ? <Grid item md={12}><CardMedia
-        component="img"
-        alt="green iguana"
-        image={props.props.img}
-        sx={{width:"500px", height:"auto"}}
-        /></Grid>
+        {props.props.left 
+        ? <Grid item md={12}>
+            <CardMedia
+                component="img"
+                alt="green iguana"
+                image={props.props.img}
+                sx={{width:"400px", height:"auto"}}
+            />
+        </Grid>
         : null}
      <Box sx={{display:'flex', flexDirection:'column'}}>
          <Grid container spacing={1}>

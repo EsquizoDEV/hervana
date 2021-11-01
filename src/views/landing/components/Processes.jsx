@@ -18,7 +18,7 @@ import { Box } from '@mui/system';
 
   //Cnvertir componentes IMGCARD a componentes que reciben propiedades IMG Y TEXT
   
-const Processes = () => {
+const Processes = ({ isMobile }) => {
 
     return (
         <Box sx={{width:"100%"}}>
@@ -27,7 +27,8 @@ const Processes = () => {
             </Box>
 
             <Grid container style={{display:"flex", justifyContent:"center"}}>
-                <ImgCard 
+                <ImgCard
+                isMobile={isMobile} 
                 left={false} 
                 title={"Paso 1"} 
                 subtitle={"Discutimos tu proyecto a profundidad"} 
@@ -37,6 +38,7 @@ const Processes = () => {
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>
                 {/* Resolver problemática de bullets en renderizado de contenido con props */}
                 <ImgCard 
+                isMobile={isMobile}
                 left={true} 
                 title={"Paso 2"} 
                 subtitle={"Trabajamos en una propuesta enfocada a resolver tus problemáticas"} 
@@ -46,6 +48,7 @@ const Processes = () => {
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>
                 {/* Pedir foto con correciones de margen */}
                 <ImgCard
+                isMobile={isMobile}
                  left={false} 
                  title={"Paso 3"} 
                  subtitle={"Nos comprometemos a trabajar por tu exito"} 
@@ -55,6 +58,7 @@ const Processes = () => {
             </Grid>
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>
                 <ImgCard 
+                isMobile={isMobile}
                 left={true} 
                 title={"Paso 4"} 
                 subtitle={"Arrancamos con tu proyecto"} 

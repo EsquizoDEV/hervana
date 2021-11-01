@@ -24,8 +24,8 @@ const  App = () => {
                     <Route path="/proyecto" exact={true} component={ProjectInput}></Route>
                     <Route path="/services" exact={true} component={Services} ></Route>
                     <Route path="/ourfocus" exact={true} component={OurFocus} ></Route>
-                    <Route path="/team"  exact={true} component={Team} ></Route>
-                    <Route path="/historia"  exact={true} component={History} ></Route>
+                    <Route path="/team"     exact={true} component={Team} ></Route>
+                    <Route path="/historia" exact={true} component={History} ></Route>
                     <Route path="/faq"      exact={true} component={FAQ} ></Route>
                 </Switch>
             </HervanaSuspense>

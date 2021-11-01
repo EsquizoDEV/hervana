@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { ImgCardComponent } from './Card/Card';
+import { ImgCardComponentM } from './Card/CardM';
 
 
 
 export const ImgCard = (props) => {
   return (
-      <ImgCardComponent props={props}/>
+      props.isMobile 
+      ? <ImgCardComponentM props={props} /> 
+      : <ImgCardComponent props={props}/>
   );
 }

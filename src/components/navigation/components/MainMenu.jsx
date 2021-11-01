@@ -5,7 +5,7 @@ import {SimpleButton} from '../../core/SimpleButton'
 import history from '../../../history'
 import {BrowserRouter as Router} from 'react-router-dom'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
-import { Icon } from '@mui/material'
+import { Icon, Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import Logo from '../../../assets/images/HERVANA LOGO.png'
 
@@ -18,13 +18,23 @@ const MainMenu = ({ isMobile, classes }) => {
                     <HamburgerListButton>
                         <Icon>menu</Icon>
                     </HamburgerListButton>
-                    <Box onClick={
-                        ()=>{
-                        history.push('/'); 
-                        window.location.reload();}
-                        } className={classes.logo} sx={{backgroundColor:"#101111", alignItems:'left'}}>
-                        <img alt="hervana-logo" id="logo" src={Logo}/>                
-                    </Box>
+                    <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="stretch"
+                        sx={{width: "100%"}}
+                    >
+                        <Box 
+                            onClick={()=>{
+                                history.push('/'); 
+                                window.location.reload();}
+                            } 
+                            className={classes.logo} 
+                            sx={{backgroundColor:"#101111", alignItems:'center', width:"100%"}}
+                        >
+                            <img alt="hervana-logo" id="logo" src={Logo}/>                
+                        </Box>
+                    </Stack>
                 </>
             :   <>
                     <Box onClick={

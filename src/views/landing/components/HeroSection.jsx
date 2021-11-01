@@ -11,7 +11,7 @@ const HeroSection = ({ isMobile, theme }) => {
         {
             position:"relative",
             zIndex:998,
-            bottom:-150
+            bottom: isMobile ? -100 : -150
         }
     } id="box-header-container">
         <Box sx={{display:'flex', justifyContent:"center", zIndex:996}}>
@@ -32,7 +32,7 @@ const HeroSection = ({ isMobile, theme }) => {
                     <img 
                         style={{
                             alignSelf: 'center',
-                            maxWidth: isMobile ? "90%" : "80%",
+                            maxWidth: isMobile ? "90%" : "90%",
                             width: isMobile ? 'auto' : '100%',
                             marginLeft: isMobile ? "10px" : "10%"
                         }} 
@@ -45,7 +45,8 @@ const HeroSection = ({ isMobile, theme }) => {
                 <Grid item sm={12} md={6}> 
                     <Box component="span" sx={{ 
                         display:'block',
-                        width: isMobile ? 'auto' : 'auto'
+                        width: isMobile ? 'auto' : 'auto',
+                        marginBottom: isMobile ? '100px' : '0px'
                     }}>
 
                         <Typography paragraph sx={{ marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>

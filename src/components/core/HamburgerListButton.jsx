@@ -28,7 +28,6 @@ export const HamburgerListButton = (props) => {
     const anchorRef = useRef(null)
     
     const handleToggle = e => {
-        console.log(e)
         if (e.target.id !== 'list-about-us') {
             setOpen((prevOpen) => !prevOpen)
         }
@@ -79,6 +78,7 @@ export const HamburgerListButton = (props) => {
                 role={undefined}
                 placement="bottom-start"
                 transition
+                disablePortal
              >
                  {({TransitionProps, placement}) => (
                      <Grow
@@ -89,8 +89,10 @@ export const HamburgerListButton = (props) => {
                      }}
                      >
                      <Paper
+                        style={{zIndex: 9999}}
                         sx={{
-                            backgroundColor:'#101111'
+                            marginTop: "2vw",
+                            backgroundColor:'#101111',
                         }}
                      >
                          <ClickAwayListener onClickAway={handleClose}>
@@ -118,26 +120,30 @@ export const HamburgerListButton = (props) => {
                                     }}>Nuestro enfoque</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
-                                    <SimpleButton size="small" onClick={() => {
-                                        history.push("/faq")
-                                        window.location.reload();    
-                                    }}>FAQ</SimpleButton>
+                                    <SimpleButton size="small" 
+                                        onClick={() => {
+                                            history.push("/faq")
+                                            window.location.reload();    
+                                        }}
+                                    >
+                                        FAQ
+                                    </SimpleButton>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
-                                        history.push("/");
+                                        history.push("/historia");
                                         window.location.reload();
                                     }}>Sobre nosotros</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
-                                        history.push("/")
+                                        history.push("/team")
                                         window.location.reload();
                                     }}>Nuestro equipo</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
-                                        history.push("/")
+                                        history.push("/#procesos")
                                         window.location.reload();    
                                     }}>Nuestro proceso</SimpleButton>
                                 </MenuItem>

@@ -2,6 +2,9 @@ import { Stack, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
 import colors from '../../utils/colorimetría';
 import SocialMenu from '../navigation/components/SocialMenu'
+import Logo from '../../assets/images/HERVANA LOGO.png'
+import history from '../../history';
+
 
 export const Footer = ({ isMobile }) => {
     return (
@@ -23,7 +26,7 @@ export const Footer = ({ isMobile }) => {
                     <Stack
                         id="items-container" 
                         direction={isMobile ? "column" : "row" }
-                        justifyContent="space-between"
+                        justifyContent="space-evenly"
                         alignItems="center"
                         //className={classes.container}
                         >
@@ -42,9 +45,18 @@ export const Footer = ({ isMobile }) => {
                         justifyContent="center"
                         alignItems="flex-end"
                         spacing={2}
+                    >
+                        <Box 
+                            onClick={()=>{
+                                history.push('/'); 
+                                window.location.reload();}
+                            } 
+                            sx={{backgroundColor:"#101111"}}
                         >
-                        <Typography variant="h4" sx={{color: colors.white}}>hervana</Typography>
-                        <Typography variant="h5" sx={{color: colors.white}}>2021</Typography>
+                            <img alt="hervana-logo" id="logo" src={Logo} />                
+                        </Box>
+                        {/* <Typography variant="h4" sx={{color: colors.white}}>hervana</Typography> */}
+                        <Typography variant="h4" sx={{color: colors.limeGreen}}>2021</Typography>
                     </Stack>
                 </Stack>
             </Box>

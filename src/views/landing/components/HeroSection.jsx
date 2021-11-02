@@ -49,8 +49,8 @@ const HeroSection = ({ isMobile, theme }) => {
                         marginBottom: isMobile ? '100px' : '0px'
                     }}>
 
-                        <Typography paragraph sx={{ marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
-                        <Typography variant="h6" sx={{ marginBottom:"200px" }}
+                        <Typography paragraph sx={{ marginTop:"100px", marginX:"3%"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                        <Typography variant="h6" sx={{ marginBottom:"200px", marginX:"3%" }}
                         style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
                         
                     </Box> 

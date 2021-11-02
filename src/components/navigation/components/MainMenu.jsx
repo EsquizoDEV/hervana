@@ -3,45 +3,49 @@ import {GreenBorderButton} from '../../core/OutlinedButton'
 import {ListButton} from '../../core/ListButton'
 import {SimpleButton} from '../../core/SimpleButton'
 import history from '../../../history'
-import {BrowserRouter as Router} from 'react-router-dom'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
 import { Icon, Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import Logo from '../../../assets/images/HERVANA LOGO.png'
 
 
-const MainMenu = ({ isMobile, classes }) => {
+const MainMenu = ({ isMobile }) => {
     return (
-        <Router>
+        <>
             { isMobile
             ?   <>
                     <HamburgerListButton sx={{zIndex: 9999}}>
                         <Icon>menu</Icon>
                     </HamburgerListButton>
-                    <Stack
+                    {/* <Stack
                         direction="row"
-                        justifyContent="center"
-                        alignItems="stretch"
+                        justifyContent="flex-start"
+                        alignItems="center"
                         sx={{width: "100%"}}
-                    >
+                    > */}
                         <Box 
                             onClick={()=>{
                                 history.push('/'); 
                                 window.location.reload();}
                             } 
-                            className={classes.logo} 
-                            sx={{backgroundColor:"#101111", alignItems:'center', width:"100%"}}
+                            direction="row"
+                            justifyContent="flex-start"
+                            alignItems="stretch"
+                            spacing={1}
+                            sx={{backgroundColor:"#101111", width:"100%"}}
                         >
-                            <img alt="hervana-logo" id="logo" src={Logo}/>                
+                            <img alt="hervana-logo" id="logo" src={Logo} style={{marginLeft:"25%", height:"90%"}}/>                
                         </Box>
-                    </Stack>
+                    {/* </Stack> */}
                 </>
             :   <>
-                    <Box onClick={
-                        ()=>{
-                        history.push('/'); 
-                        window.location.reload();}
-                        } className={classes.logo} sx={{backgroundColor:"#101111"}}>
+                    <Box 
+                        onClick={()=>{
+                            history.push('/'); 
+                            window.location.reload();}
+                        }
+                        sx={{backgroundColor:"#101111"}}
+                    >
                         <img alt="hervana-logo" id="logo" src={Logo}/>                
                     </Box>
                     <GreenBorderButton size="small" onClick={()=> {
@@ -68,7 +72,7 @@ const MainMenu = ({ isMobile, classes }) => {
                 </>
             }
         
-        </Router>    
+        </>    
     )
 }
 

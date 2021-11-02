@@ -4,13 +4,9 @@ import './index.css'
 import { makeStyles } from '@material-ui/core/styles'
 import MainMenu from './components/MainMenu';
 import SocialMenu from './components/SocialMenu'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
-    logo:{
-        "height": "60px",
-        "background-color": "#101111",
-        "alignSelf": "center",
-    },
     container: {
         position: "fixed",
         top: 0,
@@ -34,21 +30,23 @@ export const NavBar = ({ isMobile, theme }) => {
     return (
         <div id="nav_container" >
             {/* <MenuIcon id="menu-icon"/> */}
+            <Router>
+                <Stack 
+                    id="items-container" 
+                    direction="row"
+                    justifyContent={isMobile ? "flex-start" : "space-evenly"}
+                    alignItems="center"
+                    className={classes.container}
+                    sx={{width: "100%"}}
+                >
+                    <MainMenu isMobile={isMobile} />
+                    { isMobile
+                    ? undefined 
+                    : <SocialMenu />
+                    }
 
-            <Stack 
-                id="items-container" 
-                direction="row"
-                justifyContent={isMobile ? "flex-start" : "space-evenly"}
-                alignItems="center"
-                className={classes.container}
-            >
-                <MainMenu isMobile={isMobile} classes={classes} />
-                { isMobile
-                ? undefined 
-                : <SocialMenu />
-                }
-
-            </Stack>
+                </Stack>
+            </Router>
         </div>
     )
 }

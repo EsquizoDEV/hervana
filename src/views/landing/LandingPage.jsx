@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
-import { Grid, Box, Typography, Button } from '@mui/material';
+import { Grid, Box, Typography, Button, Stack } from '@mui/material';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
 import PillarsM from './components/PillarsM';
@@ -21,7 +21,7 @@ const  LandingPage = () => {
       
         <div id="body">
             <Grid id="main-container" container>
-            <NavBar sx={{}} id="nav" theme={theme} isMobile={isMobile} />
+            <NavBar sx={{zIndex: 9999}} id="nav" theme={theme} isMobile={isMobile} />
                 <Grid item xs={12} sx={{marginBottom:""}} id="hero-container" container spacing={1} >
                     <Grid sx={{}} id="hero-item-container" item sm={12} md={12}>
                         <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
@@ -42,43 +42,49 @@ const  LandingPage = () => {
                             zindex:10
                             
                         }}>
-                            <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px", marginX:"5%"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
-                                Hervana Group es una empresa de conocimiento y socio estratégico que provee 
-                                “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
-                                enfoque “tailor made”. Esto nos permite adaptarnos a tus
-                                necesidades dependiendo la fase de tu proyecto. Lo que nos
-                                define es nuestra cultura empresarial y aplicación de innovación
-                                y analítica basada en datos.
-                            </Typography>
+                            <Stack
+                                direction={isMobile ? "column" : "row"}
+                                justifyContent={isMobile ? "flex-start" : "space-evenly"}
+                                alignItems="center"
+                                sx={{width: "100%"}}
+                            >
+                                <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px", marginX:"5%"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
+                                    Hervana Group es una empresa de conocimiento y socio estratégico que provee 
+                                    “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
+                                    enfoque “tailor made”. Esto nos permite adaptarnos a tus
+                                    necesidades dependiendo la fase de tu proyecto. Lo que nos
+                                    define es nuestra cultura empresarial y aplicación de innovación
+                                    y analítica basada en datos.
+                                </Typography>
 
-                            <Box sx={{  
-                                display:'flex',
-                                justifyContent:'flex-end',
-                                width:'full',
-                                marginRight: "5%"
-                            }}>
+                                <Box sx={{  
+                                    display:'flex',
+                                    justifyContent:'flex-end',
+                                    width:'full',
+                                    marginRight: "5%"
+                                }}>
 
-                                <Button variant="filled" 
-                                onClick={()=> {
-                                    history.push('/proyecto'); 
-                                    window.location.reload();
-                                }}
-                                style={
-                                    {
-                                        marginTop: '120px',
-                                        backgroundColor:"white",
-                                        color:"black",
-                                        fontWeight:"bold",
-                                        borderRadius:"30px",
-                                        width:200,
-                                        maxHeight:"60px",
-                                        zIndex:999
+                                    <Button variant="filled" 
+                                    onClick={()=> {
+                                        history.push('/proyecto'); 
+                                        window.location.reload();
                                     }}
-                                >
-                                        Tengo un proyecto
+                                    style={
+                                        {
+                                            marginTop: '120px',
+                                            backgroundColor:"white",
+                                            color:"black",
+                                            fontWeight:"bold",
+                                            borderRadius:"30px",
+                                            width:200,
+                                            maxHeight:"60px",
+                                        }}
+                                    >
+                                            Tengo un proyecto
 
-                                </Button>
-                            </Box>    
+                                    </Button>
+                                </Box> 
+                            </Stack>   
                         </Box>
                     </Grid>
                 </Grid>
@@ -96,7 +102,7 @@ const  LandingPage = () => {
                     justifyContent:'center',
                     }} container spacing={1}>
                         
-                    <Processes isMobile={isMobile} id="process-component" />
+                    <Processes href="#procesos" isMobile={isMobile} id="process-component" />
                     
                 </Grid>
                 <Grid item xs={12}> 

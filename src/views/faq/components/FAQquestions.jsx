@@ -17,7 +17,7 @@ export const FAQquestions = () => {
     return (
         <div>
             <Box sx={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%", marginTop:"15vh", marginBottom:"15vh"}}>
-                <Typography variant="body2" sx={{color:"black", fontSize:"30px"}}>
+                <Typography variant="body2" sx={{color:"black", fontSize:"30px", marginLeft:"5vh", marginRight:"5vh"}}>
                     Esta es la sección donde se resuelven varias de las preguntas frecuentes
                 </Typography>
                 <img src={Faq} alt="faq svg" style={{marginTop:"50px"}}/>

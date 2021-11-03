@@ -1,14 +1,11 @@
-#nav_container {
-    /* width: auto; */
+/* #nav_container {
+    width: auto;
     height: 60px;
     display:flex;
     align-items: center ;
     background-color: #101111;
-    overflow: hidden;
-
-
-    
-}
+    overflow: hidden; 
+} */
 
 #items-container div {
     display:block;
@@ -21,6 +18,9 @@
     width:150px;
 }
 
+#nav_container {
+    z-index: 9999;
+}
 
 #menu-icon{
     display:none;

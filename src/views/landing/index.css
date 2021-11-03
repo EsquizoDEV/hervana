@@ -1,3 +1,21 @@
+#main-container {
+    display: inline-block;
+    position: relative;
+    width: "100%";
+    z-index: 995;
+}
+
 #body {
-    background-color: "white"
+    overflow: hidden;
+    z-index: 0;
+}
+
+#nav {
+    width: 100%;
+    z-index:99999;
+    position: relative;
+}
+
+#hero-container{
+    z-index: 0;
 }

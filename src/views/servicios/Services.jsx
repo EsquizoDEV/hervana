@@ -4,23 +4,30 @@ import { Grid } from '@mui/material';
 import * as React from 'react';
 import AtomHero from './components/AtomHero';   
 import SwipeableTextMobileStepper from '../../components/UXComponents/carrousel/Carrousel'
+import { useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import './index.css'
 
 const Services = () => {
+
+    let theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
       
     <div className="App">
+            <NavBar isMobile={isMobile} />
             <Grid id="main-container-services" container spacing={2}>
-                <Grid item xs={12}>
-                    <NavBar />
-                </Grid>
                 <Grid sx={{marginTop:"50px"}} item xs={12}>
-                    <AtomHero id="hero-atom" />
+                    <AtomHero isMobile={isMobile} id="hero-atom" />
                 </Grid>
-                <Grid container sx={{marginTop:"100px",paddingRight:"250px", paddingLeft:"250px"}}>
-                    <SwipeableTextMobileStepper />
+                {isMobile
+                ?   null
+                :    <Grid container sx={{marginTop:"100px",paddingRight:"250px", paddingLeft:"250px"}}>
+                    <SwipeableTextMobileStepper isMobile={isMobile} />
                 </Grid>
+                }
                 <Grid item xs={12}>
-                    <Footer />
+                    <Footer isMobile={isMobile} />
                 </Grid>
             </Grid>
     </div>

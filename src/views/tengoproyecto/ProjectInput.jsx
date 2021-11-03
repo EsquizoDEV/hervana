@@ -9,6 +9,8 @@ import axios from 'axios';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import history from '../../history';
+import { useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
 
 const style = {
   position: 'absolute',
@@ -37,6 +39,7 @@ function ChildModal() {
 
   return (
     <React.Fragment>
+        
       <Button sx={{backgroundColor:"#1CF445", color:"black"}}  onClick={handleOpen}>¿Qué sigue?</Button>
       <Modal
         hideBackdrop
@@ -66,6 +69,11 @@ const ProjectInput = () => {
   const [disable, setDisable] = useState(false)
   const [open, setOpen] = useState(false);
   
+
+  const hosts = [
+      "http://localhost:8000/hervana-af5fd/us-central1/api/project",
+      "https://us-central1-hervana-af5fd.cloudfunctions.net/api/project"
+  ]
 
   const handleChange = ((e) => {
     setState({
@@ -102,11 +110,11 @@ const ProjectInput = () => {
     e.preventDefault();
     if(emailValidator(state.email)){
       setDisable(true)
-      axios.post('http://localhost:8000/hervana-af5fd/us-central1/api/project', {
+      axios.post(hosts[1], {
       project: {
         name:state.name,
         mail: state.email,
-        phone:state. phone,
+        phone:state.phone,
         description:state.msg
       }
       }).then(res => {
@@ -127,10 +135,13 @@ const ProjectInput = () => {
 
   }
 
+    let theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
   return (
       
     <div className="project_input">
-       <NavBar />
+       <NavBar sx={{}} id="nav" theme={theme} isMobile={isMobile} />
 
         <Modal
           open={open}
@@ -164,11 +175,16 @@ const ProjectInput = () => {
           </Box>
         </Modal>
     
-      <Grid sx={{marginTop:"50px",display:'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}} container>
-          <Box sx={
+      <Grid sx={{marginTop:"50px",display:'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}} 
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="stretch"
+        >
+          <Grid item xs={12} sx={
             {
               backgroundColor:"#2D302E",
-              width:"750px",
+              width: isMobile ? "100%" : "750px",
               padding:"30px",
             }
           }>
@@ -183,18 +199,18 @@ const ProjectInput = () => {
               }
             }>Comunicate con nosotros para asesorarte con la información que necesitas</Typography>
             <Box component="form"
-            onSubmit={handleSend}
-            sx={
-              {
-                width:"100%",
-                display:"flex", 
-                flexDirection:"column",
-                justifyContent:"space-between",
-                backgroundColor:"#2D302E",
-                height:"400px",
-                alignItems:"center"
-              }
-            }
+                onSubmit={handleSend}
+                sx={
+                {
+                    width:"90%",
+                    display:"flex", 
+                    flexDirection:"column",
+                    justifyContent:"space-between",
+                    backgroundColor:"#2D302E",
+                    height:"400px",
+                    alignItems:"center"
+                }
+                }
             >
               <TextField 
               variant="filled" 
@@ -245,7 +261,10 @@ const ProjectInput = () => {
             </Box>
             
             
-          </Box>
+          </Grid>
+          <Grid item xs={12} sx={{width:"100%"}}> 
+                <Footer isMobile={isMobile} id="footer-component" />
+            </Grid>
       </Grid>
       
       

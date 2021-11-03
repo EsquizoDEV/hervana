@@ -1,5 +1,5 @@
 import React from 'react'
-import Stack from '@mui/material/Stack'
+// import Stack from '@mui/material/Stack'
 import { CoreIconButton } from '../../core/IconButton'
 import { FacebookOutlined, LinkedIn, WhatsApp, Instagram } from '@mui/icons-material'
 import { lightBlue } from '@mui/material/colors'

@@ -56,7 +56,7 @@ export const ImgInfoCard = (props) => {
         display:'flex', 
         flexDirection:'column', 
       }}>
-          <CardContent sx={{opacity:"1", position:"relative",width:"500px"}}>
+          <CardContent sx={{opacity:"1", position:"relative",width:"700px"}}>
               <Typography style={{color:"black"}} variant="body2" color="text.secondary">
                 {props.content}
               </Typography>

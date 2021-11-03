@@ -1,32 +1,33 @@
+import * as React from 'react';
 import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box } from '@mui/material';
-import * as React from 'react';
+import { useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
 import FAQquestions from './components/FAQquestions';
 import FAQIntro from './components/FAQIntro';
 
+
 const FAQ = () => {
+    let theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
   return (
       
       <div className="App">
-        <h1>jnignweopgngbtgpbnp</h1>
-       <Box sx={{ flexGrow: 0 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={12}>
-                    <NavBar />
-                </Grid>
-                <Grid item xs={12}>
-                    <FAQIntro />
-                </Grid>
-                <Grid item xs={12}>
-                    <FAQquestions />
-                </Grid>
-                <Grid item xs={12}>
-                    <Footer />
+        <Box sx={{flexGrow:0}}>
+            <Grid container  spacing={0}>
+                <NavBar isMobile={isMobile}/>
+
+                <FAQIntro/>
+                
+                <FAQquestions/>
+
+                <Grid item xs={12} md={12} lg={12} xl={12}>
+                    <Footer isMobile={isMobile}/>
                 </Grid>
             </Grid>
         </Box>
-      
       
     </div>
   );

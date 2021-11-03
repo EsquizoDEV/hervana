@@ -1,15 +1,7 @@
 import * as React from 'react';
-import {Box,Button} from '@mui/material';
-import greenhouse from '../../../assets/images/Greenhouse1.png';
-import {
-    createTheme,
-    responsiveFontSizes,
-  } from '@mui/material/styles';
-  import Typography from '@mui/material/Typography';
-import history from '../../../history';
-  
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
+import {Box, Grid} from '@mui/material';
+import agTech from '../../../assets/Naturaleza y tecnología.png';
+import Typography from '@mui/material/Typography';
 
 
 const HeroSection = () => {
@@ -17,39 +9,48 @@ const HeroSection = () => {
     <Box sx={
         {
             position:"relative",
-            zIndex:999,
-            bottom:-250
+            zIndex:998,
+            bottom: isMobile ? -100 : -150
         }
     } id="box-header-container">
-        <Box sx={{display:'flex', justifyContent:"center", zIndex:2}}>
-                
+        <Box sx={{display:'flex', justifyContent:"center", zIndex:996}}>
+            <Grid 
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems={isMobile ? 'stretch' : "center"}
+                sx={{marginBottom: 25}}
+            > 
+                <Grid item sm={12} md={6} xs={{
+                    display:'flex',
+                    alignItems: 'center',
+                }}> 
                 {
                 // * Imagen Greenhouse
                 }
-                    <img style={{height:500}} src={greenhouse} alt="Greenhouse"/>
+                    <img 
+                        style={{
+                            alignSelf: 'center',
+                            maxWidth: isMobile ? "90%" : "80%",
+                            width: isMobile ? 'auto' : '100%',
+                            marginLeft: isMobile ? "10px" : "10%"
+                        }} 
+                        src={agTech} 
+                        alt="Greenhouse"/>
                 {
                 // * Textos
                 }  
+                </Grid>
+                <Grid item sm={12} md={6}> 
+                    <Box component="span" sx={{ 
+                        display:'block',
+                        width: isMobile ? 'auto' : 'auto',
+                        marginBottom: isMobile ? '100px' : '0px'
+                    }}>
 
-            <Box component="span" sx={
-                { 
-                    marginLeft:10,
-                    display:'block',
-                    width:700
-                }}>
-
-                    <Typography sx={{marginTop:"100px"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
-                    <Typography variant="h6" sx={{marginBottom:"200px"}} style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
-                    <Typography  sx={{marginBottom:"20px"}}style={{fontWeight: 'bold', color:"white"}} variant="body1">
-                        Hervana Group es una empresa de conocimiento y socio estratégico que provee 
-                        “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
-                        enfoque “tailor made”. Esto nos permite adaptarnos a tus
-                        necesidades dependiendo la fase de tu proyecto. Lo que nos
-                        define es nuestra cultura empresarial y aplicación de innovación
-                        y analítica basada en datos.
-                    </Typography>
-
-                    <Box sx={{
+                        <Typography paragraph sx={{ marginTop:"100px", marginX:"3%"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
+                        <Typography variant="h6" sx={{ marginBottom:"200px", marginX:"3%" }}
+                        style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
                         
                         display:'flex',
                         justifyContent:'flex-end',

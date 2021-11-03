@@ -9,7 +9,8 @@ import MenuList from '@mui/material/MenuList';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
-import history from '../../history';
+import history from '../../history'
+
 
 const ToggleButton = styled(Button)(({ theme }) => ({
     color: colors.white,
@@ -72,6 +73,7 @@ export const ListButton = (props) => {
              role={undefined}
              placement="bottom-start"
              transition
+             style={{zIndex:999}}
              >
                  {({TransitionProps, placement}) => (
                      <Grow
@@ -88,18 +90,8 @@ export const ListButton = (props) => {
                              id="menu-list"
                              onKeyDown={handleListKeyDown}
                              >
-                                <MenuItem onClick={handleClose} onClick={() => {
-                                     history.push("/aboutus");
-                                     window.location.reload();
-                                }}>Sobre nosotros</MenuItem>
-                                <MenuItem onClick={handleClose}  onClick={() => {
-                                     history.push("/aboutus");
-                                     window.location.reload();
-                                }}>Nuestro equipo</MenuItem>
-                                <MenuItem onClick={handleClose}  onClick={() => {
-                                     history.push("/aboutus");
-                                     window.location.reload();
-                                }}>Nuestro proceso</MenuItem>
+                                 <MenuItem onClick={handleClose,()=>{history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
+                                 <MenuItem onClick={handleClose, ()=>{history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
                              </MenuList>
                          </ClickAwayListener>
                      </Paper>

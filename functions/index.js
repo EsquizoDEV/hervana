@@ -5,7 +5,6 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-
 const cors = require("cors");
 
 app.use(cors());
@@ -21,7 +20,10 @@ app.use((req, res, next) => {
 const firestore = admin.firestore();
 
 app.post("/project", (req, res) => {
-    firestore.collection("projects").add(req.body)
+    firestore.collection("projects").add({
+        ...req.body,
+        timestamp: new Date().toISOString(),
+    })
     .then(doc => {
         return res.status(201).send({
             "success": true,

@@ -1,10 +1,10 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 
-export const FocusHeader = () => {
+export const FocusHeader = ({ isMobile }) => {
     return (
-        <Grid sx={{marginTop:"40px"}} item xs={12} sm={12} md={12} lg={12}>
-            <Typography variant="h2" style={{padding:"150px",width:"60%",color:"white", fontWeight:"bold", fontSize:"70px"}}>
+        <Grid sx={{marginTop:"10vh"}} item xs={12}>
+            <Typography variant={isMobile ? "h5" : "h2"} style={{padding:"10vh",maxWidth:"90%",color:"white", fontWeight:"bold", fontSize: isMobile ? "6vh": "10vh"}}>
                 AgTech & Cultivo Data Driven Business Intelligence & analytics 
                 Transformación Digital Cannabis en Latam Sustentabilidad
             </Typography>

@@ -6,6 +6,8 @@ require('dotenv').config({
 
 const config = require('./hervana-af5fd-firebase-adminsdk-a1ito-ed574cb4ce.json');
 
-admin.initializeApp(config);
+admin.initializeApp({
+    credential: admin.credential.cert(config)
+});
 
 module.exports = admin;

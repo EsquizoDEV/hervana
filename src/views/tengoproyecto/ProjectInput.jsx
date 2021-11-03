@@ -70,6 +70,11 @@ const ProjectInput = () => {
   const [open, setOpen] = useState(false);
   
 
+  const hosts = [
+      "http://localhost:8000/hervana-af5fd/us-central1/api/project",
+      "https://us-central1-hervana-af5fd.cloudfunctions.net/api/project"
+  ]
+
   const handleChange = ((e) => {
     setState({
       ...state,
@@ -105,7 +110,7 @@ const ProjectInput = () => {
     e.preventDefault();
     if(emailValidator(state.email)){
       setDisable(true)
-      axios.post('http://localhost:8000/hervana-af5fd/us-central1/api/project', {
+      axios.post(hosts[1], {
       project: {
         name:state.name,
         mail: state.email,

@@ -39,7 +39,7 @@ const OurFocus = () => {
                   <FocusHeader isMobile={isMobile}/>
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} sx={{maxWidth: "100%"}}>
                     <Box sx={{width:"100%", marginBottom:isMobile ? "10vh" : "40vh"}}>
                         <Typography 
                             variant="h3" 
@@ -144,11 +144,12 @@ const OurFocus = () => {
                     >
                         <Grid item xs={12} md={4}>
                             <Box sx={{
-                                width:isMobile ? "100%" : "30%",  
+                                width:"100%",  
                                 display:"flex", 
                                 flexDirection:"column", 
-                                alignItems:"center",}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"30px"}}>
+                                alignItems:"center",
+                                justifyItems:"stretch",}}>
+                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Creación de paneles de control en la nube
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
@@ -156,8 +157,8 @@ const OurFocus = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:isMobile ? "100%" : "30%", display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"30px"}}>
+                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Robótica
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
@@ -165,8 +166,8 @@ const OurFocus = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:isMobile ? "100%" : "30%", display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"30px"}}>
+                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Inteligencia artificial
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
@@ -261,7 +262,7 @@ const OurFocus = () => {
                         <TextOnImage 
                         imagePosition="left"
                         img={latam} 
-
+                        isMobile={isMobile}
                         text={
                         ` Los productores en Latam pueden
                         conseguir
@@ -314,6 +315,7 @@ const OurFocus = () => {
                     <TextOnImage 
                       imagePosition="right"
                       img={digital}
+                      isMobile={isMobile}
                       text={`
                         Definimos la estrategia de transformación
                         digital como una estrategia que coordina
@@ -330,7 +332,7 @@ const OurFocus = () => {
 
                 <Grid item xs={12}>
                   <Box sx={{ width:"100%"}}>
-                    <Box sx={{display:"flex",paddingLeft:"100px",paddingRight:"100px",justifyContent:"center"}}>
+                    <Box sx={{display:"flex",paddingLeft:"5%",paddingRight:"5%",justifyContent:"center"}}>
                       <img src={transDigital} style={{width:"70vw"}} alt="transformación digital"/>
                     </Box>
                   </Box>

@@ -90,15 +90,15 @@ const Team = () => {
                                 justifyContent="space-evenly"
                                 alignItems="stretch"
                             >
-                                <Grid 
-                                    item
-                                    container
-                                    direction="row"
-                                    justifyContent="space-evenly"
-                                    alignItems="stretch" xs={12}
-                                    spacing={3}
-                                >
-                                    <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%"}}>
+                                <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%"}}>
+                                    <Grid 
+                                        item
+                                        container
+                                        direction="row"
+                                        justifyContent="space-evenly"
+                                        alignItems="stretch" xs={12}
+                                        spacing={3}
+                                    >
                                         <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh"}}>
                                                 <Card
@@ -207,8 +207,8 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid>
-                                    </Box>
-                                </Grid>
+                                    </Grid>
+                                </Box>
                             </Grid>
                         </Box>
                     </Grid>

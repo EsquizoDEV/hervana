@@ -14,7 +14,7 @@ export const FocusHeader = ({ isMobile }) => {
                     maxWidth:"90%",
                     color:"white", 
                     fontWeight:"bold", 
-                    fontSize: isMobile ? "6vh": "10vh"
+                    fontSize: isMobile ? "6vh": "8vh"
                 }}
             >
                 AgTech & Cultivo Data Driven. Business Intelligence & analytics. 

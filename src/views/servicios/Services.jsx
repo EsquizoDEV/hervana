@@ -22,7 +22,7 @@ const Services = () => {
                 </Grid>
                 {isMobile
                 ?   null
-                :    <Grid container sx={{marginTop:"100px",paddingRight:"250px", paddingLeft:"250px"}}>
+                :    <Grid container sx={{marginTop:"30vh",paddingRight:"250px", paddingLeft:"250px"}}>
                     <SwipeableTextMobileStepper isMobile={isMobile} />
                 </Grid>
                 }

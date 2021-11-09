@@ -195,7 +195,8 @@ const ProjectInput = () => {
             style={
               {
                 fontWeight:"bold", 
-                color:"white"
+                color:"white",
+                fontSize:"40px"
               }
             }>Comunicate con nosotros para asesorarte con la información que necesitas</Typography>
             <Box component="form"

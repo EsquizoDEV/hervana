@@ -87,11 +87,11 @@ export const ListButton = (props) => {
                          <ClickAwayListener onClickAway={handleClose}>
                              <MenuList
                              autoFocusItem={open}
-                             id="menu-list"
+                             id="menu-list"e
                              onKeyDown={handleListKeyDown}
                              >
-                                 <MenuItem onClick={()=>{handleClose(); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
-                                 <MenuItem onClick={()=>{handleClose(); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
+                                 <MenuItem onClick={(e)=>{handleClose(e); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
+                                 <MenuItem onClick={(e)=>{handleClose(e); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
                              </MenuList>
                          </ClickAwayListener>
                      </Paper>

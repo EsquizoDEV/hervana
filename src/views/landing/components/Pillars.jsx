@@ -29,7 +29,7 @@ const Pillars = ({ isMobile }) => {
                 width: isMobile ? "auto" : "400px",
                 height: isMobile ? "auto" : "400px",
                 position:'relative',
-                right:"7vw",
+                right:"3vw",
                 top:"300px"
             }}>
             </Box>
@@ -65,7 +65,7 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                left:"55vw",
+                left:"67%",
             }}>
             </Box>
             <Box 
@@ -97,7 +97,7 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                right:"7vw",
+                right:"3vw",
                 bottom:"270px"
             }}>
             </Box>
@@ -130,7 +130,7 @@ const Pillars = ({ isMobile }) => {
                 width:"400px",
                 height:"400px",
                 position:'relative',
-                left:"55vw",
+                left:"67%",
                 bottom:"550px"
             }}>
             </Box>

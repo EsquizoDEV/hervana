@@ -53,7 +53,7 @@ function SwipeableTextMobileStepper() {
   return (
     <Box sx={{ display:'flex',maxWidth: "90vw", height:"50vh",flexGrow: 1, border:"solid 2px black" }}>
       <AutoPlaySwipeableViews
-        style={{width:"85vw", backgroundColor:"black"}}
+        style={{width:"75vw", backgroundColor:"black"}}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -68,7 +68,7 @@ function SwipeableTextMobileStepper() {
                   height: "50vh",
                   display: 'block',
                   overflow: 'hidden',
-                  width: "43vw",
+                  width: "40vw",
                 }}
                 src={step.imgPath}
                 alt={step.label}

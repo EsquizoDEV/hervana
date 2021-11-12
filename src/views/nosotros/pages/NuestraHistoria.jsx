@@ -29,7 +29,7 @@ const NuestraHistoria = () => {
 
                     <Grid container sx={{backgroundColor:"black", height:"40vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
                         <Grid item sx={{marginTop:"40px"}}>
-                            <Typography sx={{padding:"50px", color:"white", fontSize:"40px", fontWeight:"bold"}} variant="h1">
+                            <Typography sx={{padding:"50px", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
                                 Nuestra historia
                             </Typography>
                         </Grid>

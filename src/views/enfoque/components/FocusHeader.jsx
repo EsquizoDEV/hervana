@@ -7,18 +7,25 @@ export const FocusHeader = ({ isMobile }) => {
             <Typography 
                 variant={isMobile ? "h5" : "h2"} 
                 style={{
-                    paddingLeft: isMobile ? "15vh" : "40vh",
-                    paddingRight: isMobile ? "15vh" : "40vh",
+                    paddingLeft: isMobile ? "15vh" : "10vh",
+                    paddingRight: isMobile ? "15vh" : "60vh",
                     paddingTop: isMobile ? "5vh" : "10vh",
                     paddingBottom: isMobile ? "15vh" : "10vh",
                     maxWidth:"90%",
                     color:"white", 
                     fontWeight:"bold", 
-                    fontSize: isMobile ? "6vh": "8vh"
+                    fontSize: isMobile ? "4vh": "6vh"
                 }}
             >
-                AgTech & Cultivo Data Driven. Business Intelligence & analytics. 
-                Transformación Digital. Cannabis en Latam. Sustentabilidad
+                <ul style={{listStyle:"none"}}>
+                    <li>AgTech & Cultivo Data Driven.</li>
+                    <li>Business Intelligence & analytics.</li>
+                    <li>AgTech & Cultivo Data Driven.</li>
+                    <li>Transformación Digital.</li>
+                    <li>Cannabis en Latam.</li>
+                    <li>CSustentabilidad</li>
+                </ul>  
+                  
             </Typography>
         </Grid>
     )

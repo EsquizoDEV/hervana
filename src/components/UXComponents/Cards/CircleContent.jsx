@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import {ThemeProvider, createTheme} from '@mui/material/styles'
+import history from '../../../history'
 
 const theme = createTheme({
   components:{
@@ -61,7 +62,10 @@ export const ImgInfoCard = (props) => {
                 {props.content}
               </Typography>
               <CardActions sx={{justifyContent: 'flex-end'}}>
-                  <Button sx={{color:"black", fontWeight:"bold", fontSize:"20px"}} size="small">Learn More</Button>
+                  <Button onClick={()=> {
+                    history.push("ourfocus");
+                    window.location.reload();
+                  }} sx={{color:"black", fontWeight:"bold", fontSize:"20px"}} size="small">Learn More</Button>
               </CardActions>
           </CardContent>
       </Box>

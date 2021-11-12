@@ -35,7 +35,7 @@ const OurFocus = () => {
                 justifyContent="space-evenly"
                 alignItems="stretch"
             >
-                <Grid item xs={12} sx={{backgroundColor:"black", height:"100%"}} container>
+                <Grid item xs={12} sx={{backgroundColor:"#101111", height:"100%"}} container>
                   <FocusHeader isMobile={isMobile}/>
                 </Grid>
 
@@ -44,11 +44,11 @@ const OurFocus = () => {
                         <Typography 
                             variant="h3" 
                             style={{
-                                fontSize: isMobile ? "11vw" : "4vw",
+                                fontSize: isMobile ? "4vw" : "5vh",
                                 fontWeight:"bold", 
                                 paddingLeft:"5%", 
                                 marginTop:"15vh", 
-                                marginBottom: isMobile ? "6vh" : "10vh"
+                                marginBottom: isMobile ? "4vh" : "6vh"
                             }}
                         >
                             Sustentabilidad & eficiencia
@@ -58,7 +58,7 @@ const OurFocus = () => {
                             fontSize:isMobile ? "4vw" : "2vw", 
                             fontWeight:"bold", 
                             marginBottom:"30px", 
-                            paddingLeft:"10%",
+                            paddingLeft:"5%",
                             width:"40%"
                             }
                         }>
@@ -85,15 +85,15 @@ const OurFocus = () => {
                 <Grid item xs={12}>
                     <Box 
                         sx={{
-                        marginBottom:"500px",
+                        marginBottom:"30vh",
                         width:"100%"
                         }}
                     >
-                        <Typography variant="h3" style={
+                        <Typography variant="body2" style={
                         {
                             fontSize:isMobile ? "4vw" : "2vw",
                             fontWeight:"bold", 
-                            paddingLeft:"150px", 
+                            paddingLeft:"5%", 
                             marginTop:"50px", 
                             marginBottom:"20px",
                             width:"50%"
@@ -105,9 +105,7 @@ const OurFocus = () => {
                         <Typography variant="body2" style={
                         {
                             fontSize:"2vw", 
-                            fontWeight:"bold", 
-                            marginBottom:"30px", 
-                            paddingLeft:"150px",
+                            fontWeight:"bold",  
                             width:"40%"
                         }
                         }>
@@ -130,17 +128,11 @@ const OurFocus = () => {
                     </Box>
                 </Grid>
                 
-                <Grid item xs={12} sx={{marginBottom: isMobile ? "25vh" : "5vh"}}>
+                  <Box sx={{marginBottom:"10vh"}}>
                     <Grid 
                         container
                         direction="row"
                         justifyContent="space-evenly"
-                        alignItems="stretch"
-                        sx={{
-                            paddingRight:"15vw",
-                            paddingLeft:"15vw",
-                            width:"100%",
-                        }}
                     >
                         <Grid item xs={12} md={4}>
                             <Box sx={{
@@ -148,42 +140,48 @@ const OurFocus = () => {
                                 display:"flex", 
                                 flexDirection:"column", 
                                 alignItems:"center",
-                                justifyItems:"stretch",}}>
+                                marginLeft:"5vw"
+                                }}>
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Creación de paneles de control en la nube
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
-                                <img src={paneles} style={{width:isMobile ? "60%" :"80%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                            <Box sx={{width:"100%%", display:"flex", flexDirection:"column", alignItems:"center"}}>
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Robótica
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
-                                <img src={robotica} style={{width:"80%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
+                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginRight:"3vw"}}>
+                                <Typography variant="body2" style={{marginRight:"inherit",fontWeight:"bold", fontSize:"4vh"}}>
                                     Inteligencia artificial
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
-                                <img src={AI} style={{width:"80%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                     </Grid>
-                </Grid>
+                    <Box>
+                      <Grid container direction="row" justifyContent="space-evenly">
+                        <img src={paneles} style={{width:isMobile ? "60%" :"15%"}} alt="paneles"/>
+                        <img src={robotica} style={{width:"15%"}} alt="paneles"/>
+                        <img src={AI} style={{width:"15%"}} alt="paneles"/>
+                      </Grid>
+
+                    </Box>
+                    </Box>
                 
                 <Grid item xs={12}>
                   <Box>
                     <Typography variant="h3" style={
                       {
-                        fontSize:isMobile ? "8vw" : "4vw",
+                        fontSize:isMobile ? "8vw" : "2vw",
                         fontWeight:"bold", 
-                        paddingLeft:isMobile ? "12%" : "30%", 
+                        paddingLeft:isMobile ? "12%" : "5%", 
                         marginTop:"50px", 
                         marginBottom:"20px"
                       }
@@ -195,8 +193,8 @@ const OurFocus = () => {
                       {
                         fontSize:"2vw", 
                         fontWeight:"bold", 
-                        marginBottom:"10vh", 
-                        paddingLeft:"15%",
+                        marginBottom:"", 
+                        paddingLeft:"5%",
                         width:"40%"
                       }
                     }>
@@ -207,12 +205,14 @@ const OurFocus = () => {
 
                     <Typography variant="body2" 
                         sx={{ 
-                            fontSize:"30px",
+                            fontSize:"1.2vw",
                             fontWeight:"400",
-                            width:"60%", 
-                            marginLeft:isMobile ? "20%" : "30%", 
+                            width:"35%", 
+                            marginLeft:isMobile ? "20%" : "5%", 
                             marginTop:"50px", 
-                            marginBottom:"30px"
+                            marginBottom:"30px",
+                            paddingRight:"1vw",
+                            paddingLeft:""
                         }}
                     >
                     La inteligencia de negocios (BI) combina
@@ -224,7 +224,7 @@ const OurFocus = () => {
                     </Typography>
                     
                     <div style={{padding:"15vw", paddingTop:"0"}}>
-                      <img src={bi} alt="business intelligence" style={{width:"100%", height:"40%"}}/>
+                      <img src={bi} alt="business intelligence" style={{width:"100%", height:"200%"}}/>
                     </div>
                   </Box>
                 </Grid>
@@ -232,15 +232,15 @@ const OurFocus = () => {
                 <Grid item xs={12}>
                     <Box sx={
                     {
-                        marginBottom:"500px"
+                        marginBottom:"20vh"
                     }}>
 
                         <Typography variant="h3" style={
                         {
-                            fontSize:"4vw",
+                            fontSize:"2vw",
                             fontWeight:"bold", 
-                            paddingLeft:"150px", 
-                            marginTop:"50px", 
+                            paddingLeft:"5%", 
+                            marginTop:"", 
                             marginBottom:"20px"
                         }
                         }>
@@ -251,15 +251,33 @@ const OurFocus = () => {
                         {
                             fontSize:"2vw", 
                             fontWeight:"bold", 
-                            marginBottom:"30px", 
+                            marginBottom:"", 
                             paddingLeft:"150px",
                             width:"40%"
                         }
                         }>
                         </Typography>
                     
-                        <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>  
-                        <TextOnImage 
+                        <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>
+                        <Box sx={{display:"flex",width:"100%", paddingLeft:"5%"}}>
+                          <img style={{width:"50%"}} src={latam}/>
+                          <Typography variant="body2" sx={{fontSize:"1.2vw", width:"50%", paddingRight:"10vw"}}>
+                            Los productores en Latam pueden
+                            conseguir
+                            liderar la industria mundial en calidad y
+                            costos por las condiciones favorables
+                            para la
+                            producción, como los bajos costos
+                            laborales,
+                            el clima, y la luminosidad, entre otros
+                            factores propicios. Hay una gran
+                            oportunidad de crear una verdadera y
+                            profunda revolución industria y
+                            económica
+                            en el continente.
+                          </Typography>
+                        </Box>  
+                        {/* <TextOnImage 
                         imagePosition="left"
                         img={latam} 
                         isMobile={isMobile}
@@ -277,7 +295,7 @@ const OurFocus = () => {
                         profunda revolución industria y
                         económica
                         en el continente.`
-                        }/>
+                        }/> */}
 
                     </Box>
                 </Grid>
@@ -285,14 +303,14 @@ const OurFocus = () => {
                 <Grid item xs={12}>
                   <Box sx={
                   {
-                    marginBottom:"500px",
+                    marginBottom:"10vh",
                     width:"100%"
                   }}>
                     <Typography variant="h3" style={
                       {
-                        fontSize:"4vw",
+                        fontSize:"2vw",
                         fontWeight:"bold", 
-                        paddingLeft:"150px", 
+                        paddingLeft:"5%", 
                         marginTop:"50px", 
                         marginBottom:"20px"
                       }
@@ -330,20 +348,14 @@ const OurFocus = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12}>
-                  <Box sx={{ width:"100%"}}>
-                    <Box sx={{display:"flex",paddingLeft:"5%",paddingRight:"5%",justifyContent:"center"}}>
-                      <img src={transDigital} style={{width:"70vw"}} alt="transformación digital"/>
-                    </Box>
-                  </Box>
-                </Grid>
-
-                <Grid item xs={12}>
-                    <Footer isMobile={isMobile}/>
-                </Grid>
-
+                <Box sx={{width:"100%",display:"flex",justifyContent:"center"}}>
+                  <img src={transDigital} style={{width:"50%"}} alt="transformación digital"/>
+                </Box>
             </Grid>
         </Box>
+        <Grid item xs={12}>
+          <Footer isMobile={isMobile}/>
+        </Grid>
     </div>
   );
 }

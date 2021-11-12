@@ -40,14 +40,14 @@ const Team = () => {
                     <NavBar isMobile={isMobile}/>
 
                     <Grid id="letras-intro" item xs={12} sx={{backgroundColor:"black", marginBottom:"10hv", height:"50vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
-                            <Typography sx={{padding:"50px", marginTop:"5vh", color:"white", fontSize:"100px", fontWeight:"bold"}} variant="h1">
+                            <Typography sx={{padding:"50px", marginTop:"5vh", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
                                 Nuestro equipo
                             </Typography>
                     </Grid>
                     
                     <Grid item xs={12} id="intro-texto" sx={{width:"100%", height:"auto"}}>
                         <Box sx={{marginBottom:"50px",marginTop:"100px",paddingLeft:"15vw",paddingRight:"15vw", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                            <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:"30px", color:"black"}}>
+                            <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:"25px", color:"black"}}>
                             Estamos conformados por un equipo de jóvenes profesionales interdisciplinarios con
                             experiencia en proyectos y organizaciones de clase mundial, que cuenta con una amplia red de
                             contactos y que son especialistas en operaciones de cultivo en ambientes controlados,
@@ -61,13 +61,13 @@ const Team = () => {
                                 aria-controls="panel1bh-content"
                                 id="panel1bh-header"
                                 >
-                                    <Typography variant="h3" sx={{display:"flex", justifyContent:"center",fontWeight:"bold",fontSize:"40px",width: '100%', flexShrink: 0 }}>
+                                    <Typography variant="h3" sx={{display:"flex", justifyContent:"center",fontWeight:"bold",fontSize:"30px",width: '100%', flexShrink: 0 }}>
                                         {expanded ? 'Mostrar menos' : 'Mostrar más'}
                                     </Typography>
                                 </AccordionSummary>
 
                                 <AccordionDetails>
-                                    <Typography variant="h6">
+                                    <Typography variant="body2" sx={{fontSize:"25px"}}>
                                     Somos latinoamericanos que han sido formados académica y profesionalmente en los Países
                                     Bajos. Este lugar es un hub de innovación y conocimiento en horticultura, tecnología, negocios
                                     con énfasis en sustentabilidad y pionera en la legalización de cannabis. Nos une el interés
@@ -81,7 +81,7 @@ const Team = () => {
 
                     <Grid id="equipo1" item xs={12}>
                         <Box sx={{marginBottom:"20vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"", marginBottom:"10vh"}}>
+                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"5vh", marginBottom:"10vh"}}>
                                 Managers
                             </Typography>
                             <Grid 
@@ -118,7 +118,7 @@ const Team = () => {
                                                         <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
                                                             Francisco Cambero                              
                                                         </Typography>
-                                                        <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center"}}>
+                                                        <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
                                                             AgTech Futurist & Digital lead                              
                                                         </Typography>
                                                     </CardContent>
@@ -145,7 +145,7 @@ const Team = () => {
                                                     <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
                                                         Eduardo Martínez                              
                                                     </Typography>
-                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center"}}>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
                                                         Strategist & Digital Catalyst                              
                                                     </Typography>
                                                 </CardContent>
@@ -172,7 +172,7 @@ const Team = () => {
                                                     <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
                                                         Oliver Lederman                            
                                                     </Typography>
-                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center"}}>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
                                                         Industry Expert & Project                              
                                                     </Typography>
                                                 </CardContent>
@@ -199,7 +199,7 @@ const Team = () => {
                                                     <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
                                                         Carlos Cambero                              
                                                     </Typography>
-                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center"}}>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
                                                         Plan scientist & Growing Master                              
                                                     </Typography>
                                                 </CardContent>
@@ -214,7 +214,7 @@ const Team = () => {
                     </Grid>
                     <Grid id="equipo2" item xs={12}>
                         <Box sx={{width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:""}}>
+                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"5vh"}}>
                                 Advisory board
                             </Typography>
                             <Grid 
@@ -222,8 +222,9 @@ const Team = () => {
                                 direction="row"
                                 justifyContent="space-evenly"
                                 alignItems="stretch"
+                                sx={{marginTop:"10vh"}}
                             >
-                                <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%", display:"flex", flexWrap:"wrap",justifyContent:"center"}}>
+                                <Box sx={{marginBottom:"10vh",paddingLeft:"15vw", paddingRight:"15vw",width:"100%", display:"flex", flexWrap:"wrap",justifyContent:"center"}}>
                                     <Grid item xs={12}md={4}>
                                         <Box sx={{width:"100%", marginBottom:"10vh"}}>
                                             <Card
@@ -335,11 +336,11 @@ const Team = () => {
                                                     height="200px"
                                                     />
                                                 </div>
-                                            <CardContent>
-                                                <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                    Alonso Peñelas                             
-                                                </Typography>
-                                            </CardContent>
+                                                <CardContent>
+                                                    <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
+                                                        Alonso Peñelas                             
+                                                    </Typography>
+                                                </CardContent>
                                             <CardMedia/>
                                             </Card>
                                         </Box>

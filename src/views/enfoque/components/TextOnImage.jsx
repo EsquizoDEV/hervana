@@ -3,25 +3,24 @@ import {Box, Typography} from '@mui/material'
 
 
 const TextOnImage = (props)=> {
-    console.log(props.text)
     return (
         <Box 
             sx={{
                 display:"flex", 
                 marginTop:"8vh", 
-                paddingLeft:"10vw", 
+                paddingLeft:"5%", 
                 paddingRight:"10vw",
                 overflow:"hidden",
             }}
         >
             {
             props.imagePosition === "left" 
-            ?   <img style={{width: props.isMobile ? "80%" : "60%", height: props.isMobile ? "60%" : "90%", position:"absolute"}} src={props.img} alt="sustentabilidad"/> 
+            ?   <img style={{width: props.isMobile ? "60%" : "53%", height: props.isMobile ? "60%" : "53%", position:"absolute"}} src={props.img} alt="sustentabilidad"/> 
             :   null
             }
             <Box 
                 sx={{
-                    marginTop:"9vh",
+                    marginTop:"2vh",
                     height:`45vh`,
                     display:"flex",
                     alignItems:"center",
@@ -41,8 +40,8 @@ const TextOnImage = (props)=> {
                         backgroundColor:"white",
                         marginRight: props.imagePosition === "right" ? "10vw" : false,
                         marginLeft: props.imagePosition === "right" ? false : "10vw",
-                        paddingLeft:`${props.imagePosition === "right" ? false : props.isMobile ? "4vw" : "4vw"}`,
-                        paddingRight:`${props.imagePosition === "right" ? props.isMobile ? "4vw" :  "4vw" : false}`,
+                        paddingLeft:`${props.imagePosition === "right" ? false : props.isMobile ? "4vw" : "2vw"}`,
+                        paddingRight:`${props.imagePosition === "right" ? props.isMobile ? "4vw" :  "2vw" : false}`,
                         height: "-webkit-fill-available",
                         display:"flex",
                         flexDirection:"column",
@@ -54,13 +53,13 @@ const TextOnImage = (props)=> {
             </Box>
             {
             props.imagePosition === "right" 
-            ?   <div style={{width:"100vw", height:"100%",display:"flex", justifyContent:"flex-end", position:"absolute"}}>
+            ?   <div style={{width:"100%", height:"100%",display:"flex", justifyContent:"flex-end", position:"absolute"}}>
                     <img 
                         style={{
-                            width: props.isMobile ? "80%" : "60%", 
-                            height: props.isMobile ? "60%" : "90%", 
+                            width: props.isMobile ? "60%" : "53%", 
+                            height: props.isMobile ? "60%" : "53%", 
                             position:"relative" ,
-                            right:"15vw"
+                            right:"20vw"
                         }} 
                         src={props.img} 
                         alt="sustentabilidad"

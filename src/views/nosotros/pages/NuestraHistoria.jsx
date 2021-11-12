@@ -29,14 +29,14 @@ const NuestraHistoria = () => {
 
                     <Grid container sx={{backgroundColor:"black", height:"40vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
                         <Grid item sx={{marginTop:"40px"}}>
-                            <Typography sx={{padding:"50px", color:"white", fontSize:"100px", fontWeight:"bold"}} variant="h1">
+                            <Typography sx={{padding:"50px", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
                                 Nuestra historia
                             </Typography>
                         </Grid>
                     </Grid>
                     
                     <Box sx={{marginBottom:"50px",marginTop:"50px",paddingLeft:"25vw",paddingRight:"25vw",width:"100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"30px", color:"black"}}>
+                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"25px", color:"black"}}>
                             Hervana Group fue fundada para ayudar a empresarios de la industria de
                             horticultura y de cannabis a crecer su negocio, ayudándoles a navegar e
                             implementar el uso de tecnologías de vanguardia, adoptando innovaciones
@@ -52,13 +52,13 @@ const NuestraHistoria = () => {
                             aria-controls="panel1bh-content"
                             id="panel1bh-header"
                             >
-                                <Typography variant="h3" sx={{display:"flex", justifyContent:"center",fontWeight:"bold",fontSize:"40px",width: '100%', flexShrink: 0 }}>
+                                <Typography variant="h3" sx={{display:"flex", justifyContent:"center",fontWeight:"bold",fontSize:"30px",width: '100%', flexShrink: 0 }}>
                                     {expanded ? 'Mostrar menos' : 'Mostrar más'}
                                 </Typography>
                             </AccordionSummary>
 
                             <AccordionDetails>
-                                <Typography>
+                                <Typography variant="body2" sx={{fontSize:"25px"}}>
                                 Hablamos el lenguaje de la planta, el cultivador y el empresario, derribando
                                 barreras operativas y creando una cultura de innovación e integración de
                                 negocios en la era digital.

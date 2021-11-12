@@ -26,7 +26,7 @@ export const ImgCardComponent = (props) => {
          <Grid container spacing={1}>
             <Grid item md={12}>
                 <CardContent sx={{width:"600px"}}>
-                    <Typography style={{fontSize:"70px",fontWeight:'bold', color:"black"}} gutterBottom variant="h4" component="div">
+                    <Typography style={{fontSize:"35px",fontWeight:'bold', color:"black"}} gutterBottom variant="h4" component="div">
                     <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>{props.props.title}.</div>
                     </Typography>
                     <Typography style={{fontWeight:900, color:'black'}} gutterBottom variant="h5" component="div">

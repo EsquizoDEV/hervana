@@ -98,7 +98,7 @@ const NuestraHistoria = () => {
                     </Box>
                     {/*             La foto no corresponde. No está en los archivos            */}
                     <Box sx={{width:"100%", height:"60vh"}}>
-                        <img src={Amsterdam} style={{width:"100%", height:"100%"}}/>
+                        <img src={Amsterdam} style={{width:"100%", height:"100%"}} alt="amsterdam"/>
                     </Box>
                     <Grid item xs={12} md={12} lg={12} xl={12}>
                         <Footer isMobile={isMobile}/>

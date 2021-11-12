@@ -11,20 +11,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from '../../../components/core/Footer';
-import CannabisLatam from '../../../assets/images/Enfoque a la digitalización.png';
 import user from '../../../assets/images/14.jpg'
-import getData from './getData';
-
-const users = async () => {
-    let images;
-    images = await getData()
-    return images
-}
 
 const Team = () => {
     const [expanded, setExpanded] = React.useState(false);
-    const [imgUser, setImgUser] = React.useState('')
-
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);

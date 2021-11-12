@@ -260,7 +260,7 @@ const OurFocus = () => {
                     
                         <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>
                         <Box sx={{display:"flex",width:"100%", paddingLeft:"5%"}}>
-                          <img style={{width:"50%"}} src={latam}/>
+                          <img style={{width:"50%"}} src={latam} alt="cannabis_latam"/>
                           <Typography variant="body2" sx={{fontSize:"1.2vw", width:"50%", paddingRight:"10vw"}}>
                             Los productores en Latam pueden
                             conseguir

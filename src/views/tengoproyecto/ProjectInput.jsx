@@ -177,28 +177,34 @@ const ProjectInput = () => {
     
       <Grid sx={{marginTop:"50px",display:'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}} 
         container
-        direction="column"
-        justifyContent="center"
-        alignItems="stretch"
         >
           <Grid item xs={12} sx={
             {
+              display: "flex",
+              flexDirection:"column", 
+              alignItems:"center",
+              justifyContent:"center",
               backgroundColor:"#2D302E",
-              width: isMobile ? "100%" : "750px",
+              width: isMobile ? "100%" : "50vw",
               padding:"30px",
             }
           }>
-            <Typography 
-            gutterBottom 
-            component="div" 
-            variant="h3" 
-            style={
-              {
-                fontWeight:"bold", 
-                color:"white",
-                fontSize:"40px"
-              }
-            }>Comunicate con nosotros para asesorarte con la información que necesitas</Typography>
+            <Box sx={{width:"80%", display:"flex", justifyContent:"center"}}>
+
+              <Typography 
+              gutterBottom 
+              component="div" 
+              variant="h3" 
+              style={
+                {
+                  width:"100%",
+                  fontWeight:"bold", 
+                  color:"white",
+                  fontSize:"30px"
+                }
+              }>Comunicate con nosotros para asesorarte con la información que necesitas</Typography>
+
+            </Box>
             <Box component="form"
                 onSubmit={handleSend}
                 sx={

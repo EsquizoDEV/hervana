@@ -90,8 +90,8 @@ export const ListButton = (props) => {
                              id="menu-list"
                              onKeyDown={handleListKeyDown}
                              >
-                                 <MenuItem onClick={handleClose,()=>{history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
-                                 <MenuItem onClick={handleClose, ()=>{history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
+                                 <MenuItem onClick={()=>{handleClose(); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
+                                 <MenuItem onClick={()=>{handleClose(); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
                              </MenuList>
                          </ClickAwayListener>
                      </Paper>

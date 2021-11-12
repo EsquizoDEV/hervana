@@ -180,7 +180,7 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid>
-                                        <Grid item xs={12} md={12} md={6}>
+                                        <Grid item xs={12} md={12}>
                                             <Box sx={{width:"100%", marginBottom:"10vh"}}>
                                                 <Card
                                                     elevation={0}

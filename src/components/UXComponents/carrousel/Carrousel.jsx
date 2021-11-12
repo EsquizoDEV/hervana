@@ -51,9 +51,9 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ display:'flex',maxWidth: "90vw", height:"500px",flexGrow: 1, border:"solid 2px black" }}>
+    <Box sx={{ display:'flex',maxWidth: "90vw", height:"50vh",flexGrow: 1, border:"solid 2px black" }}>
       <AutoPlaySwipeableViews
-        style={{width:800, backgroundColor:"black"}}
+        style={{width:"85vw", backgroundColor:"black"}}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -65,10 +65,10 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 500,
+                  height: "50vh",
                   display: 'block',
                   overflow: 'hidden',
-                  width: 500,
+                  width: "43vw",
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -82,7 +82,7 @@ function SwipeableTextMobileStepper() {
               square
               elevation={0}
               sx={{
-              height: "400px",
+              height: "37vh",
               width:"100%",
               display:"flex",
               flexDirection:"column"
@@ -90,11 +90,11 @@ function SwipeableTextMobileStepper() {
               }}
           >
             <Box sx={{paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
-              <Typography variant="h2" style={{fontSize:"2vw",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
+              <Typography variant="h2" style={{fontSize:"4vh",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
               <div>
                 <ul>
                   {images[activeStep].label.map((bullet, key)=> (
-                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontSize:"20px",fontWeight:"bold"}}>{bullet}</Typography></li>
+                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography></li>
                   ))}
                 </ul>
               </div>
@@ -107,7 +107,7 @@ function SwipeableTextMobileStepper() {
               activeStep={activeStep}
               nextButton={
               <Button
-              sx={{position:"relative", bottom:"200px"}}
+              sx={{position:"relative", bottom:"17vh"}}
                   size="small"
                   onClick={handleNext}
                   disabled={activeStep === maxSteps - 1}
@@ -120,7 +120,7 @@ function SwipeableTextMobileStepper() {
               </Button>
               }
               backButton={
-              <Button  sx={{position:"relative", bottom:"200px"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
+              <Button  sx={{position:"relative", bottom:"17vh"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
                   {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                   ) : (

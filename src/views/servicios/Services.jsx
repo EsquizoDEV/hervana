@@ -15,7 +15,6 @@ const Services = () => {
   return (
       
     <div className="App">
-            <NavBar isMobile={isMobile} />
             <Grid id="main-container-services" container spacing={2}>
                 <Grid sx={{marginTop:"50px"}} item xs={12}>
                     <AtomHero isMobile={isMobile} id="hero-atom" />
@@ -26,9 +25,6 @@ const Services = () => {
                     <SwipeableTextMobileStepper isMobile={isMobile} />
                 </Grid>
                 }
-                <Grid item xs={12}>
-                    <Footer isMobile={isMobile} />
-                </Grid>
             </Grid>
     </div>
   );

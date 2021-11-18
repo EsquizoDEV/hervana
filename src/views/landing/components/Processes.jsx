@@ -42,7 +42,7 @@ const Processes = ({ isMobile }) => {
                 left={true} 
                 title={"Paso 2"} 
                 subtitle={"Trabajamos en una propuesta enfocada a resolver tus problemáticas"} 
-                content={<div>Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento.</div>} 
+                content={"Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento."} 
                 img={ImgSt2}/>
             </Grid>
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>

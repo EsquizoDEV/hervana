@@ -30,38 +30,38 @@ export const ImgInfoCard = (props) => {
       <Card 
       sx={props.side === "right" ? 
       {
-        display:'flex', 
-        maxWidth: 730,
-        marginBottom: '10px',
+        display:'flex',
+        justifyContent:"center",
       } 
       : 
-      {display:'flex'}} elevation={0}>
+      {display:'flex', justifyContent:"center",
+      }} elevation={0}>
       {props.side === "left" ? 
         <CardMedia
         sx={{
-          border:"solid 1px", 
           borderColor:"white", 
           backgroundColor:'#2D302E',
-          borderRadius:"50%", 
+          borderRadius:"100%", 
           
         }}
           component="img"
           alt="green iguana"
-          width="480"
-          height="280"
+          width="360"
+          height="360"
           image={props.media}
         />
       : null
       }
       <Box sx={{
         display:'flex', 
-        flexDirection:'column', 
+        flexDirection:'column',
+        alignItems:"flex-end" 
       }}>
-          <CardContent sx={{opacity:"1", position:"relative",width:"700px"}}>
-              <Typography style={{color:"black"}} variant="body2" color="text.secondary">
+          <CardContent sx={{opacity:"1",width:"85%"}}>
+              <Typography style={{color:"black", fontSize:"1.2vw", fontWeight:"bold"}} variant="body1" color="text.secondary">
                 {props.content}
               </Typography>
-              <CardActions sx={{justifyContent: 'flex-end'}}>
+              <CardActions sx={props.side === "right" ? {justifyContent: 'flex-end'} : {justifyContent: 'flex-end', marginRight:"4vw"}}>
                   <Button onClick={()=> {
                     history.push("ourfocus");
                     window.location.reload();
@@ -76,14 +76,14 @@ export const ImgInfoCard = (props) => {
           border:"solid 1px", 
           borderColor:"white", 
           backgroundColor:'#2D302E',
-          borderRadius:"50%",
+          borderRadius:"100%",
 
           
         }}
         component="img"
         alt=""
-        width="480"
-        height="280"
+        width="360"
+        height="360"
         image={props.media}
       />
       : null

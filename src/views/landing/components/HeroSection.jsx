@@ -9,22 +9,23 @@ const HeroSection = ({ isMobile, theme }) => {
     return (
     <Box sx={
         {
-            position:"relative",
+            position:"",
             zIndex:998,
-            bottom: isMobile ? -100 : -150
+            bottom: isMobile ? -100 : -100
         }
     } id="box-header-container">
-        <Box sx={{display:'flex', justifyContent:"center", zIndex:996}}>
+        <Box sx={{display:'flex', zIndex:996}}>
             <Grid 
                 container
                 direction="row"
-                justifyContent="center"
-                alignItems={isMobile ? 'stretch' : "center"}
-                sx={{marginBottom: 25}}
+                alignItems={isMobile ? 'stretch' : "end"}
+                sx={{marginTop:"-10vh"}}
             > 
-                <Grid item sm={12} md={6} xs={{
+                <Grid item sm={12} md={6} sx={{
                     display:'flex',
-                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position:"relative",
+                    top:"25vh",
                 }}> 
                 {
                 // * Imagen Greenhouse
@@ -32,9 +33,9 @@ const HeroSection = ({ isMobile, theme }) => {
                     <img 
                         style={{
                             alignSelf: 'center',
-                            maxWidth: isMobile ? "90%" : "80%",
-                            width: isMobile ? 'auto' : '100%',
-                            marginLeft: isMobile ? "10px" : "10%"
+                            maxWidth: isMobile ? "90%" : "40vw",
+                            width: isMobile ? 'auto' : '35vw',
+                            marginLeft: isMobile ? "10px" : ""
                         }} 
                         src={agTech} 
                         alt="Greenhouse"/>
@@ -45,13 +46,24 @@ const HeroSection = ({ isMobile, theme }) => {
                 <Grid item sm={12} md={6}> 
                     <Box component="span" sx={{ 
                         display:'block',
-                        width: isMobile ? 'auto' : 'auto',
+                        width: isMobile ? 'auto' : '40vw',
                         marginBottom: isMobile ? '100px' : '0px'
                     }}>
 
-                        <Typography paragraph sx={{ marginTop:"100px", marginX:"3%"}} style={{color:"#101111", fontWeight:"bold"}} variant="h3" theme={theme}>Naturaleza y tecnología por un mundo mejor</Typography>
-                        <Typography variant="h6" sx={{ marginBottom:"50vh", marginX:"3%" }}
-                        style={{color: "#101111",fontWeight:"bold"}}>Un enfoque estratégico a la agricultura a través de innovación y digitalización</Typography>
+                        <Typography 
+                        sx={{ marginBottom:"5vh"}} 
+                        style={{color:"#101111", fontWeight:"bold", fontSize:"6vh"}} 
+                        variant="h2" 
+                        theme={theme}>
+                            Naturaleza y tecnología por un mundo mejor
+                        </Typography>
+
+                        <Typography 
+                        variant="body1" 
+                        sx={{ marginBottom:"5vh"}}
+                        style={{color: "#101111",fontWeight:"bold", fontSize:"1.2vw"}}>
+                            Entendemos la industria de horticultura desde una perspectiva holística e innovadora. 
+                        </Typography>
                         
                     </Box> 
                 </Grid>

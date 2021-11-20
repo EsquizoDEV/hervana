@@ -42,11 +42,14 @@ const Pillars = ({ isMobile }) => {
                     </Typography>
                     
                     <ImgInfoCard 
-                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    content={`  La agricultura en ambientes controlados es
+                    por mucho la manera más eficiente y
+                    sustentable de producción en la actualidad.
+                    Utilizando 90% menos agua y produciendo
+                    hasta 30 veces mas a comparación de la
+                    agricultura tradicional, sin mencionar que
+                    esta está a merced de los cada vez más
+                    desafiantes condiciones climáticas.`}
                     
                     media={Img1}
 
@@ -81,11 +84,13 @@ const Pillars = ({ isMobile }) => {
                         <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Sustentabilidad</div>
                     </Typography>
                     <ImgInfoCard
-                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    content={` Combinar el conocimiento profundo de las
+                    recetas de cultivo, principios de plant
+                    empowerment y analitica tecnica en la
+                    "mente" de nuestros horticultores con las
+                    posibilidades de datos, robótica e IA ofrece la
+                    oportunidad de incrementar sustancialmente
+                    la eficiencia y calidad de la producción.`}
                     
                     media={Img2}
 
@@ -113,11 +118,19 @@ const Pillars = ({ isMobile }) => {
                         <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Cannabis Latam</div>
                     </Typography>
                     <ImgInfoCard
-                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    content={`Los productores en Latam pueden
+                    conseguir
+                    liderar la industria mundial en calidad y
+                    costos por las condiciones favorables
+                    para la
+                    producción, como los bajos costos
+                    laborales,
+                    el clima, y la luminosidad, entre otros
+                    factores propicios. Hay una gran
+                    oportunidad de crear una verdadera y
+                    profunda revolución industria y
+                    económica
+                    en el continente.`}
                     
                     media={Img3}
     
@@ -151,11 +164,14 @@ const Pillars = ({ isMobile }) => {
                         <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
                     </Typography>
                     <ImgInfoCard
-                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    content={` Definimos la estrategia de transformación
+                    digital como una estrategia que coordina
+                    el uso de tecnologías emergentes para
+                    desbloquear nuevas fuentes de valor para
+                    clientes y empleados, impulsar el
+                    crecimiento de los ingresos y crear
+                    agilidad / eficiencia operativa al servicio
+                    de los resultados comerciales.`}
                     
                     media={Img4}
     

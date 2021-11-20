@@ -4,6 +4,8 @@ import { useTheme } from '@material-ui/core/styles';
 import { Grid, Box, Typography} from '@mui/material';
 import { NavBar } from '../../components/navigation/NavBar';
 import {FocusHeader} from './components/FocusHeader';
+import Pillars from '../../views/landing/components/Pillars'
+import PillarsM from '../../views/landing/components/PillarsM'
 import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
 import paneles from '../../assets/Artboard 63.png'
@@ -35,11 +37,11 @@ const OurFocus = () => {
                 justifyContent="space-evenly"
                 alignItems="stretch"
             >
-                <Grid item xs={12} sx={{backgroundColor:"#101111", height:"100%"}} container>
+                <Grid item xs={12} sx={{backgroundColor:"#101111", height:"100vh"}} container>
                   <FocusHeader isMobile={isMobile}/>
                 </Grid>
 
-                <Grid item xs={12} sx={{maxWidth: "100%"}}>
+                {/* <Grid item xs={12} sx={{maxWidth: "100%"}}>
                     <Box sx={{width:"100%", marginBottom:isMobile ? "10vh" : "40vh"}}>
                         <Typography 
                             variant="h3" 
@@ -80,9 +82,16 @@ const OurFocus = () => {
                             desafiantes condiciones climáticas.`
                         }/>
                     </Box>
+                </Grid> */}
+
+                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
+                    {isMobile 
+                        ?   <PillarsM id="pillars-component" />
+                        :   <Pillars isMobile={isMobile} id="pillars-component" />
+                    }
                 </Grid>
                 
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                     <Box 
                         sx={{
                         marginBottom:"30vh",
@@ -126,7 +135,7 @@ const OurFocus = () => {
                         la eficiencia y calidad de la producción.`
                         }/>
                     </Box>
-                </Grid>
+                </Grid> */}
                 
                   <Box sx={{marginBottom:"10vh"}}>
                     <Grid 
@@ -143,7 +152,7 @@ const OurFocus = () => {
                                 marginLeft:"5vw"
                                 }}>
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
-                                    Creación de paneles de control en la nube
+                                    Creación de dashboards en la nube
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
                             </Box>
@@ -229,7 +238,7 @@ const OurFocus = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                     <Box sx={
                     {
                         marginBottom:"20vh"
@@ -277,30 +286,10 @@ const OurFocus = () => {
                             en el continente.
                           </Typography>
                         </Box>  
-                        {/* <TextOnImage 
-                        imagePosition="left"
-                        img={latam} 
-                        isMobile={isMobile}
-                        text={
-                        ` Los productores en Latam pueden
-                        conseguir
-                        liderar la industria mundial en calidad y
-                        costos por las condiciones favorables
-                        para la
-                        producción, como los bajos costos
-                        laborales,
-                        el clima, y la luminosidad, entre otros
-                        factores propicios. Hay una gran
-                        oportunidad de crear una verdadera y
-                        profunda revolución industria y
-                        económica
-                        en el continente.`
-                        }/> */}
-
                     </Box>
-                </Grid>
+                </Grid> */}
                 
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                   <Box sx={
                   {
                     marginBottom:"10vh",
@@ -346,11 +335,11 @@ const OurFocus = () => {
                         `}
                       />
                   </Box>
-                </Grid>
+                </Grid> */}
 
-                <Box sx={{width:"100%",display:"flex",justifyContent:"center"}}>
+                {/* <Box sx={{width:"100%",display:"flex",justifyContent:"center"}}>
                   <img src={transDigital} style={{width:"50%"}} alt="transformación digital"/>
-                </Box>
+                </Box> */}
             </Grid>
         </Box>
         <Grid item xs={12}>

@@ -34,9 +34,9 @@ export const Footer = ({ isMobile }) => {
                             <Typography sx={{color: colors.white, marginTop: 5}}>Contáctanos a través de</Typography>
                             <SocialMenu />
                         </div>
-                        <Typography sx={{color: colors.white}}>Servicios</Typography>
-                        <Typography sx={{color: colors.white}}>Privacidad</Typography>
-                        <Typography sx={{color: colors.white}}>Términos y condiciones</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Servicios</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Privacidad</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Términos y condiciones</Typography>
                             
                     </Stack>
                     <Stack
@@ -55,8 +55,6 @@ export const Footer = ({ isMobile }) => {
                         >
                             <img alt="hervana-logo" id="logo" src={Logo} />                
                         </Box>
-                        {/* <Typography variant="h4" sx={{color: colors.white}}>hervana</Typography> */}
-                        <Typography variant="h4" sx={{color: colors.limeGreen}}>2021</Typography>
                     </Stack>
                 </Stack>
             </Box>

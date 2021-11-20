@@ -37,15 +37,14 @@ const NuestraHistoria = () => {
                     
                     <Box sx={{marginBottom:"50px",marginTop:"50px",paddingLeft:"25vw",paddingRight:"25vw",width:"100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
                         <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"25px", color:"black"}}>
-                            Hervana Group fue fundada para ayudar a empresarios de la industria de
-                            horticultura y de cannabis a crecer su negocio, ayudándoles a navegar e
-                            implementar el uso de tecnologías de vanguardia, adoptando innovaciones
-                            como digitalización de operaciones y manejo de datos, en forma de
-                            verdaderas soluciones a la medida de las necesidades específicas y
+                        Hervana Group fue fundado con el propósito de convertirse en el socio estratégico 
+                        de empresarios en la industria de horticultura y de la naciente industria legal 
+                        de cannabis, ayudándoles a mejorar sus modelos de negocio, a navegar e implementar 
+                        el uso de tecnologías de vanguardia, y a operar con los estándares más altos de calidad, 
+                        siempre ofreciendo soluciones a la medida de las necesidades reales de nuestros clientes.
 
-                            dependiendo la fase en la que se encuentre su negocio.
                         </Typography>
-                        <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                             <AccordionSummary
                             sx={{flexDirection:"column"}}
                             expandIcon={<ExpandMoreIcon />}
@@ -64,35 +63,26 @@ const NuestraHistoria = () => {
                                 negocios en la era digital.
                                 </Typography>
                             </AccordionDetails>
-                        </Accordion>
+                        </Accordion> */}
                     </Box>
 
                     <Box sx={{display:"flex", flexDirection:isMobile ? "column" : "row", width:"100%"}}>
                         <Box sx={{borderRight:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
-                            <Typography variant="h3" sx={{color:"white"}}>Misión</Typography>
-                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white"}}>
-                            Aplicar innovación y conocimiento
-                            que ayude a construir el presente y el
-                            futuro de la agricultura en
-                            Latinoamérica, combinando la
-                            naturaleza con tecnología que
-                            respalde el desarrollo y el bienestar de
-                            la sociedad, en un mundo
-                            sustentable.
+                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>Misión</Typography>
+                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
+                            Revolucionar el presente de la horticultura mundial por medio de 
+                            innovación y tecnología aplicada que facilite la transformación 
+                            digital de nuestros clientes. 
+
                             </Typography>
                         </Box>
                         {isMobile ? <div><br /></div> : null}
                         <Box sx={{borderLeft:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
-                            <Typography variant="h3" sx={{color:"white"}}>Visión</Typography>
-                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white"}}>
-                            Que Latinoamérica sea pionera en
-                            aplicación de la tecnología y
-                            utilización de data para la
-                            transformación a negocios
-                            inteligentes que ayuden al bienestar
-                            humano y ambiental, que venga a
-                            mejorar nuestra relación con la
-                            naturaleza y las personas.
+                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>Visión</Typography>
+                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
+                            Que Latinoamérica se convierta en un hub de horticultura digitalizada, 
+                            generando armonía en la relación entre el humano y la naturaleza, 
+                            liderando la transformación hacia un un mundo sustentable, descentralizado y transparente.
                             </Typography>
                         </Box>
                     </Box>

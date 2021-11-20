@@ -78,12 +78,8 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
+                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"20vh"}}  id="pillars-item" item container>
                     <Services/>
-                    {isMobile 
-                        ?   <PillarsM id="pillars-component" />
-                        :   <Pillars isMobile={isMobile} id="pillars-component" />
-                    }
                 </Grid>
 
                 <Grid item id="process-item" sx={{

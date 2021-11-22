@@ -4,12 +4,18 @@ import {ListButton} from '../../core/ListButton'
 import {SimpleButton} from '../../core/SimpleButton'
 import history from '../../../history'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
-import { Icon} from '@mui/material'
+import { Icon } from '@mui/material'
 import { Box } from '@mui/system'
 import Logo from '../../../assets/images/HERVANA LOGO.png'
 
 
 const MainMenu = ({ isMobile }) => {
+
+
+    const changeLanguage = (e) => {
+        console.log(e);
+    }
+
     return (
         <>
             { isMobile

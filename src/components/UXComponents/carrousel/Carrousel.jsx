@@ -33,7 +33,7 @@ const MobileStepperStyled = styled(MobileStepper)`
 
 `
 
-function SwipeableTextMobileStepper() {
+function SwipeableTextMobileStepper({ isMobile }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -93,7 +93,7 @@ function SwipeableTextMobileStepper() {
               <Typography variant="h2" style={{fontSize:"4vh",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
               <div>
                   {images[activeStep].label.map((bullet, key)=> (
-                    <Typography variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
+                    <Typography key={key} variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
                   ))}
               </div>
             </Box>

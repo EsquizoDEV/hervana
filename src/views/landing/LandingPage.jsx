@@ -3,22 +3,23 @@ import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box, Typography, Button, Stack } from '@mui/material';
 import HeroSection from './components/HeroSection';
-import Pillars from './components/Pillars';
-import PillarsM from './components/PillarsM';
+// import Pillars from './components/Pillars';
+// import PillarsM from './components/PillarsM';
 import Processes from './components/Processes';
 import './index.css'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import history from '../../history';
 import Services from '../servicios/Services'
+import useLanguage from '../../hooks/useLanguage';
 
 const  LandingPage = () => {
     
     let theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    
+    let { getText } = useLanguage();
+
     return (
-      
         <div id="body">
             <Grid id="main-container" container>
             <NavBar sx={{zIndex: 999}} id="nav" theme={theme} isMobile={isMobile} />
@@ -27,23 +28,29 @@ const  LandingPage = () => {
                         <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
                     </Grid>
                     <div className="py-5"></div>
-                    <Grid item sm={12} md={12} sx={{backgroundColor:"black", display:"flex", justifyContent:"flex-end"}}>
+                    <Grid item xs={12} 
+                        sx={{
+                            backgroundColor:"black", 
+                            display:"flex", 
+                            justifyContent:"flex-end"
+                        }}
+                    >
                         <Box component='div' sx={{
                             
                             display: 'flex',
                             paddingTop:"3vh",
                             height:"38.5vh",
-                            width:'50%',
+                            marginLeft: isMobile ? "8%" : "",
+                            marginRight: isMobile ? "8%" : "",
+                            width: isMobile ? "100%" : '50%',
                             zindex:10
                             
                         }}>
                             <Stack
-                                sx={{width: "40vw"}}
+                                sx={{width: isMobile ? "100%" : "40vw"}}
                             >
-                                <Typography  sx={{width: isMobile ? "80%" : "40vw" }} style={{fontWeight: 'bold', color:"white", fontSize:"1.2vw"}} variant="body1">
-                                    Hablamos el lenguaje de la planta, el cultivador y el empresario, 
-                                    derribando barreras operativas y desarrollando una cultura necesaria para 
-                                    negocios exitosos en la <a style={{color:"white"}} href="https://www.forbes.com/sites/bernardmarr/2018/08/13/the-4th-industrial-revolution-is-here-are-you-ready/?sh=29efe235628b">4ª Revolución Industrial</a> 
+                                <Typography  sx={{width: isMobile ? "90%" : "40vw" }} style={{fontWeight: 'bold', color:"white", fontSize: isMobile ? "2.5vh" : "1.2vw"}} variant="body1">
+                                    {getText('landing', 'hero-section', 'text')}<a style={{color:"white"}} href="https://www.forbes.com/sites/bernardmarr/2018/08/13/the-4th-industrial-revolution-is-here-are-you-ready/?sh=29efe235628b">{getText('landing', 'hero-section', 'text_rev')}</a> 
                                 </Typography>
 
                                 <Box sx={{  
@@ -58,16 +65,15 @@ const  LandingPage = () => {
                                         history.push('/proyecto'); 
                                         window.location.reload();
                                     }}
-                                    style={
-                                        {
-                                            marginTop: '2vh',
-                                            backgroundColor:"white",
-                                            color:"black",
-                                            fontWeight:"bold",
-                                            borderRadius:"30px",
-                                            width:200,
-                                            maxHeight:"60px",
-                                        }}
+                                    style={{
+                                        marginTop: '2vh',
+                                        backgroundColor:"white",
+                                        color:"black",
+                                        fontWeight:"bold",
+                                        borderRadius:"30px",
+                                        width:200,
+                                        maxHeight:"60px",
+                                    }}
                                     >
                                             Tengo un proyecto
 

@@ -2,10 +2,13 @@ import * as React from 'react';
 import {Box, Grid} from '@mui/material';
 import agTech from '../../../assets/Naturaleza y tecnología.png';
 import Typography from '@mui/material/Typography';
-
+import useLanguage from '../../../hooks/useLanguage';
 
 
 const HeroSection = ({ isMobile, theme }) => {
+    
+    let { getText } = useLanguage();
+
     return (
     <Box sx={
         {
@@ -19,7 +22,9 @@ const HeroSection = ({ isMobile, theme }) => {
                 container
                 direction="row"
                 alignItems={isMobile ? 'stretch' : "end"}
-                sx={{marginTop:"-10vh"}}
+                sx={{
+                    marginTop: isMobile ? '-12vh' :"-10vh"
+                }}
             > 
                 <Grid item sm={12} md={6} sx={{
                     display:'flex',
@@ -34,15 +39,14 @@ const HeroSection = ({ isMobile, theme }) => {
                         style={{
                             alignSelf: 'center',
                             maxWidth: isMobile ? "90%" : "40vw",
-                            width: isMobile ? 'auto' : '35vw',
-                            marginLeft: isMobile ? "10px" : ""
+                            width: isMobile ? '90%' : '35vw',
                         }} 
                         src={agTech} 
                         alt="Greenhouse"/>
+                </Grid>
                 {
                 // * Textos
                 }  
-                </Grid>
                 <Grid item sm={12} md={6}> 
                     <Box component="span" sx={{ 
                         display:'block',
@@ -51,18 +55,29 @@ const HeroSection = ({ isMobile, theme }) => {
                     }}>
 
                         <Typography 
-                        sx={{ marginBottom:"5vh"}} 
-                        style={{color:"#101111", fontWeight:"bold", fontSize:"6vh"}} 
-                        variant="h2" 
-                        theme={theme}>
-                            Naturaleza y tecnología por un mundo mejor
+                            sx={{ 
+                                marginBottom:isMobile ? '2vh' :"5vh",
+                                marginTop: isMobile ? '25vh' : '',
+                                paddingX: isMobile ? '5vw' : '',
+                            }} 
+                            style={{color:"#101111", fontWeight:"bold", fontSize:"6vh"}} 
+                            variant="h2" 
+                            theme={theme}
+                        >
+                            {getText('landing', 'hero-section', 'title')}
                         </Typography>
 
                         <Typography 
                         variant="body1" 
                         sx={{ marginBottom:"5vh"}}
-                        style={{color: "#101111",fontWeight:"bold", fontSize:"1.2vw"}}>
-                            Entendemos la industria de horticultura desde una perspectiva holística e innovadora. 
+                        style={{
+                            color: "#101111",
+                            fontWeight:"bold", 
+                            fontSize:isMobile ? "4vw" : "1.2vw",
+                            marginInline: isMobile ? '5vw' : ''
+                        }}
+                        >
+                            {getText('landing', 'hero-section', 'subtitle')} 
                         </Typography>
                         
                     </Box> 

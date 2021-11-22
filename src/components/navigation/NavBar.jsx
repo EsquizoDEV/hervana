@@ -46,13 +46,12 @@ export const NavBar = ({ isMobile, theme }) => {
                     }
                     sx={{backgroundColor:"#101111"}}
                     >
-                        <img alt="hervana-logo" id="logo" src={Logo}/>                
+                    {   isMobile 
+                    ?   null
+                    :   <img alt="hervana-logo" id="logo" src={Logo}/>
+                    }                
                     </Box>
                     <MainMenu isMobile={isMobile} />
-                    { isMobile
-                    ? undefined 
-                    : undefined
-                    }
 
                 </Stack>
             </Router>

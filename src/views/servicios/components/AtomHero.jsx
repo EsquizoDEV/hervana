@@ -22,9 +22,9 @@ const Item = styled(Paper)(({ theme }) => ({
     const { getText } = useLanguage();
     
     return (
-        <Box sx={{flexGrow: 0, display:"flex", justifyContent: 'center'}}>
+        <Box sx={{marginTop:"10vh",flexGrow: 0, display:"flex", justifyContent: 'center'}}>
            <Grid sx={{display:"flex",justifyContent:"center"}} container spacing={1}>
-                <Grid sx={{position:"relative",left: isMobile ? "20px" : "190px",marginTop:"50px"}} item xs={12} md={6}>
+                <Grid sx={{position:"relative",display:"flex", justifyContent:"center",flexDirection:"column",alignItems:"center", left:"10vw"}} item xs={12} md={6}>
                     {
                     // * Textos
                     }  
@@ -50,7 +50,7 @@ const Item = styled(Paper)(({ theme }) => ({
                     {
                     // * Imagen Greenhouse
                     }
-                        <img src={Atom} style={{height:"auto", width:"70%", marginLeft:"15%"}} alt="Atom"/>
+                        <img src={Atom} style={{height:"auto", width:"50%", marginLeft:"15%"}} alt="Atom"/>
                 </Grid>
             </Grid>
         </Box>

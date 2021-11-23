@@ -8,7 +8,7 @@ import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import './index.css'
 
-const Services = () => {
+const Services = (props) => {
 
     let theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -26,9 +26,11 @@ const Services = () => {
                         <SwipeableTextMobileStepper isMobile={isMobile} />
                     </Grid>
                 }
+                {props.footerDisabled ? undefined :  
                 <Grid item xs={12}>
                     <Footer isMobile={isMobile} />
                 </Grid>
+                }
             </Grid>
     </div>
   );

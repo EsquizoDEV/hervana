@@ -4,9 +4,13 @@ import colors from '../../utils/colorimetría';
 import SocialMenu from '../navigation/components/SocialMenu'
 import Logo from '../../assets/images/HERVANA LOGO.png'
 import history from '../../history';
+import useLanguage from '../../hooks/useLanguage';
 
 
 export const Footer = ({ isMobile }) => {
+
+    let { getText } = useLanguage();
+
     return (
         <div>
             <Box 
@@ -31,12 +35,12 @@ export const Footer = ({ isMobile }) => {
                         //className={classes.container}
                         >
                         <div sx={{marginLeft:3}}>
-                            <Typography sx={{color: colors.white, marginTop: 5}}>Contáctanos a través de</Typography>
+                            <Typography sx={{color: colors.white, marginTop: 5}}>{getText('general', 'footer', 'contact_us')}</Typography>
                             <SocialMenu />
                         </div>
-                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Servicios</Typography>
-                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Privacidad</Typography>
-                        <Typography variant="body1" sx={{color: colors.white, fontSize:"1.2vw"}}>Términos y condiciones</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'serv')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'priv')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'tyc')}</Typography>
                             
                     </Stack>
                     <Stack

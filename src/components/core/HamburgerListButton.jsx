@@ -162,7 +162,7 @@ export const HamburgerListButton = (props) => {
                                             sx={{color: colors.white}}
                                             control={
                                                 <Switch 
-                                                    color="warning"
+                                                    color="success"
                                                     onChange={lang.changeLanguage}
                                                     size="large"
                                                     defaultChecked

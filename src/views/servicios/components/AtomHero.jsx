@@ -3,6 +3,7 @@ import { Grid, Box, Paper } from '@mui/material';
 import {Typography} from '@mui/material' 
 import * as React from 'react';
 import Atom from '../../../assets/svg/Átomo (servicios).svg';
+import useLanguage from '../../../hooks/useLanguage';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -14,10 +15,12 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 
+  
+  
+  const AtomHero = ({ isMobile }) => {
 
-
-
-const AtomHero = ({ isMobile }) => {
+    const { getText } = useLanguage();
+    
     return (
         <Box sx={{flexGrow: 0, display:"flex", justifyContent: 'center'}}>
            <Grid sx={{display:"flex",justifyContent:"center"}} container spacing={1}>
@@ -25,7 +28,7 @@ const AtomHero = ({ isMobile }) => {
                     {
                     // * Textos
                     }  
-                        <Typography variant="h2" sx={{fontSize:"4vw",fontWeight:"bold",marginLeft:"30px"}}>Nuestros <div style={{backgroundColor:"#1CF445", display:"inline-block", width:"fit-content"}}>seis pilares</div><br/> de servicio</Typography>
+                        <Typography variant="h2" sx={{fontSize:"4vw",fontWeight:"bold",marginLeft:"30px"}}>{getText('landing', 'atom', 'title_ours')}<div style={{backgroundColor:"#1CF445", display:"inline-block", width:"fit-content"}}>{getText('landing', 'atom', 'title_pil')}</div><br/>{getText('landing', 'atom', 'title_serv')}</Typography>
                         <Item>
                             <Typography 
                                 variant="body1" 
@@ -39,11 +42,7 @@ const AtomHero = ({ isMobile }) => {
                                     marginTop:"50px"
                                 }}
                             >
-                            Creamos soluciones integradas y a la medida de las necesidades específicas y dependiendo de la fase en la que se encuentre tu negocio. <br/> 
-                            Te ayudamos en el diseño de operaciones profesionales de cultivo de vegetales verdes y/o cannabis con enfoque en digitalización. 
-                            Ensamblamos cadenas adecuadas de proveeduría y nos encargamos de que funcionen de acuerdo a las metas planteadas. 
-                            Administramos sistemas de creación y recolección de datos que estén a disposición en espacios en la nube, donde nos encargamos 
-                            de procesarlos para que faciliten visibilidad y transparencia de información a todos los niveles de tu organización.
+                            {getText('landing', 'atom', 'solutions')}
                             </Typography>
                         </Item>
                 </Grid>

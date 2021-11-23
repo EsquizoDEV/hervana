@@ -4,10 +4,29 @@
             "title": "Nature and tech for a better world",
             "subtitle": "We undestand the industry of the horticulture from a hollistic and innovative perspective.",
             "text": "We talk plant, the farmer and the entrepreneur, shutting down operative barriers and developeinga the business culture needed for successful investments in the ",
-            "text_rev": "4th Industrial Revolution"
+            "text_rev": "4th Industrial Revolution",
+            "text_but": "I HAVE A PROJECT"
         },
         "atom": {
-
+            "solutions": "We create integrated solutions tailored to specific needs and depending on the phase your business is in. We help you in the design of professional operations for growing green vegetables and / or cannabis with a focus on digitization. We assemble adequate supply chains and make sure that they work according to the goals set. We manage data creation and collection systems that are available in spaces in the cloud, where we take care of processing them so that they facilitate visibility and transparency of information at all levels of your organization.",
+            "title_ours": "Our ",
+            "title_pil": "six pillars",
+            "title_serv": " of service"
+        },
+        "process": {
+            "title": "Our process",
+            "s1_title": "Step 1",
+            "s1_subt": "We discuss deeply your project",
+            "s1_text": "In a discovery call we understand where you want to take your business and what are the barriers and frustrations you have at the moment to achieve your goals",
+            "s2_title": "Step 2",
+            "s2_subt": "We work on a proposal focused on solving your problems",
+            "s2_text": "We present a solution tailored to your needs based on our areas of knowledge.",
+            "s3_title": "Step 3",
+            "s3_subt": "We are committed to working for your success",
+            "s3_text": "We send you an economic proposal with different options, followed by a service provision contract.",
+            "s4_title": "Step 4",
+            "s4_subt": "We start with your project",
+            "s4_text": "We begin to land our professional services in your business, hand in hand with your team."
         }
     },
     "proyecto": {},
@@ -15,5 +34,22 @@
     "ourfocus": {},
     "team": {},
     "historia": {},
-    "faq": {}
+    "faq": {},
+    "general": {
+        "footer": {
+            "contact_us": "Contact us through",
+            "serv": "Services",
+            "priv": "Privacy",
+            "tyc": "Terms y Conditions"
+        },
+        "navbar": {
+            "but_proy": "I HAVE A PROJECT",
+            "serv": "Services",
+            "foc": "Our focus",
+            "faq": "FAQ",
+            "aboutus": "About us",
+            "team": "Our team",
+            "proc": "Our process"
+        }
+    }
 }

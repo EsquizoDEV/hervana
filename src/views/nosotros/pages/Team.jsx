@@ -38,13 +38,16 @@ const Team = () => {
                     <Grid item xs={12} id="intro-texto" sx={{width:"100%", height:"auto"}}>
                         <Box sx={{marginBottom:"50px",marginTop:"100px",paddingLeft:"15vw",paddingRight:"15vw", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
                             <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:"25px", color:"black"}}>
-                            Estamos conformados por un equipo de jóvenes profesionales interdisciplinarios con
-                            experiencia en proyectos y organizaciones de clase mundial, que cuenta con una amplia red de
-                            contactos y que son especialistas en operaciones de cultivo en ambientes controlados,
-                            AgTech, transformación digital, analítica de datos, desarrollo y estrategia de negocios; en
-                            industria de cannabis, y en implementación de tecnologías disruptivas como blockchain.
+                            Hervana Group está formado por un equipo de profesionales interdisciplinarios 
+                            con formación académica y experiencia profesional de clase mundial en Latinoamérica, 
+                            Norteamérica, Europa y Asia. Nuestra historia comenzó en Países Bajos, nación reconocida 
+                            por ser un hub de innovación y conocimiento en horticultura, tecnología, sustentables y pionero en el 
+                            consumo responsable de cannabis. Contamos con una amplia red de contactos y conocimiento especializado en 
+                            operaciones de  cultivo en ambientes controlados, AgTech, transformación digital, analítica de datos, desarrollo y 
+                            estrategia de negocios; en industria de cannabis y en implementación de blockchain.
+
                             </Typography>
-                            <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                            {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                 <AccordionSummary
                                 sx={{flexDirection:"column"}}
                                 expandIcon={<ExpandMoreIcon />}
@@ -65,14 +68,14 @@ const Team = () => {
                                     agricultura e impactar las sociedades y el medio ambiente de una manera positiva.
                                     </Typography>
                                 </AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                         </Box>
                     </Grid>
 
                     <Grid id="equipo1" item xs={12}>
-                        <Box sx={{marginBottom:"20vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"5vh", marginBottom:"10vh"}}>
-                                Managers
+                        <Box sx={{marginBottom:"10vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
+                                Fundadores
                             </Typography>
                             <Grid 
                                 container
@@ -82,12 +85,10 @@ const Team = () => {
                             >
                                 <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%"}}>
                                     <Grid 
-                                        item
                                         container
                                         direction="row"
                                         justifyContent="space-evenly"
-                                        alignItems="stretch" xs={12}
-                                        spacing={3}
+                                        spacing={12}
                                     >
                                         <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh"}}>
@@ -117,7 +118,7 @@ const Team = () => {
                                             </Box>
                                         </Grid>
                                         <Grid item xs={12} md={6}>
-                                            <Box sx={{width:"100%", marginBottom:"10vh"}}>
+                                            <Box sx={{width:"100%", marginBottom:"5vh"}}>
                                                 <Card
                                                     elevation={0}
                                                 >
@@ -143,7 +144,7 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid>
-                                        <Grid item xs={12} md={6}>
+                                        {/* <Grid item xs={12} md={6}>
                                             <Box sx={{width:"100%", marginBottom:"10vh"}}>
                                                 <Card
                                                     elevation={0}
@@ -169,8 +170,8 @@ const Team = () => {
                                                 <CardMedia/>
                                                 </Card>
                                             </Box>
-                                        </Grid>
-                                        <Grid item xs={12} md={12}>
+                                        </Grid> */}
+                                        {/* <Grid item xs={12} md={12}>
                                             <Box sx={{width:"100%", marginBottom:"10vh"}}>
                                                 <Card
                                                     elevation={0}
@@ -196,6 +197,34 @@ const Team = () => {
                                                 <CardMedia/>
                                                 </Card>
                                             </Box>
+                                        </Grid> */}
+                                         <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Bsc. Francisco Cambero</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}} >AgTech Futurist</Typography>
+                                            </Box>
+                                        </Grid>
+                                        
+                                        
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>MBA. Eduardo Martinez</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Strategy & Digital Catalyst</Typography>
+                                            </Box>
+                                        </Grid>
+                                        
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Bsc. Oliver Ledermann</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Industry & Business Expert</Typography>
+                                            </Box>
+                                        </Grid>
+
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Carlos Cambero</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Plant Scientist & Growing Master</Typography>
+                                            </Box>
                                         </Grid>
                                     </Grid>
                                 </Box>
@@ -203,143 +232,143 @@ const Team = () => {
                         </Box>
                     </Grid>
                     <Grid id="equipo2" item xs={12}>
-                        <Box sx={{width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"5vh"}}>
-                                Advisory board
+                        <Box sx={{marginBottom:"10vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
+                                Junta de asesores
                             </Typography>
                             <Grid 
                                 container
                                 direction="row"
                                 justifyContent="space-evenly"
                                 alignItems="stretch"
-                                sx={{marginTop:"10vh"}}
                             >
-                                <Box sx={{marginBottom:"10vh",paddingLeft:"15vw", paddingRight:"15vw",width:"100%", display:"flex", flexWrap:"wrap",justifyContent:"center"}}>
-                                    <Grid item xs={12}md={4}>
-                                        <Box sx={{width:"100%", marginBottom:"10vh"}}>
-                                            <Card
-                                                elevation={0}
-                                            >
-                                                <div style={{display:"flex", justifyContent:"center"}}>
-                                                    <CardMedia
-                                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
-                                                    component="img"
-                                                    alt="leader"
-                                                    image={user}
-                                                    width="200px"
-                                                    height="200px"
-                                                    />
-                                                </div>
-                                            <CardContent>
-                                                <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                    Alekos Martínez                              
-                                                </Typography>
-                                            </CardContent>
-                                            <CardMedia/>
-                                            </Card>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12}md={4}>
-                                        <Box sx={{width:"100%", marginBottom:"10vh"}}>
-                                            <Card
-                                                elevation={0}
-                                            >
-                                                <div style={{display:"flex", justifyContent:"center"}}>
-                                                    <CardMedia
-                                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
-                                                    component="img"
-                                                    alt="leader"
-                                                    image={user}
-                                                    width="200px"
-                                                    height="200px"
-                                                    />
-                                                </div>
-                                            <CardContent>
-                                                <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                    Daniel Ender                              
-                                                </Typography>
-                                            </CardContent>
-                                            <CardMedia/>
-                                            </Card>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12}md={4}>
-                                        <Box sx={{width:"100%", marginBottom:"10vh"}}>
-                                            <Card
-                                                elevation={0}
-                                            >
-                                                <div style={{display:"flex", justifyContent:"center"}}>
-                                                    <CardMedia
-                                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
-                                                    component="img"
-                                                    alt="leader"
-                                                    image={user}
-                                                    width="200px"
-                                                    height="200px"
-                                                    />
-                                                </div>
-                                            <CardContent>
-                                                <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                    Juan Manuel Cancino                              
-                                                </Typography>
-                                            </CardContent>
-                                            <CardMedia/>
-                                            </Card>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12}md={4}>
-                                        <Box sx={{width:"100%", marginBottom:"10vh"}}>
-                                            <Card
-                                                elevation={0}
-                                            >
-                                                <div style={{display:"flex", justifyContent:"center"}}>
-                                                    <CardMedia
-                                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
-                                                    component="img"
-                                                    alt="leader"
-                                                    image={user}
-                                                    width="200px"
-                                                    height="200px"
-                                                    />
-                                                </div>
-                                            <CardContent>
-                                                <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                    Marisol Fonseca                              
-                                                </Typography>
-                                            </CardContent>
-                                            <CardMedia/>
-                                            </Card>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12}md={4}>
-                                        <Box sx={{width:"100%", marginBottom:"10vh"}}>
-                                            <Card
-                                                elevation={0}
-                                            >
-                                                <div style={{display:"flex", justifyContent:"center"}}>
-                                                    <CardMedia
-                                                    sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
-                                                    component="img"
-                                                    alt="leader"
-                                                    image={user}
-                                                    width="200px"
-                                                    height="200px"
-                                                    />
-                                                </div>
+                                <Box sx={{marginBottom:"10vh",paddingLeft:"20vw", paddingRight:"20vw",width:"100%"}}>
+                                    <Grid 
+                                        container
+                                        direction="row"
+                                        justifyContent="space-evenly"
+                                        spacing={12}
+                                    >
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={user}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                    <CardContent>
+                                                        <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                            Alekos Martínez                            
+                                                        </Typography>
+                                                    </CardContent>
+                                                    <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid>
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width:"100%", marginBottom:"5vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={user}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
                                                 <CardContent>
-                                                    <Typography variant="body2" align="center" style={{fontSize:"5vh",display:"flex", justifyContent:"center"}}>
-                                                        Alonso Peñelas                             
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        Daniel Ender                              
                                                     </Typography>
                                                 </CardContent>
-                                            <CardMedia/>
-                                            </Card>
-                                        </Box>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid>
+                                        {/* <Grid item xs={12} md={6}>
+                                            <Box sx={{width:"100%", marginBottom:"10vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={user}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                <CardContent>
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        Oliver Lederman                            
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Industry Expert & Project                              
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid> */}
+                                        {/* <Grid item xs={12} md={12}>
+                                            <Box sx={{width:"100%", marginBottom:"10vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={user}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                <CardContent>
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        Carlos Cambero                              
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Plan scientist & Growing Master                              
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid> */}
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Daniel Ender</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Finance & Business Master</Typography>
+                                            </Box>
+                                        </Grid>
+
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Ing. Alekos Martinez</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Entrepreneurship & Tech Master</Typography>
+                                            </Box>
+                                        </Grid>
                                     </Grid>
                                 </Box>
                             </Grid>
                         </Box>
                     </Grid>
-
                     <Grid item xs={12}> 
                         <Footer isMobile={isMobile} id="footer-component" />
                     </Grid>

@@ -1,0 +1,55 @@
+{
+    "landing": {
+        "hero-section": {
+            "title": "Naturaleza y tecnología por un mundo mejor",
+            "subtitle": "Entendemos la industria de horticultura desde una perspectiva holística e innovadora.",
+            "text": "Hablamos el lenguaje de la planta, el cultivador y el empresario, derribando barreras operativas y desarrollando una cultura necesaria para negocios exitosos en la ",
+            "text_rev": "4ª Revolución Industrial",
+            "text_but": "TENGO UN PROYECTO"
+        },
+        "atom": {
+            "solutions": "Creamos soluciones integradas y a la medida de las necesidades específicas y dependiendo de la fase en la que se encuentre tu negocio. Te ayudamos en el diseño de operaciones profesionales de cultivo de vegetales verdes y/o cannabis con enfoque en digitalización. Ensamblamos cadenas adecuadas de proveeduría y nos encargamos de que funcionen de acuerdo a las metas planteadas. Administramos sistemas de creación y recolección de datos que estén a disposición en espacios en la nube, donde nos encargamos de procesarlos para que faciliten visibilidad y transparencia de información a todos los niveles de tu organización.",
+            "title_ours": "Nuestros ",
+            "title_pil": "seis pilares",
+            "title_serv": " de servicio"
+        },
+        "process": {
+            "title": "Nuestro proceso",
+            "s1_title": "Paso 1",
+            "s1_subt": "Discutimos tu proyecto a profundidad",
+            "s1_text": "En una llamada de descubrimiento entendemos hacia dónde quieres llevar tu negocio y cuáles son las barreras y frustraciones que tienes al momento para lograr tus metas",
+            "s2_title": "Paso 2",
+            "s2_subt": "Trabajamos en una propuesta enfocada a resolver tus problemáticas",
+            "s2_text": "Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento.",
+            "s3_title": "Paso 3",
+            "s3_subt": "Nos comprometemos a trabajar por tu exito",
+            "s3_text": "Te enviamos una propuesta económica condiferentes opciones, seguida de un contrato de prestación de servicios.",
+            "s4_title": "Paso 4",
+            "s4_subt": "Arrancamos con tu proyecto",
+            "s4_text": "Empezamos a aterrizar nuestros servicios profesionales en tu negocio, de la mano de tu equipo."
+        }
+    },
+    "proyecto": {},
+    "servicios": {},
+    "ourfocus": {},
+    "team": {},
+    "historia": {},
+    "faq": {},
+    "general": {
+        "footer": {
+            "contact_us": "Contáctanos a través de",
+            "serv": "Servicios",
+            "priv": "Privacidad",
+            "tyc": "Términos y Condiciones"
+        },
+        "navbar": {
+            "but_proy": "TENGO UN PROYECTO",
+            "serv": "Servicios",
+            "foc": "Nuestro enfoque",
+            "faq": "FAQ",
+            "aboutus": "Sobre nosotros",
+            "team": "Nuestro equipo",
+            "proc": "Nuestro proceso"
+        }
+    }
+}

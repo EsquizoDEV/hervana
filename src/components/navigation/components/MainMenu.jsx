@@ -4,12 +4,22 @@ import {ListButton} from '../../core/ListButton'
 import {SimpleButton} from '../../core/SimpleButton'
 import history from '../../../history'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
-import { Icon} from '@mui/material'
+import { FormControlLabel, Icon, Switch } from '@mui/material'
 import { Box } from '@mui/system'
 import Logo from '../../../assets/images/HERVANA LOGO.png'
+import { FormGroup } from '@material-ui/core'
+import colors from '../../../utils/colorimetría';
+import useLanguage from '../../../hooks/useLanguage';
 
 
 const MainMenu = ({ isMobile }) => {
+
+    let lang = useLanguage();
+
+    const changeLanguage = (e) => {
+        console.log(e);
+    }
+
     return (
         <>
             { isMobile
@@ -39,36 +49,46 @@ const MainMenu = ({ isMobile }) => {
                     {/* </Stack> */}
                 </>
             :   <>
-                    <Box 
-                        onClick={()=>{
-                            history.push('/'); 
-                            window.location.reload();}
-                        }
-                        sx={{backgroundColor:"#101111"}}
-                    >
-                        <img alt="hervana-logo" id="logo" src={Logo}/>                
-                    </Box>
-                    <GreenBorderButton size="small" onClick={()=> {
-                        history.push("/proyecto");
-                        window.location.reload();
-                    }}>Tengo un proyecto</GreenBorderButton>
-                    
-                    <ListButton>Nosotros</ListButton>
                     
                     <SimpleButton size="small" onClick={() => {
                         history.push("/services");
                         window.location.reload();
-                    }}>Servicios</SimpleButton>
-                    
+                    }} sx={{fontSize:"2vh"}}>Servicios</SimpleButton>
+
                     <SimpleButton size="small" onClick={() => {
                         history.push("/ourfocus")
                         window.location.reload();
-                    }}>Nuestro enfoque</SimpleButton>
+                    }} sx={{fontSize:"2vh"}}>Nuestro enfoque</SimpleButton>
+
+                    <ListButton>Nosotros</ListButton>
                     
-                    <SimpleButton size="small" onClick={() => {
+                    <GreenBorderButton size="large" onClick={()=> {
+                        history.push("/proyecto");
+                        window.location.reload();
+                    }} sx={{}}>Tengo un proyecto</GreenBorderButton>
+
+                    <FormGroup>
+                        <FormControlLabel
+                            value="end" 
+                            label="ES/EN"
+                            sx={{color: colors.white}}
+                            control={
+                                <Switch 
+                                    color="success"
+                                    onChange={lang.changeLanguage}
+                                    size="large"
+                                    defaultChecked
+                                    // checked={lang.language ? 'en' : 'es'}
+                                />
+                            }
+                        />
+                    </FormGroup>
+                    
+                    
+                    {/* <SimpleButton size="small" onClick={() => {
                         history.push("/faq")
                         window.location.reload();    
-                    }}>FAQ</SimpleButton>
+                    }}>FAQ</SimpleButton> */}
                 </>
             }
         

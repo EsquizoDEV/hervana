@@ -26,13 +26,13 @@ export const ImgCardComponent = (props) => {
          <Grid container spacing={1}>
             <Grid item md={12}>
                 <CardContent sx={{width:"600px"}}>
-                    <Typography style={{fontSize:"35px",fontWeight:'bold', color:"black"}} gutterBottom variant="h4" component="div">
+                    <Typography style={{fontSize:"6vh",fontWeight:'bold', color:"black"}} variant="h2" gutterBottom>
                     <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>{props.props.title}.</div>
                     </Typography>
-                    <Typography style={{fontWeight:900, color:'black'}} gutterBottom variant="h5" component="div">
+                    <Typography style={{fontWeight:"6vh", color:'black', fontWeight:"bold"}} gutterBottom variant="h3">
                     {props.props.subtitle}
                     </Typography>
-                    <Typography style={{color:'black'}} variant="body2" color="text.secondary">
+                    <Typography style={{color:'black', fontSize:"1.2vw"}} variant="body1" color="text.secondary">
                     {props.props.content}
                     </Typography>
                 </CardContent>

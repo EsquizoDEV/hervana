@@ -4,9 +4,13 @@ import colors from '../../utils/colorimetría';
 import SocialMenu from '../navigation/components/SocialMenu'
 import Logo from '../../assets/images/HERVANA LOGO.png'
 import history from '../../history';
+import useLanguage from '../../hooks/useLanguage';
 
 
 export const Footer = ({ isMobile }) => {
+
+    let { getText } = useLanguage();
+
     return (
         <div>
             <Box 
@@ -31,12 +35,12 @@ export const Footer = ({ isMobile }) => {
                         //className={classes.container}
                         >
                         <div sx={{marginLeft:3}}>
-                            <Typography sx={{color: colors.white, marginTop: 5}}>Contáctanos a través de</Typography>
+                            <Typography sx={{color: colors.white, marginTop: 5}}>{getText('general', 'footer', 'contact_us')}</Typography>
                             <SocialMenu />
                         </div>
-                        <Typography sx={{color: colors.white}}>Servicios</Typography>
-                        <Typography sx={{color: colors.white}}>Privacidad</Typography>
-                        <Typography sx={{color: colors.white}}>Términos y condiciones</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'serv')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'priv')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'tyc')}</Typography>
                             
                     </Stack>
                     <Stack
@@ -55,8 +59,6 @@ export const Footer = ({ isMobile }) => {
                         >
                             <img alt="hervana-logo" id="logo" src={Logo} />                
                         </Box>
-                        {/* <Typography variant="h4" sx={{color: colors.white}}>hervana</Typography> */}
-                        <Typography variant="h4" sx={{color: colors.limeGreen}}>2021</Typography>
                     </Stack>
                 </Stack>
             </Box>

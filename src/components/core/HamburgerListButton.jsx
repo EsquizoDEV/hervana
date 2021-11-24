@@ -1,6 +1,7 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useRef, useState, useEffect, useContext} from 'react'
 import Button from '@mui/material/Button';
 import  ClickAwayListener  from '@mui/material/ClickAwayListener';
+import { FormControlLabel, Icon, Switch} from '@mui/material'
 import {GreenBorderButton} from '../core/OutlinedButton'
 import Grow from '@mui/material/Grow';
 import Paper  from '@mui/material/Paper';
@@ -12,7 +13,10 @@ import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
 import history from '../../history'
 // import { ListButton } from './ListButton';
+import { MDBIcon } from 'mdb-react-ui-kit';
+import { FormGroup } from '@material-ui/core'
 import { SimpleButton } from './SimpleButton';
+import useLanguage from '../../hooks/useLanguage';
 
 const ToggleButton = styled(Button)(({ theme }) => ({
     color: colors.white,
@@ -26,6 +30,9 @@ const ToggleButton = styled(Button)(({ theme }) => ({
 export const HamburgerListButton = (props) => {
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null)
+    
+    const lang = useLanguage()
+
     
     const handleToggle = e => {
         if (e.target.id !== 'list-about-us') {
@@ -143,9 +150,27 @@ export const HamburgerListButton = (props) => {
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
-                                        history.push("/#procesos")
+                                        history.push("/procesos")
                                         window.location.reload();    
                                     }}>Nuestro proceso</SimpleButton>
+                                </MenuItem>
+                                <MenuItem>
+                                    <FormGroup>
+                                        <FormControlLabel
+                                            value="end" 
+                                            label="ES/EN"
+                                            sx={{color: colors.white}}
+                                            control={
+                                                <Switch 
+                                                    color="success"
+                                                    onChange={lang.changeLanguage}
+                                                    size="large"
+                                                    defaultChecked
+                                                    // checked={lang.language ? 'en' : 'es'}
+                                                />
+                                            }
+                                        />
+                                    </FormGroup>
                                 </MenuItem>
                              </MenuList>
                          </ClickAwayListener>

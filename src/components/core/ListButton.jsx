@@ -62,6 +62,7 @@ export const ListButton = (props) => {
              ref={anchorRef}
              onClick={handleToggle}
              endIcon={<KeyboardArrowDown/>}
+             sx={{fontSize:"2vh"}}
              >
                  {props.children}
 
@@ -87,11 +88,11 @@ export const ListButton = (props) => {
                          <ClickAwayListener onClickAway={handleClose}>
                              <MenuList
                              autoFocusItem={open}
-                             id="menu-list"e
+                             id="menu-list"
                              onKeyDown={handleListKeyDown}
                              >
-                                 <MenuItem onClick={(e)=>{handleClose(e); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
-                                 <MenuItem onClick={(e)=>{handleClose(e); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
+                                 <MenuItem sx={{fontSize:"2vh"}} onClick={(e)=>{handleClose(e); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
+                                 <MenuItem sx={{fontSize:"2vh"}} onClick={(e)=>{handleClose(e); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
                              </MenuList>
                          </ClickAwayListener>
                      </Paper>

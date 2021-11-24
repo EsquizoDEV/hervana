@@ -140,141 +140,126 @@ const ProjectInput = () => {
 
   return (
       
-    <div className="project_input">
-       <NavBar sx={{}} id="nav" theme={theme} isMobile={isMobile} />
-
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="parent-modal-title"
-          aria-describedby="parent-modal-description"
-        >
-          <Box sx={{ ...style, width: 400 }}>
-            
-            <Typography 
-            variant="h3" 
-            style={{marginBottom:"20px", color:"white"}} 
-            id="parent-modal-title">
-              {status ? "Felicidades!" : "Lo sentimos, hubo un error al enviar tu proyecto"}
-            </Typography>
-            
-            <Typography 
-            variant="body2" 
-            style={{color:"white", marginBottom:"20px"}} 
-            id="parent-modal-description">
-              {status ? 
-              "Tu proyecto fue recibido por nuestros ejecutivos, en los próximos días nos pondremos en contacto contigo"
-              : 
-              "Intenta de nuevo más tarde"}
-            </Typography>
-            
-            {status ? <ChildModal />: <Button sx={{backgroundColor:"#1CF445", color:"black"}} onClick={handleClose}>Intentar de nuevo</Button>}
-            
-            <Button sx={{backgroundColor:"#1CF445", color:"black", marginLeft:"20px"}} onClick={handleClose}>Cerrar</Button>
-
-          </Box>
-        </Modal>
-    
-      <Grid sx={{marginTop:"50px",display:'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}} 
-        container
-        >
-          <Grid item xs={12} sx={
-            {
-              display: "flex",
-              flexDirection:"column", 
-              alignItems:"center",
-              justifyContent:"center",
-              backgroundColor:"#2D302E",
-              width: isMobile ? "100%" : "50vw",
-              padding:"30px",
-            }
-          }>
-            <Box sx={{width:"80%", display:"flex", justifyContent:"center"}}>
-
-              <Typography 
-              gutterBottom 
-              component="div" 
-              variant="h3" 
-              style={
-                {
-                  width:"100%",
-                  fontWeight:"bold", 
-                  color:"white",
-                  fontSize:"30px"
-                }
-              }>Comunicate con nosotros para asesorarte con la información que necesitas</Typography>
-
-            </Box>
-            <Box component="form"
-                onSubmit={handleSend}
-                sx={
-                {
-                    width:"90%",
-                    display:"flex", 
-                    flexDirection:"column",
-                    justifyContent:"space-between",
-                    backgroundColor:"#2D302E",
-                    height:"400px",
-                    alignItems:"center"
-                }
-                }
+    <div>
+      <NavBar id="nav" theme={theme} isMobile={isMobile} />
+      <div style={{width:"100%", height:"100vh", marginTop:"10vh"}} className="project_input">
+        {/* 
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="parent-modal-title"
+              aria-describedby="parent-modal-description"
             >
-              <TextField 
-              variant="filled" 
-              sx={
-                {
-                  width:"100%", 
-                  backgroundColor:"white", 
-                  borderRadius:"0"
-                  }
-                  } required name="name" FormHelperTextProps={<p>Llena este dato</p>} onChange={handleChange} label="Nombre"/>
-              <TextField 
-              variant="filled" 
-              sx={
-                {
-                  width:"100%", 
-                  backgroundColor:"white", 
-                  borderRadius:"0"
-                  }
-                  } 
-                  required 
-                  name="email"
-                  onChange={handleChange} 
-                  helperText={emailValidator(state.email)? null : "Introduce un correo electrónico válido"} 
-                  label="Correo"/>
-
-              <TextField 
-              variant="filled" 
-              sx={
-                {
-                  width:"100%", 
-                  backgroundColor:"white", 
-                  borderRadius:"0"
-                  }
-                  } required type="number" name="phone" onChange={handleChange} label="Teléfono"/>
-
-              <TextField 
-              multiline 
-              variant="filled" 
-              sx={
-                {
-                  width:"100%", 
-                  backgroundColor:"white", 
-                  borderRadius:"0"
-                }
-                } required name="msg" onChange={handleChange} label="Mensaje"/>
+              <Box sx={{ ...style, width: 400 }}>
                 
-                <SimpleButton disabled={disable} id="submit_button" type="submit" sx={{backgroundColor:"#29ABE2", width:"120px"}} variant="filled">Enviar</SimpleButton>
-            </Box>
-            
-            
-          </Grid>
-          <Grid item xs={12} sx={{width:"100%"}}> 
-                <Footer isMobile={isMobile} id="footer-component" />
-            </Grid>
-      </Grid>
-      
-      
+                <Typography 
+                variant="h3" 
+                style={{marginBottom:"20px", color:"white"}} 
+                id="parent-modal-title">
+                  {status ? "Felicidades!" : "Lo sentimos, hubo un error al enviar tu proyecto"}
+                </Typography>
+                
+                <Typography 
+                variant="body2" 
+                style={{color:"white", marginBottom:"20px"}} 
+                id="parent-modal-description">
+                  {status ? 
+                  "Tu proyecto fue recibido por nuestros ejecutivos, en los próximos días nos pondremos en contacto contigo"
+                  : 
+                  "Intenta de nuevo más tarde"}
+                </Typography>
+                
+                {status ? <ChildModal />: <Button sx={{backgroundColor:"#1CF445", color:"black"}} onClick={handleClose}>Intentar de nuevo</Button>}
+                
+                <Button sx={{backgroundColor:"#1CF445", color:"black", marginLeft:"20px"}} onClick={handleClose}>Cerrar</Button>
+
+              </Box>
+            </Modal>
+      */}
+        
+        <Grid sx={{justifyContent:"center", alignItems:"center", height:"70%"}} container>
+                  <Box component="form"
+                      onSubmit={handleSend}
+                      sx={
+                      {
+                          height:"80%",
+                          display:"flex", 
+                          flexDirection:"column",
+                          justifyContent:"space-between",
+                          backgroundColor:"#2D302E",
+                          alignItems:"center",
+                          width:"50%"
+                      }
+                      }
+                  >
+                    <Typography 
+                      gutterBottom 
+                      component="div" 
+                      variant="h1" 
+                      style={
+                        {
+                          fontSize:"6vh",
+                          width:"40%",
+                          fontWeight:"bold", 
+                          color:"white",
+                          fontSize:"30px",
+                          marginTop:"5vh"
+                        }
+                    }>Nos comunicaremos contigo para entender tu proyecto a profundidad!</Typography>
+                    <TextField 
+                    variant="filled" 
+                    sx={
+                      {
+                        width:"40%", 
+                        backgroundColor:"white", 
+                        borderRadius:"0"
+                        }
+                        } required name="name" FormHelperTextProps={<p>Llena este dato</p>} onChange={handleChange} label="Nombre"/>
+                    <TextField 
+                    variant="filled" 
+                    sx={
+                      {
+                        width:"40%", 
+                        backgroundColor:"white", 
+                        borderRadius:"0"
+                        }
+                        } 
+                        required 
+                        name="email"
+                        onChange={handleChange} 
+                        helperText={emailValidator(state.email)? null : "Introduce un correo electrónico válido"} 
+                        label="Correo"/>
+
+                    <TextField 
+                    variant="filled" 
+                    sx={
+                      {
+                        width:"40%", 
+                        backgroundColor:"white", 
+                        borderRadius:"0"
+                        }
+                        } required type="number" name="phone" onChange={handleChange} label="Teléfono"/>
+
+                    <TextField 
+                    multiline 
+                    variant="filled" 
+                    sx={
+                      {
+                        width:"40%", 
+                        backgroundColor:"white", 
+                        borderRadius:"0"
+                      }
+                      } required name="msg" onChange={handleChange} label="Mensaje"/>
+                      
+                      <SimpleButton disabled={disable} id="submit_button" type="submit" sx={{backgroundColor:"#29ABE2", width:"120px", marginBottom:"2vh"}} variant="filled">Enviar</SimpleButton>
+                  </Box>
+                  
+        </Grid> 
+        <Grid item xs={12}> 
+              <Footer isMobile={isMobile} id="footer-component" />
+        </Grid>
+        
+      </div>
     </div>
   );
 }

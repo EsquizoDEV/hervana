@@ -17,7 +17,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const MobileStepperStyled = styled(MobileStepper)`
     .MuiMobileStepper-dots {
       position:relative;
-      top:40px;
+      top:10vh;
     }
     
     .MuiMobileStepper-dot{
@@ -33,7 +33,7 @@ const MobileStepperStyled = styled(MobileStepper)`
 
 `
 
-function SwipeableTextMobileStepper() {
+function SwipeableTextMobileStepper({ isMobile }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -51,9 +51,9 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ display:'flex',maxWidth: "90vw", height:"50vh",flexGrow: 1, border:"solid 2px black" }}>
+    <Box sx={{ display:'flex',maxWidth: "75vw", height:"75vh",flexGrow: 1, border:"solid 2px black" }}>
       <AutoPlaySwipeableViews
-        style={{width:"75vw", backgroundColor:"black"}}
+        style={{width:"40vw", backgroundColor:"black", display:"flex", alignItems:"center"}}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -65,10 +65,8 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: "50vh",
-                  display: 'block',
-                  overflow: 'hidden',
-                  width: "40vw",
+                  height: "55vh",
+                  width: "55vh",
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -77,26 +75,26 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <Box style={{width:"100%"}}>
+      <Box style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column"}}>
           <Paper
               square
               elevation={0}
               sx={{
-              height: "37vh",
-              width:"100%",
+              height: "50vh",
+              width:"80%",
               display:"flex",
-              flexDirection:"column"
+              flexDirection:"column",
+              justifyContent:"center",
+              alignItems:"center"
 
               }}
           >
-            <Box sx={{paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px"}}>
+            <Box sx={{paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px", display:"flex", alignItems:"center", flexDirection:"column"}}>
               <Typography variant="h2" style={{fontSize:"4vh",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
               <div>
-                <ul>
                   {images[activeStep].label.map((bullet, key)=> (
-                    <li key={key} style={{listStyle:'none'}}><Typography variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography></li>
+                    <Typography key={key} variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
                   ))}
-                </ul>
               </div>
             </Box>
           </Paper>
@@ -107,7 +105,7 @@ function SwipeableTextMobileStepper() {
               activeStep={activeStep}
               nextButton={
               <Button
-              sx={{position:"relative", bottom:"17vh"}}
+              sx={{position:"relative", bottom:"17vh", left:"15vw"}}
                   size="small"
                   onClick={handleNext}
                   disabled={activeStep === maxSteps - 1}
@@ -120,7 +118,7 @@ function SwipeableTextMobileStepper() {
               </Button>
               }
               backButton={
-              <Button  sx={{position:"relative", bottom:"17vh"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
+              <Button  sx={{position:"relative", bottom:"17vh", right:"15vw"}} size="small" onClick={handleBack} disabled={activeStep === 0}>
                   {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                   ) : (

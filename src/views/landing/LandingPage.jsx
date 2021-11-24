@@ -3,65 +3,61 @@ import { NavBar } from '../../components/navigation/NavBar';
 import { Footer } from '../../components/core/Footer';
 import { Grid, Box, Typography, Button, Stack } from '@mui/material';
 import HeroSection from './components/HeroSection';
-import Pillars from './components/Pillars';
-import PillarsM from './components/PillarsM';
+// import Pillars from './components/Pillars';
+// import PillarsM from './components/PillarsM';
 import Processes from './components/Processes';
 import './index.css'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import history from '../../history';
-  
+import Services from '../servicios/Services'
+import useLanguage from '../../hooks/useLanguage';
 
 const  LandingPage = () => {
     
     let theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    
+    let { getText } = useLanguage();
+
     return (
-      
         <div id="body">
             <Grid id="main-container" container>
-            <NavBar sx={{zIndex: 9999}} id="nav" theme={theme} isMobile={isMobile} />
-                <Grid item xs={12} sx={{marginBottom:""}} id="hero-container" container spacing={1} >
+            <NavBar sx={{zIndex: 999}} id="nav" theme={theme} isMobile={isMobile} />
+                <Grid id="hero-container" container spacing={1} >
                     <Grid sx={{}} id="hero-item-container" item sm={12} md={12}>
                         <HeroSection id="hero-component" isMobile={isMobile} theme={theme} />
                     </Grid>
                     <div className="py-5"></div>
-                    <Grid item sm={12} md={12}>
+                    <Grid item xs={12} 
+                        sx={{
+                            backgroundColor:"black", 
+                            display:"flex", 
+                            justifyContent:"flex-end"
+                        }}
+                    >
                         <Box component='div' sx={{
                             
                             display: 'flex',
-                            justifyContent: 'center',
-                            alignItems:"center",
-                            position:"relative",
-                            backgroundColor:"black",
-                            bottom:"300px", 
-                            height:600,
-                            width:'100%',
-                            paddingBlock: 10,
+                            paddingTop:"3vh",
+                            height:"38.5vh",
+                            marginLeft: isMobile ? "8%" : "",
+                            marginRight: isMobile ? "8%" : "",
+                            width: isMobile ? "100%" : '50%',
                             zindex:10
                             
                         }}>
                             <Stack
-                                direction={isMobile ? "column" : "row"}
-                                justifyContent={isMobile ? "flex-start" : "space-evenly"}
-                                alignItems="center"
-                                sx={{width: "100%"}}
+                                sx={{width: isMobile ? "100%" : "40vw"}}
                             >
-                                <Typography  sx={{width: isMobile ? "80%" : "60%", marginTop:"100px", marginX:"5%"  }} style={{fontWeight: 'bold', color:"white"}} variant="body1">
-                                    Hervana Group es una empresa de conocimiento y socio estratégico que provee 
-                                    “know how” innovador, operacional y analitico, en negocios y cultivo en ambientes controlados con un
-                                    enfoque “tailor made”. Esto nos permite adaptarnos a tus
-                                    necesidades dependiendo la fase de tu proyecto. Lo que nos
-                                    define es nuestra cultura empresarial y aplicación de innovación
-                                    y analítica basada en datos.
+                                <Typography  sx={{width: isMobile ? "90%" : "40vw" }} style={{fontWeight: 'bold', color:"white", fontSize: isMobile ? "2.5vh" : "1.2vw"}} variant="body1">
+                                    {getText('landing', 'hero-section', 'text')}<a style={{color:"white"}} href="https://www.forbes.com/sites/bernardmarr/2018/08/13/the-4th-industrial-revolution-is-here-are-you-ready/?sh=29efe235628b">{getText('landing', 'hero-section', 'text_rev')}</a> 
                                 </Typography>
 
                                 <Box sx={{  
                                     display:'flex',
-                                    justifyContent:'flex-end',
-                                    width:'full',
-                                    marginRight: "5%"
+                                    justifyContent:"flex-end",
+                                    marginTop:"3vh",
+                                    width:'100%',
                                 }}>
 
                                     <Button variant="filled" 
@@ -69,18 +65,17 @@ const  LandingPage = () => {
                                         history.push('/proyecto'); 
                                         window.location.reload();
                                     }}
-                                    style={
-                                        {
-                                            marginTop: '120px',
-                                            backgroundColor:"white",
-                                            color:"black",
-                                            fontWeight:"bold",
-                                            borderRadius:"30px",
-                                            width:200,
-                                            maxHeight:"60px",
-                                        }}
+                                    style={{
+                                        marginTop: '2vh',
+                                        backgroundColor:"white",
+                                        color:"black",
+                                        fontWeight:"bold",
+                                        borderRadius:"30px",
+                                        width:200,
+                                        maxHeight:"60px",
+                                    }}
                                     >
-                                            Tengo un proyecto
+                                            {getText('landing', 'hero-section', 'text_but')}
 
                                     </Button>
                                 </Box> 
@@ -89,11 +84,8 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" item container>
-                    {isMobile 
-                        ?   <PillarsM id="pillars-component" />
-                        :   <Pillars isMobile={isMobile} id="pillars-component" />
-                    }
+                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"20vh"}}  id="pillars-item" item container>
+                    <Services landing={true}/>
                 </Grid>
 
                 <Grid item id="process-item" sx={{

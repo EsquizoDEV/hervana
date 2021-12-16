@@ -186,7 +186,7 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={tres}
+                                                        image={cuatro}
                                                         width="200px"
                                                         height="200px"
                                                         />
@@ -264,7 +264,7 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={cuatro}
+                                                        image={cinco}
                                                         width="200px"
                                                         height="200px"
                                                         />
@@ -291,7 +291,7 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={cinco}
+                                                        image={seis}
                                                         width="200px"
                                                         height="200px"
                                                         />
@@ -318,7 +318,7 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={seis}
+                                                        image={siete}
                                                         width="200px"
                                                         height="200px"
                                                         />

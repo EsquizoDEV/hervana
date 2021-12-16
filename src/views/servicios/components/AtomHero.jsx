@@ -11,7 +11,6 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     boxShadow:'0 0 0 0',
-    marginLeft:"30px"
   }));
 
 
@@ -24,16 +23,28 @@ const Item = styled(Paper)(({ theme }) => ({
     return (
         <Box sx={{marginTop:"10vh",flexGrow: 0, display:"flex", justifyContent: 'center'}}>
            <Grid sx={{display:"flex",justifyContent:"center"}} container spacing={1}>
-                <Grid sx={{position:"relative",display:"flex", justifyContent:"center",flexDirection:"column",alignItems:"center", left:"10vw"}} item xs={12} md={6}>
+                <Grid sx={{
+                    position:"relative",
+                    display:"flex", 
+                    justifyContent:"center",
+                    flexDirection:"column",
+                    alignItems: isMobile ? "flex-start" : "center", 
+                    left:"10%"
+                }} item xs={12} md={6}>
                     {
                     // * Textos
                     }  
-                        <Typography variant="h2" sx={{fontSize:"4vw",fontWeight:"bold",marginLeft:"30px"}}>{getText('landing', 'atom', 'title_ours')}<div style={{backgroundColor:"#1CF445", display:"inline-block", width:"fit-content"}}>{getText('landing', 'atom', 'title_pil')}</div><br/>{getText('landing', 'atom', 'title_serv')}</Typography>
-                        <Item>
+                        <Typography variant="h2" sx={{
+                            fontSize: isMobile ? "6vw" : "4vw",
+                            fontWeight:"bold",
+                            marginLeft: isMobile ? "0vh" : "30px",
+                        }}>{getText('landing', 'atom', 'title_ours')}<div style={{backgroundColor:"#1CF445", display:"inline-block", width:"fit-content"}}>{getText('landing', 'atom', 'title_pil')}</div><br/>{getText('landing', 'atom', 'title_serv')}</Typography>
+                        {/* <Item> */}
                             <Typography 
-                                variant="body1" 
+                                variant="body1"
+                                align="justify" 
                                 style={{
-                                    left: isMobile ? "20px" : "190px", 
+                                    left: isMobile ? "" : "190px", 
                                     width:isMobile ? "80%" : "50%", 
                                     color:"black",
                                     textAlign:"left",
@@ -42,15 +53,19 @@ const Item = styled(Paper)(({ theme }) => ({
                                     marginTop:"50px"
                                 }}
                             >
-                            {getText('landing', 'atom', 'solutions')}
+                                {getText('landing', 'atom', 'solutions')}
                             </Typography>
-                        </Item>
+                        {/* </Item> */}
                 </Grid>
                 <Grid sx={{position: 'relative', right: isMobile ? '0px' : '80px',marginBottom: '100px',top:'60px'}} item xs={12} md={6}>
                     {
                     // * Imagen Greenhouse
                     }
-                        <img src={Atom} style={{height:"auto", width:"50%", marginLeft:"15%"}} alt="Atom"/>
+                        <img src={Atom} style={{
+                            height:"auto", 
+                            width:"70%", 
+                            marginLeft:"15%"
+                        }} alt="Atom"/>
                 </Grid>
             </Grid>
         </Box>

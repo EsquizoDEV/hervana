@@ -76,7 +76,6 @@ const  LandingPage = () => {
                                     }}
                                     >
                                             {getText('landing', 'hero-section', 'text_but')}
-
                                     </Button>
                                 </Box> 
                             </Stack>   

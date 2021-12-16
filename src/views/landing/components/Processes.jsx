@@ -26,7 +26,11 @@ const Processes = ({ isMobile }) => {
     return (
         <Box sx={{width:"100%"}}>
             <Box component="div" sx={{display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h2" style={{fontWeight:'bold', color:'black'}}>{getText('landing', 'process', 'title')}</Typography>
+                <Typography variant="h2" style={{
+                    fontWeight:'bold', 
+                    color:'black',
+                    marginLeft: isMobile ? "10%" : "0"
+                }}>{getText('landing', 'process', 'title')}</Typography>
             </Box>
 
             <Grid container style={{display:"flex", justifyContent:"center"}}>

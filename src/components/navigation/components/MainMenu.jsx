@@ -4,17 +4,17 @@ import {ListButton} from '../../core/ListButton'
 import {SimpleButton} from '../../core/SimpleButton'
 import history from '../../../history'
 import { HamburgerListButton } from '../../core/HamburgerListButton'
-import { Icon } from '@mui/material'
+import { FormControlLabel, Icon, Switch } from '@mui/material'
 import { Box } from '@mui/system'
 import Logo from '../../../assets/images/HERVANA LOGO.png'
+import { FormGroup } from '@material-ui/core'
+import colors from '../../../utils/colorimetría';
+import useLanguage from '../../../hooks/useLanguage';
 
 
 const MainMenu = ({ isMobile }) => {
 
-
-    const changeLanguage = (e) => {
-        console.log(e);
-    }
+    let {getText, changeLanguage} = useLanguage();
 
     return (
         <>
@@ -49,19 +49,36 @@ const MainMenu = ({ isMobile }) => {
                     <SimpleButton size="small" onClick={() => {
                         history.push("/services");
                         window.location.reload();
-                    }} sx={{fontSize:"2vh"}}>Servicios</SimpleButton>
+                    }} sx={{fontSize:"2vh"}}>{getText('general', 'navbar','serv')}</SimpleButton>
 
                     <SimpleButton size="small" onClick={() => {
                         history.push("/ourfocus")
                         window.location.reload();
-                    }} sx={{fontSize:"2vh"}}>Nuestro enfoque</SimpleButton>
+                    }} sx={{fontSize:"2vh"}}>{getText('general', 'navbar','foc')}</SimpleButton>
 
-                    <ListButton>Nosotros</ListButton>
+                    <ListButton>{getText('general', 'navbar','aboutus')}</ListButton>
                     
                     <GreenBorderButton size="large" onClick={()=> {
                         history.push("/proyecto");
                         window.location.reload();
-                    }} sx={{}}>Tengo un proyecto</GreenBorderButton>
+                    }} sx={{}}>{getText('general', 'navbar','but_proy')}</GreenBorderButton>
+
+                    <FormGroup>
+                        <FormControlLabel
+                            value="end" 
+                            label="ES/EN"
+                            sx={{color: colors.white}}
+                            control={
+                                <Switch 
+                                    color="success"
+                                    onChange={changeLanguage}
+                                    size="large"
+                                    defaultChecked
+                                    // checked={lang.language ? 'en' : 'es'}
+                                />
+                            }
+                        />
+                    </FormGroup>
                     
                     
                     {/* <SimpleButton size="small" onClick={() => {

@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import history from '../../history';
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
+import useLanguage from '../../hooks/useLanguage';
 
 const style = {
   position: 'absolute',
@@ -136,6 +137,9 @@ const ProjectInput = () => {
   }
 
     let theme = useTheme();
+    
+    let {getText} = useLanguage()
+    
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
@@ -198,14 +202,14 @@ const ProjectInput = () => {
                       variant="h1" 
                       style={
                         {
-                          fontSize:"6vh",
-                          width:"40%",
+                          fontSize:"5vh",
+                          width:"35%",
                           fontWeight:"bold", 
                           color:"white",
                           fontSize:"30px",
-                          marginTop:"5vh"
+                          marginTop:"5vh",
                         }
-                    }>Nos comunicaremos contigo para entender tu proyecto a profundidad!</Typography>
+                    }> {getText('proyecto', 'input', 'title')} </Typography>
                     <TextField 
                     variant="filled" 
                     sx={
@@ -214,7 +218,7 @@ const ProjectInput = () => {
                         backgroundColor:"white", 
                         borderRadius:"0"
                         }
-                        } required name="name" FormHelperTextProps={<p>Llena este dato</p>} onChange={handleChange} label="Nombre"/>
+                        } required name="name" FormHelperTextProps={<p>Llena este dato</p>} onChange={handleChange} label={getText('proyecto', 'input', 'name')}/>
                     <TextField 
                     variant="filled" 
                     sx={
@@ -227,8 +231,8 @@ const ProjectInput = () => {
                         required 
                         name="email"
                         onChange={handleChange} 
-                        helperText={emailValidator(state.email)? null : "Introduce un correo electrónico válido"} 
-                        label="Correo"/>
+                        helperText={emailValidator(state.email)? null : getText('proyecto', 'input', 'email_validator')} 
+                        label={getText('proyecto', 'input', 'email')}/>
 
                     <TextField 
                     variant="filled" 
@@ -238,7 +242,7 @@ const ProjectInput = () => {
                         backgroundColor:"white", 
                         borderRadius:"0"
                         }
-                        } required type="number" name="phone" onChange={handleChange} label="Teléfono"/>
+                        } required type="number" name="phone" onChange={handleChange} label={getText('proyecto', 'input', 'phone')}/>
 
                     <TextField 
                     multiline 
@@ -249,9 +253,9 @@ const ProjectInput = () => {
                         backgroundColor:"white", 
                         borderRadius:"0"
                       }
-                      } required name="msg" onChange={handleChange} label="Mensaje"/>
+                      } required name="msg" onChange={handleChange} label={getText('proyecto', 'input', 'message')}/>
                       
-                      <SimpleButton disabled={disable} id="submit_button" type="submit" sx={{backgroundColor:"#29ABE2", width:"120px", marginBottom:"2vh"}} variant="filled">Enviar</SimpleButton>
+                      <SimpleButton disabled={disable} id="submit_button" type="submit" sx={{backgroundColor:"#1CF445", width:"120px", marginBottom:"2vh", color:"black"}} variant="filled">{getText('proyecto', 'input', 'but')}</SimpleButton>
                   </Box>
                   
         </Grid> 

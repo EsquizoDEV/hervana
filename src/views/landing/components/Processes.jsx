@@ -8,6 +8,7 @@ import ImgSt2 from '../../../assets/images/Paso 2.png'
 import ImgSt3 from '../../../assets/Paso 3.png'
 import ImgSt4 from '../../../assets/Paso 4.png'
 import { Box } from '@mui/system';
+import useLanguage from '../../../hooks/useLanguage';
 
 // const Item = styled(Paper)(({ theme }) => ({
 //     ...theme.typography.body2,
@@ -20,19 +21,21 @@ import { Box } from '@mui/system';
   
 const Processes = ({ isMobile }) => {
 
+    let { getText } = useLanguage();
+
     return (
         <Box sx={{width:"100%"}}>
-            <Box component="div" sx={{display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h2" style={{fontWeight:'bold', color:'black'}}>Nuestro proceso</Typography>
-            </Box>
 
             <Grid container style={{display:"flex", justifyContent:"center"}}>
+                <Grid item md={12} sx={isMobile ? {display: 'flex', justifyContent: 'center', marginX:"15px", padding:"16px"} : {display: 'flex', justifyContent: 'center'}}>
+                    <Typography variant="h2" style={{fontWeight:'bold', color:'black'}}> <div>{getText('landing', 'process', 'title')}</div></Typography>
+                </Grid>
                 <ImgCard
                 isMobile={isMobile} 
                 left={false} 
-                title={"Paso 1"} 
-                subtitle={"Discutimos tu proyecto a profundidad"} 
-                content={"En una llamada de descubrimiento entendemos hacia dónde quieres llevar tu negocio y cuáles son las barreras y frustraciones que tienes al momento para lograr tus metas"} 
+                title={getText('landing', 'process', 's1_title')} 
+                subtitle={getText('landing', 'process', 's1_subt')} 
+                content={getText('landing', 'process', 's1_text')} 
                 img={ImgSt1}/>
             </Grid>
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>
@@ -40,9 +43,9 @@ const Processes = ({ isMobile }) => {
                 <ImgCard 
                 isMobile={isMobile}
                 left={true} 
-                title={"Paso 2"} 
-                subtitle={"Trabajamos en una propuesta enfocada a resolver tus problemáticas"} 
-                content={"Te presentamos una solución a la medida de tus necesidades basada en nuestras áreas de conocimiento."} 
+                title={getText('landing', 'process', 's2_title')} 
+                subtitle={getText('landing', 'process', 's2_subt')} 
+                content={getText('landing', 'process', 's2_text')} 
                 img={ImgSt2}/>
             </Grid>
             <Grid style={{marginTop:'50px', display:"flex", justifyContent:"center"}} container>
@@ -50,9 +53,9 @@ const Processes = ({ isMobile }) => {
                 <ImgCard
                 isMobile={isMobile}
                  left={false} 
-                 title={"Paso 3"} 
-                 subtitle={"Nos comprometemos a trabajar por tu exito"} 
-                 content={"Te enviamos una propuesta económica condiferentes opciones, seguida de un contrato de prestación de servicios."} 
+                 title={getText('landing', 'process', 's3_title')} 
+                 subtitle={getText('landing', 'process', 's3_subt')} 
+                 content={getText('landing', 'process', 's3_text')} 
                  img={ImgSt3}
                 />
             </Grid>
@@ -60,9 +63,9 @@ const Processes = ({ isMobile }) => {
                 <ImgCard 
                 isMobile={isMobile}
                 left={true} 
-                title={"Paso 4"} 
-                subtitle={"Arrancamos con tu proyecto"} 
-                content={"Empezamos a aterrizar nuestros servicios profesionales en tu negocio, de la mano de tu equipo."} 
+                title={getText('landing', 'process', 's4_title')} 
+                subtitle={getText('landing', 'process', 's4_subt')} 
+                content={getText('landing', 'process', 's4_text')} 
                 img={ImgSt4}/>
             </Grid>
         </Box>

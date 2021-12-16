@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 const texts_es = require('../translations/es.json')
+const texts_en = require('../translations/en.json')
 const LangContext = React.createContext({
         language: 'es',
         texts: {},
@@ -15,9 +16,12 @@ export class LanguageProvider extends Component {
         language: 'es',
         texts: texts_es,
         translations: {
-            "es": texts_es
+            "es": texts_es,
+            "en": texts_en
         },
     }
+
+
     
     getText = (url, section, id) => {
         return this.state.texts[url][section][id];
@@ -41,20 +45,24 @@ export class LanguageProvider extends Component {
             language: e.target.checked ? 'es' : 'en',
             texts: this.state.translations[language],
         });
+
+        localStorage.setItem('language', this.state.language)
+        localStorage.setItem('texts', this.state.texts)
+        localStorage.setItem('translations', this.state.translations)
     }
 
     render() {
         return (
             <LangContext.Provider
                 value={{
-                    language: this.state.language,
+                    language: localStorage.getItem('language'),
                     changeLanguage: this.changeLanguage,
-                    texts: this.state.texts,
+                    texts: localStorage.getItem('texts'),
                     getText: this.getText,
-                    translations: this.state.translations
+                    translations: localStorage.getItem('translations')
                 }}
             >
-                {this.props.children}
+                <>{this.props.children}</>
             </LangContext.Provider>
         );
     }

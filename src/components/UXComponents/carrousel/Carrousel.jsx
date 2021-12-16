@@ -11,6 +11,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {images} from './data.js' 
 import { styled } from '@mui/system';
+import useLanguage from '../../../hooks/useLanguage'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -37,6 +38,7 @@ function SwipeableTextMobileStepper({ isMobile }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
+  let {getText} = useLanguage()
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -47,26 +49,31 @@ function SwipeableTextMobileStepper({ isMobile }) {
   };
 
   const handleStepChange = (step) => {
-    setActiveStep(step);
+    setTimeout(() => {
+      setActiveStep(step);
+    }, 7000)
   };
+
+  let content = getText(`${images[activeStep].label[0]}`, `${images[activeStep].label[1]}${activeStep.toString()}`, `${images[activeStep].label[2]}`)
 
   return (
     <Box sx={{ display:'flex',maxWidth: "75vw", height:"75vh",flexGrow: 1, border:"solid 2px black" }}>
       <AutoPlaySwipeableViews
-        style={{width:"40vw", backgroundColor:"black", display:"flex", alignItems:"center"}}
+        style={{width:"50%", backgroundColor:"black", display:"flex", alignItems:"Center"}}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        
       >
         {images.map((step, index) => (
-          <div key={step.label}>
+          <div style={{display:"flex",alignItems:"center", justifyContent:"center"}} key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
                 sx={{
-                  height: "55vh",
-                  width: "55vh",
+                  height: "auto",
+                  width: "70%",
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -90,11 +97,31 @@ function SwipeableTextMobileStepper({ isMobile }) {
               }}
           >
             <Box sx={{paddingLeft:"50px", paddingRight:"50px", paddingTop:"30px", display:"flex", alignItems:"center", flexDirection:"column"}}>
-              <Typography variant="h2" style={{fontSize:"4vh",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{images[activeStep].title}</Typography>
+              <Typography variant="h2" style={{fontSize:"4vh",fontWeight:"bold", display:"flex", justifyContent: "center"}}>{getText(`${images[activeStep].title[0]}`, `${images[activeStep].title[1]}${activeStep.toString()}`, `${images[activeStep].title[2]}`)}</Typography>
               <div>
-                  {images[activeStep].label.map((bullet, key)=> (
+                {
+                  Array.isArray(content)
+                  ? 
+                  <>
+                    <ul style={{listStyle:"none"}}>
+                      {content.map((bullet, key)=>(
+                        <li>
+                          <Typography key={key} variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
+                        </li>
+                      ))
+                      }
+                    </ul>
+                  </>
+                  :
+                  <>
+                   <Typography variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{content}</Typography>
+                  </>
+
+                }
+                  {/* {images[activeStep].label.map((bullet, key)=> (
                     <Typography key={key} variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
-                  ))}
+                  ))} */}
+                  {/* <Typography variant="body1" sx={{fontSize:"1.2vw"}}>{getText(`${images[activeStep].label[0]}`, `${images[activeStep].label[1]}${activeStep.toString()}`, `${images[activeStep].label[2]}`)}</Typography> */}
               </div>
             </Box>
           </Paper>

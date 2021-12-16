@@ -6,17 +6,17 @@ import { NavBar } from '../../components/navigation/NavBar';
 import {FocusHeader} from './components/FocusHeader';
 import Pillars from '../../views/landing/components/Pillars'
 import PillarsM from '../../views/landing/components/PillarsM'
-import TextOnImage from './components/TextOnImage'
+// import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
 import paneles from '../../assets/Artboard 63.png'
 import robotica from '../../assets/Artboard 64.png'
 import AI from '../../assets/Artboard 65.png'
 import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
-import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
-import hands from '../../assets/Robótica.png'
-import panelesInvernadero from '../../assets/Creación de páneles de control.png'
-import latam from '../../assets/Inteligencia artificial.png'
-import digital from '../../assets/Artboard 60.png'
+// import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
+// import hands from '../../assets/Robótica.png'
+// import panelesInvernadero from '../../assets/Creación de páneles de control.png'
+// import latam from '../../assets/Inteligencia artificial.png'
+// import digital from '../../assets/Artboard 60.png'
 
 
 //* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)

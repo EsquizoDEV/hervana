@@ -1,18 +1,19 @@
-import { styled } from '@mui/material/styles';
-import { Grid, Box, Paper } from '@mui/material';
+// import { styled } from '@mui/material/styles';
+import { Grid, Box } from '@mui/material';
 import {Typography} from '@mui/material' 
 import * as React from 'react';
 import Atom from '../../../assets/NewAtom.png';
+import EngAtom from '../../../assets/medios_pend/atomo.jpeg'
 import useLanguage from '../../../hooks/useLanguage';
 
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(0),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    boxShadow:'0 0 0 0',
-    marginLeft:"30px"
-  }));
+// const Item = styled(Paper)(({ theme }) => ({
+//     ...theme.typography.body2,
+//     padding: theme.spacing(0),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//     boxShadow:'0 0 0 0',
+//     marginLeft:"30px"
+//   }));
 
 
   
@@ -20,6 +21,10 @@ const Item = styled(Paper)(({ theme }) => ({
   const AtomHero = ({ isMobile }) => {
 
     const { getText } = useLanguage();
+
+    let {language} = useLanguage()
+
+    console.log(language)
     
     return (
         <Box sx={{marginTop:"10vh",flexGrow: 0, display:"flex", justifyContent: 'center'}}>
@@ -54,7 +59,7 @@ const Item = styled(Paper)(({ theme }) => ({
                     {
                     // * Imagen Greenhouse
                     }
-                        <img src={Atom} style={{height:"auto", width:"95%"}} alt="Atom"/>
+                        <img src={language === "en" ? Atom : EngAtom} style={{height:"auto", width:"95%"}} alt="Atom"/>
                 </Grid>
             </Grid>
         </Box>

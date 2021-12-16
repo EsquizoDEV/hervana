@@ -64,10 +64,9 @@ function SwipeableTextMobileStepper({ isMobile }) {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        
       >
         {images.map((step, index) => (
-          <div style={{display:"flex",alignItems:"center", justifyContent:"center"}} key={step.label}>
+          <div style={{display:"flex",alignItems:"center", justifyContent:"center"}} key={index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
@@ -105,8 +104,8 @@ function SwipeableTextMobileStepper({ isMobile }) {
                   <>
                     <ul style={{listStyle:"none"}}>
                       {content.map((bullet, key)=>(
-                        <li>
-                          <Typography key={key} variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
+                        <li key={key}>
+                          <Typography variant="body1" style={{fontSize:"2vh",fontWeight:"bold"}}>{bullet}</Typography>
                         </li>
                       ))
                       }

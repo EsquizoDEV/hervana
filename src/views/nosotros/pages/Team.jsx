@@ -14,7 +14,7 @@ import { Footer } from '../../../components/core/Footer';
 import Oliver from '../../../assets/oliver_holanda/image00001.jpeg'
 import uno from '../../../assets/medios_pend/1.jpeg'
 import dos from '../../../assets/medios_pend/2.jpeg'
-import tres from '../../../assets/medios_pend/3.jpeg'
+// import tres from '../../../assets/medios_pend/3.jpeg'
 import cuatro from '../../../assets/medios_pend/4.jpeg'
 import cinco from '../../../assets/medios_pend/5.jpeg'
 import seis from '../../../assets/medios_pend/6.jpeg'
@@ -23,11 +23,11 @@ import useLanguage from '../../../hooks/useLanguage';
 
 
 const Team = () => {
-    const [expanded, setExpanded] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    }
+    // const handleChange = (panel) => (event, isExpanded) => {
+    //     setExpanded(isExpanded ? panel : false);
+    // }
     
     let theme = useTheme();
     

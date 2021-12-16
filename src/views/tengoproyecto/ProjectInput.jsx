@@ -147,7 +147,7 @@ const ProjectInput = () => {
     <div>
       <NavBar id="nav" theme={theme} isMobile={isMobile} />
       <div style={{width:"100%", height:"100vh", marginTop:"10vh"}} className="project_input">
-        {/* 
+        
             <Modal
               open={open}
               onClose={handleClose}
@@ -179,7 +179,7 @@ const ProjectInput = () => {
 
               </Box>
             </Modal>
-      */}
+     
         
         <Grid sx={{justifyContent:"center", alignItems:"center", height:"70%"}} container>
                   <Box component="form"
@@ -202,11 +202,10 @@ const ProjectInput = () => {
                       variant="h1" 
                       style={
                         {
-                          fontSize:"5vh",
+                          fontSize:"3vh",
                           width:"35%",
                           fontWeight:"bold", 
                           color:"white",
-                          fontSize:"30px",
                           marginTop:"5vh",
                         }
                     }> {getText('proyecto', 'input', 'title')} </Typography>

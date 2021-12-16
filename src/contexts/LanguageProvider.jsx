@@ -29,7 +29,7 @@ export class LanguageProvider extends Component {
 
     changeLanguage = (e) => {
         let language = e.target.checked ? 'es' : 'en';
-        if (this.state.translations[language] == undefined) {
+        if (this.state.translations[language] === undefined) {
             let { translations } = this.state;
             
             translations[language] = require(`../translations/${language}.json`);

@@ -13,11 +13,11 @@ import useLanguage from '../../../hooks/useLanguage';
 
 
 const NuestraHistoria = () => {
-    const [expanded, setExpanded] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    }
+    // const handleChange = (panel) => (event, isExpanded) => {
+    //     setExpanded(isExpanded ? panel : false);
+    // }
 
     let theme = useTheme();
 

@@ -42,6 +42,7 @@
     },
     "servicios": {
         "atom": {
+            "atom_img":"../../../assets/medios_pend/atomo.jpeg",
             "solutions": "We create integrated solutions tailored to specific needs and depending on the phase your business is in. We help you in the design of professional operations for growing green vegetables and / or cannabis with a focus on digitization. We assemble adequate supply chains and make sure that they work according to the goals set. We manage data creation and collection systems that are available in spaces in the cloud, where we take care of processing them so that they facilitate visibility and transparency of information at all levels of your organization.",
             "title_ours": "Our ",
             "title_pil": "six pillars",

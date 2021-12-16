@@ -42,6 +42,7 @@
     },
     "servicios": {
         "atom": {
+            "atom_img":"../../../assets/NewAtom.png",
             "solutions":"Creamos soluciones integradas y a la medida de las necesidades específicas y dependiendo de la fase en la que se encuentre tu negocio. Te ayudamos en el diseño de operaciones profesionales de cultivo de vegetales verdes y/o cannabis con enfoque en digitalización. Ensamblamos cadenas adecuadas de proveeduría y nos encargamos de que funcionen de acuerdo a las metas planteadas. Administramos sistemas de creación y recolección de datos que estén a disposición en espacios en la nube, donde nos encargamos de procesarlos para que faciliten visibilidad y transparencia de información a todos los niveles de tu organización.",
             "title_ours": "Nuestros",
             "title_pil": "seis pilares",

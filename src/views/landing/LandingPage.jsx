@@ -10,7 +10,7 @@ import './index.css'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import history from '../../history';
-import Services from '../servicios/Services'
+// import Services from '../servicios/Services'
 import useLanguage from '../../hooks/useLanguage';
 
 const  LandingPage = () => {

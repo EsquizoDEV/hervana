@@ -2,8 +2,8 @@
 import { Grid, Box } from '@mui/material';
 import {Typography} from '@mui/material' 
 import * as React from 'react';
-import Atom from '../../../assets/NewAtom.png';
-import EngAtom from '../../../assets/medios_pend/atomo.jpeg'
+import Atom from '../../../assets/atoms/NewAtom.png';
+import EngAtom from '../../../assets/atoms/atomo.jpeg'
 import useLanguage from '../../../hooks/useLanguage';
 
 // const Item = styled(Paper)(({ theme }) => ({
@@ -24,12 +24,12 @@ import useLanguage from '../../../hooks/useLanguage';
 
     let {language} = useLanguage()
 
-    console.log(language)
     
     return (
         <Box sx={{marginTop:"10vh",flexGrow: 0, display:"flex", justifyContent: 'center'}}>
            <Grid sx={{display:"flex",justifyContent:"center", alignItems:"center", width:"80%"}} container spacing={1}>
-                <Grid sx={{height:"100%"}} item xs={12} md={6}>
+                <Grid 
+                item xs={12} md={6}>
                     {
                     // * Textos
                     }  
@@ -59,7 +59,7 @@ import useLanguage from '../../../hooks/useLanguage';
                     {
                     // * Imagen Greenhouse
                     }
-                        <img src={language === "en" ? Atom : EngAtom} style={{height:"auto", width:"95%"}} alt="Atom"/>
+                        <img src={language == "es" ? Atom : EngAtom} style={{top: -200 ,height:"auto", width:"95%"}} alt="Atom"/>
                 </Grid>
             </Grid>
         </Box>

@@ -82,6 +82,11 @@
             "i_4": "Transformación Digital.",
             "i_5": "Cannabis en Latam.",
             "i_6": "Sustentabilidad."
+        },
+        "focus":{
+            "cloud":"Creación de dashboards en la nube",
+            "robotics":"Robótica",
+            "ai":"Inteligencia artificial"
         }
     },
     "team": {
@@ -130,6 +135,10 @@
             "aboutus": "Sobre nosotros",
             "team": "Nuestro equipo",
             "proc": "Nuestro proceso"
+        },
+        "listButton":{
+            "history":"Nuestra historia",
+            "team":"Nuestro equipo"
         }
     }
 }

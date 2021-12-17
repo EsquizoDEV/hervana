@@ -41,48 +41,6 @@ const OurFocus = () => {
                   <FocusHeader isMobile={isMobile}/>
                 </Grid>
 
-                {/* <Grid item xs={12} sx={{maxWidth: "100%"}}>
-                    <Box sx={{width:"100%", marginBottom:isMobile ? "10vh" : "40vh"}}>
-                        <Typography 
-                            variant="h3" 
-                            style={{
-                                fontSize: isMobile ? "4vw" : "5vh",
-                                fontWeight:"bold", 
-                                paddingLeft:"5%", 
-                                marginTop:"15vh", 
-                                marginBottom: isMobile ? "4vh" : "6vh"
-                            }}
-                        >
-                            Sustentabilidad & eficiencia
-                        </Typography>
-                        <Typography variant="body2" style={
-                            {
-                            fontSize:isMobile ? "4vw" : "2vw", 
-                            fontWeight:"bold", 
-                            marginBottom:"30px", 
-                            paddingLeft:"5%",
-                            width:"40%"
-                            }
-                        }>
-                            Contribuimos con el desarrollo sostenible mediante tecnología
-                        </Typography>
-                        <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>  
-                        <TextOnImage 
-                            imagePosition="left" 
-                            img={hands}
-                            isMobile={isMobile}
-                            text={
-                            ` La agricultura en ambientes controlados es
-                            por mucho la manera más eficiente y
-                            sustentable de producción en la actualidad.
-                            Utilizando 90% menos agua y produciendo
-                            hasta 30 veces mas a comparación de la
-                            agricultura tradicional, sin mencionar que
-                            esta está a merced de los cada vez más
-                            desafiantes condiciones climáticas.`
-                        }/>
-                    </Box>
-                </Grid> */}
 
                 <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
                     {isMobile 
@@ -91,51 +49,6 @@ const OurFocus = () => {
                     }
                 </Grid>
                 
-                {/* <Grid item xs={12}>
-                    <Box 
-                        sx={{
-                        marginBottom:"30vh",
-                        width:"100%"
-                        }}
-                    >
-                        <Typography variant="body2" style={
-                        {
-                            fontSize:isMobile ? "4vw" : "2vw",
-                            fontWeight:"bold", 
-                            paddingLeft:"5%", 
-                            marginTop:"50px", 
-                            marginBottom:"20px",
-                            width:"50%"
-                        }
-                        }>
-                        Agtech & cultivo data driven
-                        </Typography>
-                    
-                        <Typography variant="body2" style={
-                        {
-                            fontSize:"2vw", 
-                            fontWeight:"bold",  
-                            width:"40%"
-                        }
-                        }>
-                        </Typography>
-                        
-                        <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div> 
-                        <TextOnImage 
-                        imagePosition="right"
-                        img={panelesInvernadero} 
-                        isMobile={isMobile}
-                        text={`
-                        Combinar el conocimiento profundo de las
-                        recetas de cultivo, principios de plant
-                        empowerment y analitica tecnica en la
-                        "mente" de nuestros horticultores con las
-                        posibilidades de datos, robótica e IA ofrece la
-                        oportunidad de incrementar sustancialmente
-                        la eficiencia y calidad de la producción.`
-                        }/>
-                    </Box>
-                </Grid> */}
                 
                   <Box sx={{marginBottom:"10vh"}}>
                     <Grid 

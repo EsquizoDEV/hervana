@@ -19,7 +19,6 @@ const NuestraHistoria = () => {
     //     setExpanded(isExpanded ? panel : false);
     // }
 
-    let { getText } = useLanguage();
 
     let theme = useTheme();
 

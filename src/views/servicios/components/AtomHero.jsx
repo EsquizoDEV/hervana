@@ -49,13 +49,13 @@ import useLanguage from '../../../hooks/useLanguage';
                                 textAlign:"left",
                                 fontWeight:"bold",
                                 marginTop:"50px",
-                                fontSize:isMobile ? "1.7vh" : "1.2vw"
+                                fontSize:isMobile ? "2vh" : "1.2vw"
                             }}
                         >
                         {getText('servicios', 'atom', 'solutions')}
                         </Typography>
                 </Grid>
-                <Grid sx={{}} item xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                     {
                     // * Imagen Greenhouse
                     }

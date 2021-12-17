@@ -33,7 +33,6 @@ const Team = () => {
 
     let theme = useTheme();
     
-    let {getText} = useLanguage()
     
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 

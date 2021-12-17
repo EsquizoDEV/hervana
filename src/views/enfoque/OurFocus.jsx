@@ -44,7 +44,7 @@ const OurFocus = () => {
 
                 <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
                     {isMobile 
-                        ?   <PillarsM id="pillars-component" />
+                        ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
                         :   <Pillars isMobile={isMobile} id="pillars-component" />
                     }
                 </Grid>
@@ -62,10 +62,9 @@ const OurFocus = () => {
                                 display:"flex", 
                                 flexDirection:"column", 
                                 alignItems:"center",
-                                marginLeft:"5vw",
                                 justifyContent:"center"
                                 }}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
+                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh", marginLeft:"5vw"}}>
                                     Creación de dashboards en la nube
                                 </Typography>
                                 <img src={paneles} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
@@ -78,7 +77,7 @@ const OurFocus = () => {
                                     Robótica
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
-                                <img src={robotica} style={{width:"50%"}} alt="paneles"/>
+                                <img src={robotica} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
@@ -87,7 +86,7 @@ const OurFocus = () => {
                                     Inteligencia artificial
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
-                                <img src={AI} style={{width:"50%"}} alt="paneles"/>
+                                <img src={AI} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                     </Grid>
@@ -146,109 +145,6 @@ const OurFocus = () => {
                     </div>
                   </Box>
                 </Grid>
-                
-                {/* <Grid item xs={12}>
-                    <Box sx={
-                    {
-                        marginBottom:"20vh"
-                    }}>
-
-                        <Typography variant="h3" style={
-                        {
-                            fontSize:"2vw",
-                            fontWeight:"bold", 
-                            paddingLeft:"5%", 
-                            marginTop:"", 
-                            marginBottom:"20px"
-                        }
-                        }>
-                        Industria del cannabis en Latam
-                        </Typography>
-                    
-                        <Typography variant="body2" style={
-                        {
-                            fontSize:"2vw", 
-                            fontWeight:"bold", 
-                            marginBottom:"", 
-                            paddingLeft:"150px",
-                            width:"40%"
-                        }
-                        }>
-                        </Typography>
-                    
-                        <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>
-                        <Box sx={{display:"flex",width:"100%", paddingLeft:"5%"}}>
-                          <img style={{width:"50%"}} src={latam} alt="cannabis_latam"/>
-                          <Typography variant="body2" sx={{fontSize:"1.2vw", width:"50%", paddingRight:"10vw"}}>
-                            Los productores en Latam pueden
-                            conseguir
-                            liderar la industria mundial en calidad y
-                            costos por las condiciones favorables
-                            para la
-                            producción, como los bajos costos
-                            laborales,
-                            el clima, y la luminosidad, entre otros
-                            factores propicios. Hay una gran
-                            oportunidad de crear una verdadera y
-                            profunda revolución industria y
-                            económica
-                            en el continente.
-                          </Typography>
-                        </Box>  
-                    </Box>
-                </Grid> */}
-                
-                {/* <Grid item xs={12}>
-                  <Box sx={
-                  {
-                    marginBottom:"10vh",
-                    width:"100%"
-                  }}>
-                    <Typography variant="h3" style={
-                      {
-                        fontSize:"2vw",
-                        fontWeight:"bold", 
-                        paddingLeft:"5%", 
-                        marginTop:"50px", 
-                        marginBottom:"20px"
-                      }
-                    }>
-                      Transformación digital
-                    </Typography>
-                  
-                    <Typography variant="body2" style={
-                      {
-                        fontSize:"2vw", 
-                        fontWeight:"bold", 
-                        marginBottom:"30px", 
-                        paddingLeft:"150px",
-                        width:"40%"
-                      }
-                    }>
-                    </Typography>
-                    
-                    <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div> 
-                    <TextOnImage 
-                      imagePosition="right"
-                      img={digital}
-                      isMobile={isMobile}
-                      text={`
-                        Definimos la estrategia de transformación
-                        digital como una estrategia que coordina
-                        el uso de tecnologías emergentes para
-                        desbloquear nuevas fuentes de valor para
-                        clientes y empleados, impulsar el
-                        crecimiento de los ingresos y crear
-                        agilidad / eficiencia operativa al servicio
-                        de los resultados comerciales.
-                        `}
-                      />
-                  </Box>
-                </Grid> */}
-
-                {/* <Box sx={{width:"100%",display:"flex",justifyContent:"center"}}>
-                  <img src={transDigital} style={{width:"50%"}} alt="transformación digital"/>
-                </Box> */}
             </Grid>
         </Box>
         <Grid item xs={12}>

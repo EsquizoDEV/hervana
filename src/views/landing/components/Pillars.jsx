@@ -20,7 +20,7 @@ const Pillars = ({ isMobile }) => {
         <Box sx={{
             width:"70%"
         }}>
-            <Box sx={{marginBottom:"-30vh"}}>
+            <Box sx={{marginBottom:"-50vh"}}>
                 {/* Circulo de adorno 1*/}
                 <Box id="PillarRightImage" 
                 data-aos="fade-left"
@@ -35,7 +35,11 @@ const Pillars = ({ isMobile }) => {
                 </Box>
                 <Box 
                     data-aos="fade-left"
-                    sx={{position:"relative", bottom:"45vh"}}
+                    sx={{
+                        position:"relative", 
+                        bottom:"45vh",
+                        marginLeft: isMobile ? "20%" : "0"
+                    }}
                 >
                     <Typography style={{fontSize:"6vh",fontWeight: 'bold', color:"black", width:"27vw", marginLeft:"6vw"}} gutterBottom variant="h3" component="div">
                         <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
@@ -113,7 +117,11 @@ const Pillars = ({ isMobile }) => {
                 </Box>
                 <Box 
                 data-aos="fade-left"
-                sx={{position:"relative", bottom:"45vh"}}>
+                sx={{
+                    position:"relative", 
+                    bottom:"45vh",
+                    marginLeft: "0%"
+                }}>
                     <Typography style={{fontSize:"6vh",fontWeight: 'bold', color:"black", width:"27vw", marginLeft:"6vw"}} gutterBottom variant="h3" component="div">
                         <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Cannabis Latam</div>
                     </Typography>

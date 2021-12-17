@@ -10,6 +10,7 @@ import { KeyboardArrowDown } from '@material-ui/icons';
 import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
 import history from '../../history'
+import useLanguage from '../../hooks/useLanguage';
 
 
 const ToggleButton = styled(Button)(({ theme }) => ({
@@ -27,6 +28,8 @@ export const ListButton = (props) => {
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen)
     }
+
+    const {getText} = useLanguage()
     
     const handleClose = (event) => {
         if (anchorRef.current && anchorRef.current.contains(event.target)){ 
@@ -91,8 +94,34 @@ export const ListButton = (props) => {
                              id="menu-list"
                              onKeyDown={handleListKeyDown}
                              >
-                                 <MenuItem sx={{fontSize:"2vh"}} onClick={(e)=>{handleClose(e); history.push('/historia'); window.location.reload()}}>Nuestra historia</MenuItem>
-                                 <MenuItem sx={{fontSize:"2vh"}} onClick={(e)=>{handleClose(e); history.push('/team'); window.location.reload()}}>Nuestro equipo</MenuItem>
+                                 <MenuItem 
+                                    sx={
+                                            {
+                                            fontSize:"2vh"
+                                            }
+                                        } 
+                                    onClick={(e)=>{
+                                        handleClose(e); 
+                                        history.push('/historia'); 
+                                        window.location.reload()}
+                                        }
+                                >
+                                        {getText('general', 'listButton','history')}
+                                </MenuItem>
+                                 <MenuItem 
+                                    sx={
+                                        {
+                                            fontSize:"2vh"
+                                        }
+                                        } 
+                                    onClick={(e)=>{
+                                        handleClose(e); 
+                                        history.push('/team'); 
+                                        window.location.reload()
+                                    }
+                                    }>
+                                        {getText('general', 'listButton','team')}
+                                    </MenuItem>
                              </MenuList>
                          </ClickAwayListener>
                      </Paper>

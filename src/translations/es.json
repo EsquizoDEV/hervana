@@ -82,6 +82,11 @@
             "i_4": "Transformación Digital.",
             "i_5": "Cannabis en Latam.",
             "i_6": "Sustentabilidad."
+        },
+        "focus":{
+            "cloud":"Creación de dashboards en la nube",
+            "robotics":"Robótica",
+            "ai":"Inteligencia artificial"
         }
     },
     "team": {
@@ -114,7 +119,20 @@
             "text":" Que Latinoamérica se convierta en un hub de horticultura digitalizada, generando armonía en la relación entre el humano y la naturaleza, liderando la transformación hacia un un mundo sustentable, descentralizado y transparente."
         }
     },
-    "faq": {},
+    "faq": {
+        "start": {
+            "title": "FAQ",
+            "desc": "Esta es la sección donde se resuelven varias de las preguntas frecuentes"
+        },
+        "q1": {
+            "title": "Pregunta #1",
+            "desc": "Hervana Group es un socio estratégico formado por un equipo experto de profesionales especializados en la digitalización y operaciones de cultivo en ambientes controlados, analítica e inteligencia de negocios, con experiencia en proyectos de clase mundial."
+        },
+        "q2": {
+            "title": "Pregunta #2",
+            "desc": "Hervana Group es un socio estratégico formado por un equipo experto de profesionales especializados en la digitalización y operaciones de cultivo en ambientes controlados, analítica e inteligencia de negocios, con experiencia en proyectos de clase mundial."
+        }
+    },
     "general": {
         "footer": {
             "contact_us": "Contáctanos a través de",
@@ -130,6 +148,10 @@
             "aboutus": "Sobre nosotros",
             "team": "Nuestro equipo",
             "proc": "Nuestro proceso"
+        },
+        "listButton":{
+            "history":"Nuestra historia",
+            "team":"Nuestro equipo"
         }
     }
 }

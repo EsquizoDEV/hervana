@@ -121,7 +121,20 @@
             "text":"May Latin America become a digitized horticulture hub, generating harmony in the relationship between human and nature, leading the transformation towards a sustainable, decentralized and transparent world."
         }
     },
-    "faq": {},
+    "faq": {
+        "start": {
+            "title": "FAQ",
+            "desc": "This is the section where varous frequently asked questions (FAQ) are answered"
+        },
+        "q1": {
+            "title": "Question #1",
+            "desc": "Hervana Group is a strategic partner made up of an expert team of professionals specialized in digitization and cultivation operations in controlled environments, analytics and business intelligence, with experience in world-class projects."
+        },
+        "q2": {
+            "title": "Question #2",
+            "desc": "Hervana Group is a strategic partner made up of an expert team of professionals specialized in digitization and cultivation operations in controlled environments, analytics and business intelligence, with experience in world-class projects."
+        }
+    },
     "general": {
         "footer": {
             "contact_us": "Contact us through",

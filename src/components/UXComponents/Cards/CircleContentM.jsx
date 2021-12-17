@@ -33,7 +33,7 @@ export const ImgInfoCard = (props) => {
                 display:'flex', 
                 maxWidth: "90%",
                 marginBottom: '10px',
-            } 
+        } 
         : {display:'flex'}
         } 
       >
@@ -63,7 +63,7 @@ export const ImgInfoCard = (props) => {
             flexDirection:'column', 
             maxWidth: "auto",
             position:'relative',
-            left: props.side === "left" ? 20 : 140,
+            left: props.side === "left" ? (props.isMobile ? 50 : 20) : (props.isMobile ? 160 : 140),
             width: props.side === "left" ? 320 : 320,
         }}>
             <Typography style={{color:"black"}} variant="body2" color="text.secondary">

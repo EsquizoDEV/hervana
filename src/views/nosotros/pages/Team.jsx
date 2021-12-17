@@ -29,9 +29,10 @@ const Team = () => {
     //     setExpanded(isExpanded ? panel : false);
     // }
     
+    let { getText } = useLanguage();
+
     let theme = useTheme();
     
-    let {getText} = useLanguage()
     
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -102,7 +103,11 @@ const Team = () => {
                                                 >
                                                     <div style={{display:"flex", justifyContent:"center"}}>
                                                         <CardMedia
-                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        sx={{
+                                                            height:"30vh",
+                                                            width:"30vh",
+                                                            borderRadius:"50%"
+                                                        }}
                                                         component="img"
                                                         alt="leader"
                                                         image={uno}
@@ -129,7 +134,11 @@ const Team = () => {
                                                 >
                                                     <div style={{display:"flex", justifyContent:"center"}}>
                                                         <CardMedia
-                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        sx={{
+                                                            height:"30vh",
+                                                            width:"30vh",
+                                                            borderRadius:"50%"
+                                                        }}
                                                         component="img"
                                                         alt="leader"
                                                         image={dos}
@@ -214,21 +223,21 @@ const Team = () => {
                                         <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
                                                 <Typography variant="h2" sx={{fontSize:"4vh"}}>MBA. Eduardo Martinez</Typography>
-                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Strategy & Digital Catalyst</Typography>
+                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Strategy & Digital Catalyst</Typography>
                                             </Box>
                                         </Grid>
                                         
                                         <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
                                                 <Typography variant="h2" sx={{fontSize:"4vh"}}>Bsc. Oliver Ledermann</Typography>
-                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Industry & Business Expert</Typography>
+                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Industry & Business Expert</Typography>
                                             </Box>
                                         </Grid>
 
                                         <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
                                                 <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Carlos Cambero</Typography>
-                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}}>Plant Scientist & Growing Master</Typography>
+                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Plant Scientist & Growing Master</Typography>
                                             </Box>
                                         </Grid> */}
                                     </Grid>
@@ -389,6 +398,19 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid> */}
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Daniel Ender</Typography>
+                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Finance & Business Master</Typography>
+                                            </Box>
+                                        </Grid>
+
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Ing. Alekos Martinez</Typography>
+                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Entrepreneurship & Tech Master</Typography>
+                                            </Box>
+                                        </Grid>
                                     </Grid>
                                 </Box>
                             </Grid>

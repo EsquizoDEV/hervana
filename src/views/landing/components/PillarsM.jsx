@@ -37,7 +37,7 @@ const PillarsM = ({ isMobile }) => {
                 data-aos="fade-left"
                 sx={{position:"relative", bottom:"30px",marginBottom:"290px"}}
             >
-                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", maxWidth:"90%", marginLeft:"20%"}} gutterBottom variant="h3" component="div">
+                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", maxWidth:"90%", marginLeft:"22%"}} gutterBottom variant="h3" component="div">
                     <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
                 </Typography>
                 
@@ -51,9 +51,7 @@ const PillarsM = ({ isMobile }) => {
                 ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
                 
                 media={Img1}
-
                 side="right"
-                
               />
             </Box>
 
@@ -115,7 +113,7 @@ const PillarsM = ({ isMobile }) => {
                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
                  exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
                  ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
-                 
+                 isMobile={true}
                  media={Img3}
  
                  side="right"

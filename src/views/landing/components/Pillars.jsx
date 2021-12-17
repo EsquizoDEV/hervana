@@ -20,7 +20,7 @@ const Pillars = ({ isMobile }) => {
         <Box sx={{
             width:"70%"
         }}>
-            <Box sx={{marginBottom:"-50vh"}}>
+            <Box sx={{marginBottom:"-30vh"}}>
                 {/* Circulo de adorno 1*/}
                 <Box id="PillarRightImage" 
                 data-aos="fade-left"

@@ -8,268 +8,76 @@ import Pillars from '../../views/landing/components/Pillars'
 import PillarsM from '../../views/landing/components/PillarsM'
 // import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
-import dashboard from '../../assets/Artboard 63.png'
-import robotica from '../../assets/Artboard 64.png'
-import ai from '../../assets/Artboard 65.png'
 import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
-import useLanguage from '../../hooks/useLanguage';
-
-
-//* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)
-
+import { HexagonsDesk } from './components/HexagonsDesk';
+// import useLanguage from '../../hooks/useLanguage';
 
 const OurFocus = () => {
   let theme = useTheme();
-  const {getText} = useLanguage()
+  // const {getText} = useLanguage()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
       
     <div className="App">
         <NavBar theme={theme} isMobile={isMobile} />    
-        <Box sx={{ flexGrow: 0, maxWidth:"100%"}}>
-            <Grid 
-                container
-                direction="column"
-                justifyContent="space-evenly"
-                alignItems="stretch"
+        <Box sx={{maxWidth:"100%"}}>
+          <Grid item xs={12} sx={{backgroundColor:"#101111", height:"100vh"}} container>
+            <FocusHeader isMobile={isMobile}/>
+          </Grid>
+
+
+          <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"-20vh"}}  id="pillars-item" container>
+              {isMobile 
+                  ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
+                  :   <Pillars isMobile={isMobile} id="pillars-component" />
+              }
+          </Grid>
+          
+          {/* //* Renderiza los hexágonos */}
+          <HexagonsDesk/>
+          
+          <Box sx={{display:""}}>
+            <Typography variant="h3" style={
+              {
+                fontSize:isMobile ? "4vw" : "2vw",
+                fontWeight:"bold", 
+                paddingLeft:isMobile ? "12%" : "5%", 
+                marginBottom:"20px"
+              }
+            }>
+              Business intelligence
+            </Typography>
+            
+            <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>
+
+            <Typography variant="body2" 
+                sx={{ 
+                    fontSize:isMobile ? "4vw" : "1.2vw",
+                    fontWeight:"400",
+                    width:isMobile ? "80%" : "35%", 
+                    marginLeft:"5%", 
+                    marginTop:"50px", 
+                    marginBottom:"30px",
+                    paddingRight:isMobile ? "0" : "1vw",
+                    paddingLeft:""
+                }}
             >
-                <Grid item xs={12} sx={{backgroundColor:"#101111", height:"100vh"}} container>
-                  <FocusHeader isMobile={isMobile}/>
-                </Grid>
-
-
-                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"-20vh"}}  id="pillars-item" container>
-                    {isMobile 
-                        ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
-                        :   <Pillars isMobile={isMobile} id="pillars-component" />
-                    }
-                </Grid>
-                
-                
-                  {/* <Box sx={{marginBottom:"10vh"}}>
-                    <Grid 
-                        container
-                        direction="row"
-                        justifyContent="center"
-                    >
-                        <Grid item xs={12} md={4}>
-                            <Box sx={{
-                                width:"100%",  
-                                display:"flex", 
-                                flexDirection:"column", 
-                                alignItems:"center",
-                                justifyContent:"center"
-                                }}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh", marginLeft:"5vw"}}>
-                                    Creación de dashboards en la nube
-                                </Typography>
-                                <img src={paneles} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
-                                    Robótica
-                                </Typography>
-                                <img src={robotica} style={{width:"50%"}} alt="paneles"/>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginRight:"3vw", justifyContent:"center"}}>
-                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
-                                    Inteligencia artificial
-                                </Typography>
-                                <img src={AI} style={{width:"50%"}} alt="paneles"/>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                    </Box> */}
-
-                    <Box sx={
-                      {
-                        paddingLeft:"5vw",
-                        paddingRight:"5vw"
-                      }}
-                    >
-                      <Box sx={
-                        {
-                          display:"flex",
-                          justifyContent:"space-evenly",
-                          height:"50vh",
-                          marginBottom:"3vh"
-                        }
-                      }>
-                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center",
-                              justifyContent:"center", 
-                              height:"10vh",
-                            }
-                          }>
-                            
-                            <Typography
-                            variant="body2"
-                            sx={
-                              {
-                                fontSize:isMobile ? "8vw" : "2vw",
-                                fontWeight:"bold",
-                                display:"flex",
-                                alignItems:"center",
-                                justifyContent:"center"
-                              }}
-                            >
-                              {getText('ourfocus','focus', 'cloud')}
-                            </Typography>
-                          </div>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center", 
-                              justifyContent:"center", 
-                              height:"40vh",
-                            }
-                          }>
-                            
-                            <img style={
-                              {
-                              }} alt="dashboards_cloud" src={dashboard}/>
-                          </div>
-                        </Box>
-                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center",
-                              justifyContent:"center", 
-                              height:"10vh"
-                            }
-                          }>
-                            
-                            <Typography
-                            variant="body2"
-                            sx={
-                              {
-                                fontSize:isMobile ? "8vw" : "2vw",
-                                fontWeight:"bold",
-                                display:"flex",
-                                alignItems:"center",
-                                justifyContent:"center"
-                              }}
-                            >
-                              {getText('ourfocus','focus', 'robotics')}
-                            </Typography>
-                          </div>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center", 
-                              justifyContent:"center", 
-                              height:"40vh",
-                            }
-                          }>
-                            
-                            <img alt="robotics" src={robotica}/>
-                          </div>
-                        </Box>
-                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center",
-                              justifyContent:"center", 
-                              height:"10vh",
-                            }
-                          }>
-                            
-                            <Typography
-                            variant="body2"
-                            sx={
-                              {
-                                fontSize:isMobile ? "8vw" : "2vw",
-                                fontWeight:"bold",
-                                display:"flex",
-                                alignItems:"center",
-                                justifyContent:"center"
-                              }}
-                            >
-                              {getText('ourfocus','focus', 'ai')}
-                            </Typography>
-                          </div>
-                          <div style={
-                            {
-                              display:"flex", 
-                              alignItems:"center", 
-                              justifyContent:"center", 
-                              height:"40vh",
-                            }
-                          }>
-                            
-                            <img  alt="ai" src={ai}/>
-                          </div>
-                        </Box>
-                      </Box>
-                    </Box>
-                
-                <Grid item xs={12}>
-                  <Box>
-                    <Typography variant="h3" style={
-                      {
-                        fontSize:isMobile ? "8vw" : "2vw",
-                        fontWeight:"bold", 
-                        paddingLeft:isMobile ? "12%" : "5%", 
-                    marginBottom:"20px"
-                      }
-                    }>
-                      Business intelligence
-                    </Typography>
-                    
-                    <Box component="div" style={
-                      {
-                        fontSize:"2vw", 
-                        fontWeight:"bold", 
-                        marginBottom:"", 
-                        paddingLeft:"5%",
-                        width:"40%"
-                      }
-                    }>
-                      
-                    </Box>
-                    
-                    <div style={{backgroundColor:"#1CF445", height:"5px", width:"30%"}}></div>
-
-                    <Typography variant="body2" 
-                        sx={{ 
-                            fontSize:"1.2vw",
-                            fontWeight:"400",
-                            width:"35%", 
-                            marginLeft:isMobile ? "20%" : "5%", 
-                            marginTop:"50px", 
-                            marginBottom:"30px",
-                            paddingRight:"1vw",
-                            paddingLeft:""
-                        }}
-                    >
-                    La inteligencia de negocios (BI) combina
-                    análisis de negocios, minería, visualización,
-                    herramientas e infraestructura de datos,
-                    además de prácticas recomendadas para
-                    ayudar a las empresas a tomar decisiones
-                    basadas en los datos.
-                    </Typography>
-                    
-                    <div style={{padding:"15vw", paddingTop:"0"}}>
-                      <img src={bi} alt="business intelligence" style={{width:"100%", height:"200%"}}/>
-                    </div>
-                  </Box>
-                </Grid>
-            </Grid>
+              La inteligencia de negocios (BI) combina
+              análisis de negocios, minería, visualización,
+              herramientas e infraestructura de datos,
+              además de prácticas recomendadas para
+              ayudar a las empresas a tomar decisiones
+              basadas en los datos.
+            </Typography>
+            
+            <div style={{padding:"15vw", paddingTop:"0"}}>
+              <img src={bi} alt="business intelligence" style={{width:"100%", height:"200%"}}/>
+            </div>
+          </Box>
         </Box>
-        <Grid item xs={12}>
-          <Footer isMobile={isMobile}/>
-        </Grid>
+
+        <Footer isMobile={isMobile}/>
     </div>
   );
 }

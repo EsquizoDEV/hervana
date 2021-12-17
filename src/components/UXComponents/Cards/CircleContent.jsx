@@ -63,7 +63,7 @@ export const ImgInfoCard = (props) => {
               </Typography>
               <CardActions sx={props.side === "right" ? {justifyContent: 'flex-end'} : {justifyContent: 'flex-end', marginRight:"4vw"}}>
                   <Button onClick={()=> {
-                    history.push("ourfocus");
+                    history.push("team");
                     window.location.reload();
                   }} sx={{color:"black", fontWeight:"bold", fontSize:"20px"}} size="small">Learn More</Button>
               </CardActions>

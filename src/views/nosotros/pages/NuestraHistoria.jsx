@@ -69,14 +69,14 @@ const NuestraHistoria = () => {
                     <Box sx={{display:"flex", flexDirection:isMobile ? "column" : "row", width:"100%"}}>
                         <Box sx={{borderRight:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
                             <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText('historia', 'mision', 'title')}</Typography>
-                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
+                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "2vw" : "1.2vw"}}>
                                 {getText('historia', 'mision', 'text')}
                             </Typography>
                         </Box>
                         {isMobile ? <div><br /></div> : null}
                         <Box sx={{borderLeft:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
                             <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText('historia', 'vision', 'title')}</Typography>
-                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
+                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "2vw" : "1.2vw"}}>
                                 {getText('historia','vision', 'text')}
                             </Typography>
                         </Box>

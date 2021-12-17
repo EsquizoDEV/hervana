@@ -59,7 +59,7 @@ import useLanguage from '../../../hooks/useLanguage';
                     {
                     // * Imagen Greenhouse
                     }
-                        <img src={language == "es" ? Atom : EngAtom} style={{top: -200 ,height:"auto", width:"95%"}} alt="Atom"/>
+                        <img src={language === "es" ? Atom : EngAtom} style={{top: -200 ,height:"auto", width:"95%"}} alt="Atom"/>
                 </Grid>
             </Grid>
         </Box>

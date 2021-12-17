@@ -398,19 +398,6 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid> */}
-                                        <Grid item xs={12} md={6}>
-                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Daniel Ender</Typography>
-                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Finance & Business Master</Typography>
-                                            </Box>
-                                        </Grid>
-
-                                        <Grid item xs={12} md={6}>
-                                            <Box sx={{width: "100%", marginBottom:"10vh",display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Ing. Alekos Martinez</Typography>
-                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Entrepreneurship & Tech Master</Typography>
-                                            </Box>
-                                        </Grid>
                                     </Grid>
                                 </Box>
                             </Grid>

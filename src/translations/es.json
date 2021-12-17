@@ -32,9 +32,45 @@
     "proyecto": {},
     "servicios": {},
     "ourfocus": {},
-    "team": {},
-    "historia": {},
-    "faq": {},
+    "team": {
+        "start": {
+            "title": "Nuestro equipo",
+            "desc": "Hervana Group está formado por un equipo de profesionales interdisciplinarios con formación académica y experiencia profesional de clase mundial en Latinoamérica, Norteamérica, Europa y Asia. Nuestra historia comenzó en Países Bajos, nación reconocida por ser un hub de innovación y conocimiento en horticultura, tecnología, sustentables y pionero en el consumo responsable de cannabis. Contamos con una amplia red de contactos y conocimiento especializado en operaciones de  cultivo en ambientes controlados, AgTech, transformación digital, analítica de datos, desarrollo y estrategia de negocios; en industria de cannabis y en implementación de blockchain."
+        },
+        "team": {
+            "founders": "Fundadores",
+            "asesores": "Junta de asesores"
+        }
+    },
+    "historia": {
+        "start": {
+            "title": "Nuestra historia",
+            "desc": "Hervana Group fue fundado con el propósito de convertirse en el socio estratégico de empresarios en la industria de horticultura y de la naciente industria legal de cannabis, ayudándoles a mejorar sus modelos de negocio, a navegar e implementar el uso de tecnologías de vanguardia, y a operar con los estándares más altos de calidad, siempre ofreciendo soluciones a la medida de las necesidades reales de nuestros clientes."
+        },
+        "mission": {
+            "title": "Misión",
+            "desc" : "Revolucionar el presente de la horticultura mundial por medio de innovación y tecnología aplicada que facilite la transformación digital de nuestros clientes. "
+        },
+        "vision": {
+            "title": "Visión",
+            "desc": "Que Latinoamérica se convierta en un hub de horticultura digitalizada, generando armonía en la relación entre el humano y la naturaleza, liderando la transformación hacia un un mundo sustentable, descentralizado y transparente."
+        }
+
+    },
+    "faq": {
+        "start": {
+            "title": "FAQ",
+            "desc": "Esta es la sección donde se resuelven varias de las preguntas frecuentes"
+        },
+        "q1": {
+            "title": "Pregunta #1",
+            "desc": "Hervana Group es un socio estratégico formado por un equipo experto de profesionales especializados en la digitalización y operaciones de cultivo en ambientes controlados, analítica e inteligencia de negocios, con experiencia en proyectos de clase mundial."
+        },
+        "q2": {
+            "title": "Pregunta #2",
+            "desc": "Hervana Group es un socio estratégico formado por un equipo experto de profesionales especializados en la digitalización y operaciones de cultivo en ambientes controlados, analítica e inteligencia de negocios, con experiencia en proyectos de clase mundial."
+        }
+    },
     "general": {
         "footer": {
             "contact_us": "Contáctanos a través de",

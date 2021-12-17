@@ -7,10 +7,10 @@ export const FocusHeader = ({ isMobile }) => {
             <Typography 
                 variant={isMobile ? "h5" : "h2"} 
                 style={{
-                    paddingLeft: isMobile ? "15vh" : "10vh",
-                    paddingRight: isMobile ? "15vh" : "60vh",
+                    paddingLeft: isMobile ? "5vh" : "10vh",
+                    paddingRight: isMobile ? "5vh" : "60vh",
                     paddingTop: isMobile ? "5vh" : "10vh",
-                    paddingBottom: isMobile ? "15vh" : "10vh",
+                    paddingBottom: isMobile ? "5vh" : "10vh",
                     maxWidth:"90%",
                     color:"white", 
                     fontWeight:"bold", 

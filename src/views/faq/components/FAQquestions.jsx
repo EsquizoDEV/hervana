@@ -6,8 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Faq from '../../../assets/images/FAQ.png'
 
-
-export const FAQquestions = () => {
+export const FAQquestions = ({ getText }) => {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
@@ -18,7 +17,7 @@ export const FAQquestions = () => {
         <div>
             <Box sx={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%", marginTop:"15vh", marginBottom:"15vh"}}>
                 <Typography variant="body2" sx={{color:"black", fontSize:"30px", marginLeft:"5vh", marginRight:"5vh"}}>
-                    Esta es la sección donde se resuelven varias de las preguntas frecuentes
+                    {getText("faq", "start", "desc")}
                 </Typography>
                 <img src={Faq} alt="faq svg" style={{marginTop:"50px"}}/>
                 <Box sx={{paddingLeft:"15vw", paddingRight:"15vw", marginTop:"50px"}}>
@@ -29,16 +28,13 @@ export const FAQquestions = () => {
                         id="panel1bh-header"
                         >
                             <Typography variant="h3" sx={{fontWeight:"bold",fontSize:"40px",width: '25%', flexShrink: 0 }}>
-                                Pregunta #1
+                            {getText("faq", "q1", "title")}
                             </Typography>
                         </AccordionSummary>
 
                         <AccordionDetails>
                             <Typography>
-                            Hervana Group es un socio estratégico formado por un equipo experto de
-                            profesionales especializados en la digitalización y operaciones de cultivo
-                            en ambientes controlados, analítica e inteligencia de negocios,
-                            con experiencia en proyectos de clase mundial.
+                            {getText("faq", "q1", "desc")}
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -49,15 +45,12 @@ export const FAQquestions = () => {
                         id="panel1bh-header"
                         >
                             <Typography variant="h3" sx={{fontWeight:"bold",fontSize:"40px",width: '25%', flexShrink: 0 }}>
-                                Pregunta #2
+                            {getText("faq", "q2", "title")}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                            Hervana Group es un socio estratégico formado por un equipo experto de
-                            profesionales especializados en la digitalización y operaciones de cultivo
-                            en ambientes controlados, analítica e inteligencia de negocios,
-                            con experiencia en proyectos de clase mundial.
+                            {getText("faq", "q2", "desc")}
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

@@ -32,9 +32,45 @@
     "proyecto": {},
     "servicios": {},
     "ourfocus": {},
-    "team": {},
-    "historia": {},
-    "faq": {},
+    "team": {
+        "start": {
+            "title": "Our team",
+            "desc": "Hervana Group is formed by a team of interdisciplinary proffesionals with academic formation and world-class experience in Latinamerica, Northamerica, Europe and Asia. Our history began in the Netherlands, nation recognized because it is a hub of innovation y knowledge in horticulture, tech, sustainables and pioneer in the responsible consumption of cannabis. We count with a broad contact network and specialized knowledge in cultivation operations in controlled environments, AgTech, digital transformation, data analytic, business development and strategy; in cannabis industry and blockchain implementation."
+        },
+        "team": {
+            "founders": "Founders",
+            "asesores": "Board of advisers"
+        }
+    },
+    "historia": {
+        "start": {
+            "title": "Our history",
+            "desc": "Hervana Group was founded with the purpose of becoming the strategic partner of entrepreneurs in the horticulture industry and the nascent legal cannabis industry, helping them to improve their business models, navigate and implement the use of cutting-edge technologies, and operate with the highest quality standards, always offering solutions tailored to the real needs of our customers."
+        },
+        "mission": {
+            "title": "Mission",
+            "desc" : "Revolutionize the present of world horticulture through innovation and applied technology that facilitates the digital transformation of our clients."
+        },
+        "vision": {
+            "title": "Vision",
+            "desc": "May Latin America become a digitized horticulture hub, generating harmony in the relationship between human and nature, leading the transformation towards a sustainable, decentralized and transparent world."
+        }
+
+    },
+    "faq": {
+        "start": {
+            "title": "FAQ",
+            "desc": "This is the section where varous frequently asked questions (FAQ) are answered"
+        },
+        "q1": {
+            "title": "Question #1",
+            "desc": "Hervana Group is a strategic partner made up of an expert team of professionals specialized in digitization and cultivation operations in controlled environments, analytics and business intelligence, with experience in world-class projects."
+        },
+        "q2": {
+            "title": "Question #2",
+            "desc": "Hervana Group is a strategic partner made up of an expert team of professionals specialized in digitization and cultivation operations in controlled environments, analytics and business intelligence, with experience in world-class projects."
+        }
+    },
     "general": {
         "footer": {
             "contact_us": "Contact us through",

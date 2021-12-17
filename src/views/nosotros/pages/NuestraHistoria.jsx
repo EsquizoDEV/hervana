@@ -9,6 +9,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from '../../../components/core/Footer';
 import Amsterdam from '../../../assets/Ámsterdam.png'
+import useLanguage from '../../../hooks/useLanguage';
 
 
 const NuestraHistoria = () => {
@@ -17,6 +18,8 @@ const NuestraHistoria = () => {
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     }
+
+    let { getText } = useLanguage();
 
     let theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -30,18 +33,14 @@ const NuestraHistoria = () => {
                     <Grid container sx={{backgroundColor:"black", height:"40vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
                         <Grid item sx={{marginTop:"40px"}}>
                             <Typography sx={{padding:"50px", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
-                                Nuestra historia
+                            {getText("historia", "start", "title")}
                             </Typography>
                         </Grid>
                     </Grid>
                     
-                    <Box sx={{marginBottom:"50px",marginTop:"50px",paddingLeft:"25vw",paddingRight:"25vw",width:"100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"25px", color:"black"}}>
-                        Hervana Group fue fundado con el propósito de convertirse en el socio estratégico 
-                        de empresarios en la industria de horticultura y de la naciente industria legal 
-                        de cannabis, ayudándoles a mejorar sus modelos de negocio, a navegar e implementar 
-                        el uso de tecnologías de vanguardia, y a operar con los estándares más altos de calidad, 
-                        siempre ofreciendo soluciones a la medida de las necesidades reales de nuestros clientes.
+                    <Box sx={{marginBottom:"50px",marginTop:"50px",paddingLeft:"10vw",paddingRight:"10vw",width:"100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
+                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"3.5vh", color:"black"}}>
+                        {getText("historia", "start", "desc")}
 
                         </Typography>
                         {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -68,21 +67,16 @@ const NuestraHistoria = () => {
 
                     <Box sx={{display:"flex", flexDirection:isMobile ? "column" : "row", width:"100%"}}>
                         <Box sx={{borderRight:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
-                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>Misión</Typography>
-                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
-                            Revolucionar el presente de la horticultura mundial por medio de 
-                            innovación y tecnología aplicada que facilite la transformación 
-                            digital de nuestros clientes. 
-
+                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText("historia", "mission", "title")}</Typography>
+                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "3vh" : "1.2vw"}}>
+                            {getText("historia", "mission", "desc")}
                             </Typography>
                         </Box>
                         {isMobile ? <div><br /></div> : null}
                         <Box sx={{borderLeft:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#808080"}}>
-                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>Visión</Typography>
-                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:"1.2vw"}}>
-                            Que Latinoamérica se convierta en un hub de horticultura digitalizada, 
-                            generando armonía en la relación entre el humano y la naturaleza, 
-                            liderando la transformación hacia un un mundo sustentable, descentralizado y transparente.
+                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText("historia", "vision", "title")}</Typography>
+                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "3vh" : "1.2vw"}}>
+                            {getText("historia", "vision", "desc")}
                             </Typography>
                         </Box>
                     </Box>

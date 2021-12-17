@@ -31,8 +31,7 @@ export const HamburgerListButton = (props) => {
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null)
     
-    const lang = useLanguage()
-
+    let { getText, changeLanguage } = useLanguage();
     
     const handleToggle = e => {
         if (e.target.id !== 'list-about-us') {
@@ -112,19 +111,19 @@ export const HamburgerListButton = (props) => {
                                     <GreenBorderButton size="small" onClick={()=> {
                                         history.push("/proyecto");
                                         window.location.reload();
-                                    }}>Tengo un proyecto</GreenBorderButton>
+                                    }}>{getText("general", "navbar", "but_proy")}</GreenBorderButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
                                         history.push("/services");
                                         window.location.reload();
-                                    }}>Servicios</SimpleButton>
+                                    }}>{getText("general", "navbar", "serv")}</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
                                         history.push("/ourfocus")
                                         window.location.reload();
-                                    }}>Nuestro enfoque</SimpleButton>
+                                    }}>{getText("general", "navbar", "foc")}</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" 
@@ -132,28 +131,26 @@ export const HamburgerListButton = (props) => {
                                             history.push("/faq")
                                             window.location.reload();    
                                         }}
-                                    >
-                                        FAQ
-                                    </SimpleButton>
-                                </MenuItem>
+                                    >{getText("general", "navbar", "faq")}</SimpleButton>
+                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
                                         history.push("/historia");
                                         window.location.reload();
-                                    }}>Sobre nosotros</SimpleButton>
+                                    }}>{getText("general", "navbar", "aboutus")}</SimpleButton>
                                  </MenuItem>
                                  <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
                                         history.push("/team")
                                         window.location.reload();
-                                    }}>Nuestro equipo</SimpleButton>
+                                    }}>{getText("general", "navbar", "team")}</SimpleButton>
                                  </MenuItem>
-                                 <MenuItem onClick={handleClose}>
+                                 {/* <MenuItem onClick={handleClose}>
                                     <SimpleButton size="small" onClick={() => {
                                         history.push("/procesos")
                                         window.location.reload();    
                                     }}>Nuestro proceso</SimpleButton>
-                                </MenuItem>
+                                </MenuItem> */}
                                 <MenuItem>
                                     <FormGroup>
                                         <FormControlLabel
@@ -163,7 +160,7 @@ export const HamburgerListButton = (props) => {
                                             control={
                                                 <Switch 
                                                     color="success"
-                                                    onChange={lang.changeLanguage}
+                                                    onChange={changeLanguage}
                                                     size="large"
                                                     defaultChecked
                                                     // checked={lang.language ? 'en' : 'es'}

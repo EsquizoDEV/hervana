@@ -1,7 +1,7 @@
-import React, {useRef, useState, useEffect, useContext} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import Button from '@mui/material/Button';
 import  ClickAwayListener  from '@mui/material/ClickAwayListener';
-import { FormControlLabel, Icon, Switch} from '@mui/material'
+import { FormControlLabel, Switch} from '@mui/material'
 import {GreenBorderButton} from '../core/OutlinedButton'
 import Grow from '@mui/material/Grow';
 import Paper  from '@mui/material/Paper';
@@ -12,8 +12,6 @@ import { KeyboardArrowDown } from '@material-ui/icons';
 import {styled} from '@mui/material/styles';
 import colors from '../../utils/colorimetría'
 import history from '../../history'
-// import { ListButton } from './ListButton';
-import { MDBIcon } from 'mdb-react-ui-kit';
 import { FormGroup } from '@material-ui/core'
 import { SimpleButton } from './SimpleButton';
 import useLanguage from '../../hooks/useLanguage';

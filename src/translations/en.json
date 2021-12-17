@@ -29,33 +29,92 @@
             "s4_text": "We begin to land our professional services in your business, hand in hand with your team."
         }
     },
-    "proyecto": {},
-    "servicios": {},
-    "ourfocus": {},
-    "team": {
-        "start": {
-            "title": "Our team",
-            "desc": "Hervana Group is formed by a team of interdisciplinary proffesionals with academic formation and world-class experience in Latinamerica, Northamerica, Europe and Asia. Our history began in the Netherlands, nation recognized because it is a hub of innovation y knowledge in horticulture, tech, sustainables and pioneer in the responsible consumption of cannabis. We count with a broad contact network and specialized knowledge in cultivation operations in controlled environments, AgTech, digital transformation, data analytic, business development and strategy; in cannabis industry and blockchain implementation."
+    "proyecto": {
+        "input":{
+            "title":"We will contact you to understand your project in depth!",
+            "name":"Name",
+            "email":"E-mail",
+            "email_validator":"Error: Please verify your email",
+            "phone":"Phone number",
+            "message":"Message",
+            "but":"Send project"
+        }
+    },
+    "servicios": {
+        "atom": {
+            "atom_img":"../../../assets/medios_pend/atomo.jpeg",
+            "solutions": "We create integrated solutions tailored to specific needs and depending on the phase your business is in. We help you in the design of professional operations for growing green vegetables and / or cannabis with a focus on digitization. We assemble adequate supply chains and make sure that they work according to the goals set. We manage data creation and collection systems that are available in spaces in the cloud, where we take care of processing them so that they facilitate visibility and transparency of information at all levels of your organization.",
+            "title_ours": "Our ",
+            "title_pil": "six pillars",
+            "title_serv": " of service"
+        }
+    },
+    "carrousel": {
+        "step0":{
+            "title": "HORTICULTURE INTELLIGENCE",
+            "content":"Quality, control, efficiency and transparency are our guiding principles, so we help our clients to create comprehensive and intelligent growing master plans (climate, irrigation, nutrition, IPM, management, etc.), applying the Dutch Plant Empowerment philosophy, achieving high operating standards, waste reduction, continuous improvement and efficiency in the use of resources."
         },
-        "team": {
-            "founders": "Founders",
-            "asesores": "Board of advisers"
+        "step1":{
+            "title": "LEAFY GREENS & CANNABIS",
+            "content":["- Professional experience in industrialized horticulture operations.", "- Deep understanding of the cannabis industry and the international Compliance regulations.", "- Specialized advice on business and financial models preparation and transformation."]
+        },
+        "step2":{
+            "title": "STRATEGIC SOURCING",
+            "content":"Strategic sourcing and integration services for an adequate supply chain, based on our network of world-class partners of services, supplies and technology that facilitate the transformation and professional operation of your business."
+        },
+        "step3":{
+            "title": "DIGITAL TRANSFORMATION",
+            "content":"Design and implementation of integrated digital systems through applied technologies and data management, which function as assets of the company's business model, unlocking sources of value (higher performance, efficiency, transparency, etc.) for operators, administrators and investors."
+        },
+        "step4":{
+            "title": "PROJECT MANAGEMENT",
+            "content":["- 360 Methodology: Design, landing, supervision and monitoring of our project proposals.", "- Reliable team on the ground that helps you to successfully achieve your goals.", "- Supplier management and preparation of tenders.", "- Follow-up workshops for the adoption and correct use of tools and systems with your team."]
+        },
+        "step5":{
+            "title": "BUSINESS INTELLIGENCE",
+            "content":["Advanced data management, now recognized by experts as \"the new oil\", is the foundation for transforming  smarter business.", "- Creation, collection, design and management of data in the cloud.", "- Comprehensive design of strategic dashboards for analysis and decision making within the technical and strategic areas of the business.", "- Certification of data in Blockchain that facilitates transparency and Compliance."]
+        }
+        
+    },
+    "ourfocus": {
+        "focusHeader": {
+            "i_1":"Agtech & cultivo data driven",
+            "i_2":"Business Intelligence & analytics.",
+            "i_3":"AgTech & Cultivo Data Driven.",
+            "i_4":"Switch to digital.",
+            "i_5":"Cannabis Latam.",
+            "i_6":"Sustainability."
+        }
+    },
+    "team": {
+        "header": {
+            "title":"Our Team"
+        },
+        "mainText": {
+            "text": "Hervana Group is conformed by a team of interdisciplinary professionals with world-class academic training and professional experience in Latin America, North America, Europe and Asia. Our story began in the Netherlands, a nation recognized for being an innovation and knowledge hub for in horticulture, technology, sustainability and a pioneer in the responsible use of cannabis. We have a wide network of partners and specialized knowledge in growing operations in controlled environments, AgTech, digital transformation, data analytics, business development and strategy; in the cannabis industry and in blockchain implementation."
+        },
+        "founders":{
+            "title": "Founders"
+        },
+        "advisors":{
+            "title":"Advisory board"
         }
     },
     "historia": {
-        "start": {
-            "title": "Our history",
-            "desc": "Hervana Group was founded with the purpose of becoming the strategic partner of entrepreneurs in the horticulture industry and the nascent legal cannabis industry, helping them to improve their business models, navigate and implement the use of cutting-edge technologies, and operate with the highest quality standards, always offering solutions tailored to the real needs of our customers."
+        "header": {
+            "title":"Our Story"
         },
-        "mission": {
-            "title": "Mission",
-            "desc" : "Revolutionize the present of world horticulture through innovation and applied technology that facilitates the digital transformation of our clients."
+        "mainText":{
+            "text":"Hervana Group was founded with the purpose of becoming the strategic partner of entrepreneurs in the horticulture industry and the nascent legal cannabis industry, helping them improve their business models, navigate and implement the use of cutting-edge technologies, and operate with the highest quality standards, always offering solutions tailored to the real needs of our customers."
+        },
+        "mision":{
+            "title":"Our mision",
+            "text":"To revolutionize the present of horticulture in the world through innovation and applied technology that facilitate the digital transformation of our clients."
         },
         "vision": {
-            "title": "Vision",
-            "desc": "May Latin America become a digitized horticulture hub, generating harmony in the relationship between human and nature, leading the transformation towards a sustainable, decentralized and transparent world."
+            "title":"Our vision",
+            "text":"May Latin America become a digitized horticulture hub, generating harmony in the relationship between human and nature, leading the transformation towards a sustainable, decentralized and transparent world."
         }
-
     },
     "faq": {
         "start": {

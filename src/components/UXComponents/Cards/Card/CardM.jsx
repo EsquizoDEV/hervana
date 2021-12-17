@@ -29,7 +29,7 @@ export const ImgCardComponentM = (props) => {
                             <Typography style={{fontWeight:900, color:'black'}} gutterBottom variant="h5" component="div">
                             {props.props.subtitle}
                             </Typography>
-                            <Typography style={{color:'black'}} variant="body2" color="text.secondary">
+                            <Typography style={{color:'black'}} variant="body1" color="text.secondary">
                             {props.props.content}
                             </Typography>
                         </CardContent>

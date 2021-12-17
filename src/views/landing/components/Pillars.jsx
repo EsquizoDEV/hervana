@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import {Typography } from '@mui/material';
 import { ImgInfoCard } from '../../../components/UXComponents/Cards/CircleContent';
-import Img1 from '../../../assets/images/Enfoque a la digitalización.png'
-import Img2 from '../../../assets/images/Sustentabilidad.png'
-import Img3 from '../../../assets/images/Greenhouse1.png'
-import Img4 from '../../../assets/images/Cannabis Latam.png'
+import Img1 from '../../../assets/circulares/image00003.png'
+import Img2 from '../../../assets/circulares/image00005.png'
+import Img3 from '../../../assets/circulares/image00004.png'
+import Img4 from '../../../assets/circulares/image00001.png'
 import { Box } from '@mui/system';
 import Aos from 'aos'
 import 'aos/dist/aos.css'

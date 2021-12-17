@@ -29,33 +29,90 @@
             "s4_text": "Empezamos a aterrizar nuestros servicios profesionales en tu negocio, de la mano de tu equipo."
         }
     },
-    "proyecto": {},
-    "servicios": {},
-    "ourfocus": {},
-    "team": {
-        "start": {
-            "title": "Nuestro equipo",
-            "desc": "Hervana Group está formado por un equipo de profesionales interdisciplinarios con formación académica y experiencia profesional de clase mundial en Latinoamérica, Norteamérica, Europa y Asia. Nuestra historia comenzó en Países Bajos, nación reconocida por ser un hub de innovación y conocimiento en horticultura, tecnología, sustentables y pionero en el consumo responsable de cannabis. Contamos con una amplia red de contactos y conocimiento especializado en operaciones de  cultivo en ambientes controlados, AgTech, transformación digital, analítica de datos, desarrollo y estrategia de negocios; en industria de cannabis y en implementación de blockchain."
+    "proyecto": {
+        "input":{
+            "title":"Nos comunicaremos contigo para entender tu proyecto a profundidad",
+            "name":"Nombre",
+            "email":"Correo electrónico",
+            "email_validator": "Introduce un correo electrónico válido",
+            "phone":"Teléfono",
+            "message":"Mensaje",
+            "but":"Enviar"
+        }
+    },
+    "servicios": {
+        "atom": {
+            "atom_img":"../../../assets/NewAtom.png",
+            "solutions":"Creamos soluciones integradas y a la medida de las necesidades específicas y dependiendo de la fase en la que se encuentre tu negocio. Te ayudamos en el diseño de operaciones profesionales de cultivo de vegetales verdes y/o cannabis con enfoque en digitalización. Ensamblamos cadenas adecuadas de proveeduría y nos encargamos de que funcionen de acuerdo a las metas planteadas. Administramos sistemas de creación y recolección de datos que estén a disposición en espacios en la nube, donde nos encargamos de procesarlos para que faciliten visibilidad y transparencia de información a todos los niveles de tu organización.",
+            "title_ours": "Nuestros",
+            "title_pil": "seis pilares",
+            "title_serv": " de servicio"
+        }
+    },
+    "carrousel":{
+        "step0":{
+            "title": "INTELIGENCIA DE CULTIVOS",
+            "content":"Calidad, control, eficiencia y transparencia son nuestra guía, por lo que ayudamos a nuestros clientes a crear planes maestros de cultivo integrales e inteligentes (clima, riego, nutrición, IPM, manejo, etc.), aplicando la filosofía Neerlandesa de plant empowerment,logrando altos estándares operativos, reducción de desperdicios, mejora continua y eficientación en el uso de recursos."
         },
-        "team": {
-            "founders": "Fundadores",
-            "asesores": "Junta de asesores"
+        "step1":{
+            "title": "VEGETALES VERDES & CANNABIS",
+            "content":["- Experiencia profesional en operaciones de cultivo industrializadas.", "- Entendimiento profundo de la industria y los elementos de Compliance con las diferentes regulaciones internacionales.","- Asesoría en desarrollo de modelos de negocio y financieros especializados en la industria."]
+        },
+        "step2":{
+            "title": "ENSAMBLAJE ESTRATÉGICO",
+            "content":"Servicios de integración estratégica y ensamblaje de una cadena adecuada de proveeduría, basada en nuestra red de socios de clase mundial para servicios, insumos y tecnología que facilite la transformación y operación  profesional de tu negocio."
+        },
+        "step3":{
+            "title": "TRANSFORMACIÓN DIGITAL",
+            "content":"Diseñamos e implementamos sistemas digitales integrados por medio de tecnologías aplicadas y administración de datos, que funcionen como activos del modelo de negocio de la  empresa, desbloqueando fuentes de valor (mayor rendimiento, eficiencia, transparencia, etc.) para operarios, administradores e inversionistas."
+        },
+        "step4":{
+            "title": "ADMINISTRACIÓN DE PROYECTOS",
+            "content":["- Metodología 360: Diseño, aterrizaje, supervisión y seguimiento de nuestras propuestas de proyecto.", "- Equipo de confianza sobre el terreno que te ayude a lograr las metas exitosamente.", "- Administración de proveeduría y preparación de licitaciones.", "- Sesiones de seguimiento para adopción y uso correcto de herramientas y sistemas con tu equipo."]
+        },
+        "step5":{
+            "title": "INTELIGENCIA DE NEGOCIOS",
+            "content":["El manejo avanzado de datos, actualmente reconocidos por expertos como \"el nuevo petróleo\", es la base de la transformación hacia negocios más inteligentes.", "- Creación, recopilación, diseño y administración de datos en la nube.", "- Diseño integral de dashboards estratégicos para análisis y toma de decisiones en las áreas técnicas y estratégicas del negocio.", "- Certificación de datos en Blockchain que facilite transparencia y Compliance."]
+        }
+    },
+    "ourfocus": {
+        "focusHeader": {
+            "i_2": "Business Intelligence & analytics.",
+            "i_3": "AgTech & Cultivo Data Driven.",
+            "i_4": "Transformación Digital.",
+            "i_5": "Cannabis en Latam.",
+            "i_6": "Sustentabilidad."
+        }
+    },
+    "team": {
+        "header": {
+            "title":"Nuestro equipo"
+        },
+        "mainText": {
+            "text": "Hervana Group está formado por un equipo de profesionales interdisciplinarios con formación académica y experiencia profesional de clase mundial en Latinoamérica, Norteamérica, Europa y Asia. Nuestra historia comenzó en Países Bajos, nación reconocida por ser un hub de innovación y conocimiento en horticultura, tecnología, sustentables y pionero en el consumo responsable de cannabis. Contamos con una amplia red de contactos y conocimiento especializado en operaciones de  cultivo en ambientes controlados, AgTech, transformación digital, analítica de datos, desarrollo y estrategia de negocios; en industria de cannabis y en implementación de blockchain."
+        },
+        "founders":{
+            "title": "Fundadores"
+        },
+        "advisors":{
+            "title":"Junta de asesores"
         }
     },
     "historia": {
-        "start": {
-            "title": "Nuestra historia",
-            "desc": "Hervana Group fue fundado con el propósito de convertirse en el socio estratégico de empresarios en la industria de horticultura y de la naciente industria legal de cannabis, ayudándoles a mejorar sus modelos de negocio, a navegar e implementar el uso de tecnologías de vanguardia, y a operar con los estándares más altos de calidad, siempre ofreciendo soluciones a la medida de las necesidades reales de nuestros clientes."
+        "header": {
+            "title":"Nuestra historia"
         },
-        "mission": {
-            "title": "Misión",
-            "desc" : "Revolucionar el presente de la horticultura mundial por medio de innovación y tecnología aplicada que facilite la transformación digital de nuestros clientes. "
+        "mainText":{
+            "text":"Hervana Group fue fundado con el propósito de convertirse en el socio estratégico de empresarios en la industria de horticultura y de la naciente industria legal de cannabis, ayudándoles a mejorar sus modelos de negocio, a navegar e implementar el uso de tecnologías de vanguardia, y a operar con los estándares más altos de calidad, siempre ofreciendo soluciones a la medida de las necesidades reales de nuestros clientes."
+        }, 
+        "mision":{
+            "title":"Misión",
+            "text":"Revolucionar el presente de la horticultura mundial por medio de innovación y tecnología aplicada que facilite la transformación digital de nuestros clientes. "
         },
-        "vision": {
-            "title": "Visión",
-            "desc": "Que Latinoamérica se convierta en un hub de horticultura digitalizada, generando armonía en la relación entre el humano y la naturaleza, liderando la transformación hacia un un mundo sustentable, descentralizado y transparente."
+        "vision":{
+            "title":"Visión",
+            "text":" Que Latinoamérica se convierta en un hub de horticultura digitalizada, generando armonía en la relación entre el humano y la naturaleza, liderando la transformación hacia un un mundo sustentable, descentralizado y transparente."
         }
-
     },
     "faq": {
         "start": {

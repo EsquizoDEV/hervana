@@ -6,24 +6,35 @@ import CardMedia from '@mui/material/CardMedia';
 import { NavBar } from '../../../components/navigation/NavBar'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import Accordion from '@mui/material/Accordion';
+// import AccordionDetails from '@mui/material/AccordionDetails';
+// import AccordionSummary from '@mui/material/AccordionSummary';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from '../../../components/core/Footer';
-import user from '../../../assets/images/14.jpg'
+import Oliver from '../../../assets/oliver_holanda/image00001.jpeg'
+import uno from '../../../assets/medios_pend/1.jpeg'
+import dos from '../../../assets/medios_pend/2.jpeg'
+// import tres from '../../../assets/medios_pend/3.jpeg'
+import cuatro from '../../../assets/medios_pend/4.jpeg'
+import cinco from '../../../assets/medios_pend/5.jpeg'
+import seis from '../../../assets/medios_pend/6.jpeg'
+import siete from '../../../assets/medios_pend/7.jpeg'
 import useLanguage from '../../../hooks/useLanguage';
 
-const Team = () => {
-    const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    }
+const Team = () => {
+    // const [expanded, setExpanded] = React.useState(false);
+
+    // const handleChange = (panel) => (event, isExpanded) => {
+    //     setExpanded(isExpanded ? panel : false);
+    // }
     
     let { getText } = useLanguage();
 
     let theme = useTheme();
+    
+    let {getText} = useLanguage()
+    
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
@@ -34,15 +45,14 @@ const Team = () => {
 
                     <Grid id="letras-intro" item xs={12} sx={{backgroundColor:"black", marginBottom:"10hv", height:"50vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
                             <Typography sx={{padding:"50px", marginTop:"5vh", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
-                                {getText("team", "start", "title")}
+                                {getText('team', 'header', 'title')}
                             </Typography>
                     </Grid>
                     
                     <Grid item xs={12} id="intro-texto" sx={{width:"100%", height:"auto"}}>
                         <Box sx={{marginBottom:"50px",marginTop:"100px",paddingLeft:"15vw",paddingRight:"15vw", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
                             <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:"25px", color:"black"}}>
-                            {getText("team", "start", "desc")}
-
+                                {getText('team','mainText', 'text')}
                             </Typography>
                             {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                 <AccordionSummary
@@ -72,7 +82,7 @@ const Team = () => {
                     <Grid id="equipo1" item xs={12}>
                         <Box sx={{marginBottom:"10vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
                             <Typography variant="h2" style={{fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
-                            {getText("team", "team", "founders")}
+                                {getText('team','founders', 'title')}
                             </Typography>
                             <Grid 
                                 container
@@ -101,17 +111,17 @@ const Team = () => {
                                                         }}
                                                         component="img"
                                                         alt="leader"
-                                                        image={user}
+                                                        image={uno}
                                                         width="200px"
                                                         height="200px"
                                                         />
                                                     </div>
                                                     <CardContent>
                                                         <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
-                                                            Francisco Cambero                              
+                                                            Bsc. F.J. Cambero                               
                                                         </Typography>
                                                         <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
-                                                            AgTech Futurist & Digital lead                              
+                                                            AgTech specialist & Digital lead                              
                                                         </Typography>
                                                     </CardContent>
                                                     <CardMedia/>
@@ -132,14 +142,14 @@ const Team = () => {
                                                         }}
                                                         component="img"
                                                         alt="leader"
-                                                        image={user}
+                                                        image={dos}
                                                         width="200px"
                                                         height="200px"
                                                         />
                                                     </div>
                                                 <CardContent>
                                                     <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
-                                                        Eduardo Martínez                              
+                                                        MBA. Eduardo Martínez                             
                                                     </Typography>
                                                     <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
                                                         Strategist & Digital Catalyst                              
@@ -149,11 +159,64 @@ const Team = () => {
                                                 </Card>
                                             </Box>
                                         </Grid>
-                                        
-                                         <Grid item xs={12} md={6}>
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width:"100%", marginBottom:"10vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={Oliver}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                <CardContent>
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        Bsc. Oliver Ledermann                           
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Industry & Business Expert                              
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid>
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width:"100%", marginBottom:"10vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={cuatro}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                <CardContent>
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        MSc. Andrés Estrada                              
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Plant Scientist & Growing Master                              
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid>
+                                         {/* <Grid item xs={12} md={6}>
                                             <Box sx={{width: "100%", marginBottom:"10vh", display:"flex", flexDirection:"column", alignItems:"center"}}>
-                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Bsc. Francisco Cambero</Typography>
-                                                <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}} >AgTech Futurist</Typography>
+                                                <Typography variant="h2" sx={{fontSize:"4vh"}}>Bsc. Oliver Ledermann</Typography>
+                                                <Typography variant="body1" sx={{fontSize:"1.2vw"}} >AgTech Futurist</Typography>
                                             </Box>
                                         </Grid>
                                         
@@ -177,7 +240,7 @@ const Team = () => {
                                                 <Typography variant="h2" sx={{fontSize:"4vh"}}>MSc. Carlos Cambero</Typography>
                                                 <Typography variant="body1" sx={{fontSize: isMobile ? "3vh" : "1.2vw"}}>Plant Scientist & Growing Master</Typography>
                                             </Box>
-                                        </Grid>
+                                        </Grid> */}
                                     </Grid>
                                 </Box>
                             </Grid>
@@ -186,7 +249,7 @@ const Team = () => {
                     <Grid id="equipo2" item xs={12}>
                         <Box sx={{marginBottom:"10vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
                             <Typography variant="h2" style={{fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
-                            {getText("team", "team", "asesores")}
+                                {getText('team', 'advisors', 'title')}
                             </Typography>
                             <Grid 
                                 container
@@ -211,14 +274,17 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={user}
+                                                        image={cinco}
                                                         width="200px"
                                                         height="200px"
                                                         />
                                                     </div>
                                                     <CardContent>
                                                         <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
-                                                            Alekos Martínez                            
+                                                            Eng. Alekos Martinez                            
+                                                        </Typography>
+                                                        <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                            Entrepreneurship & Tech Master
                                                         </Typography>
                                                     </CardContent>
                                                     <CardMedia/>
@@ -235,14 +301,44 @@ const Team = () => {
                                                         sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
                                                         component="img"
                                                         alt="leader"
-                                                        image={user}
+                                                        image={seis}
                                                         width="200px"
                                                         height="200px"
                                                         />
                                                     </div>
                                                 <CardContent>
                                                     <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
-                                                        Daniel Ender                              
+                                                        Ba. Antonio Elenes                              
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Creative Media Producer 
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardMedia/>
+                                                </Card>
+                                            </Box>
+                                        </Grid>
+                                        <Grid item xs={12} md={6}>
+                                            <Box sx={{width:"100%", marginBottom:"5vh"}}>
+                                                <Card
+                                                    elevation={0}
+                                                >
+                                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                                        <CardMedia
+                                                        sx={{height:"30vh",width:"30vh",borderRadius:"50%"}}
+                                                        component="img"
+                                                        alt="leader"
+                                                        image={siete}
+                                                        width="200px"
+                                                        height="200px"
+                                                        />
+                                                    </div>
+                                                <CardContent>
+                                                    <Typography variant="h3" align="center" style={{fontWeight:"bold", fontSize:"5vh", display:"flex", justifyContent:"center"}}>
+                                                        MSc. Daniel Ender                              
+                                                    </Typography>
+                                                    <Typography variant="body2" align="center" style={{display:"flex", justifyContent:"center", fontSize:"3vh"}}>
+                                                        Finance & Business Master 
                                                     </Typography>
                                                 </CardContent>
                                                 <CardMedia/>

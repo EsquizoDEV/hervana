@@ -34,6 +34,9 @@ const Processes = ({ isMobile }) => {
             </Box>
 
             <Grid container style={{display:"flex", justifyContent:"center"}}>
+                <Grid item md={12} sx={isMobile ? {display: 'flex', justifyContent: 'center', marginX:"15px", padding:"16px"} : {display: 'flex', justifyContent: 'center'}}>
+                    <Typography variant="h2" style={{fontWeight:'bold', color:'black'}}> <div>{getText('landing', 'process', 'title')}</div></Typography>
+                </Grid>
                 <ImgCard
                 isMobile={isMobile} 
                 left={false} 

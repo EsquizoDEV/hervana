@@ -14,11 +14,7 @@ import useLanguage from '../../../hooks/useLanguage';
 
 const MainMenu = ({ isMobile }) => {
 
-    let lang = useLanguage();
-
-    const changeLanguage = (e) => {
-        console.log(e);
-    }
+    let {getText, changeLanguage} = useLanguage();
 
     return (
         <>
@@ -53,19 +49,19 @@ const MainMenu = ({ isMobile }) => {
                     <SimpleButton size="small" onClick={() => {
                         history.push("/services");
                         window.location.reload();
-                    }} sx={{fontSize:"2vh"}}>Servicios</SimpleButton>
+                    }} sx={{fontSize:"2vh"}}>{getText('general', 'navbar','serv')}</SimpleButton>
 
                     <SimpleButton size="small" onClick={() => {
                         history.push("/ourfocus")
                         window.location.reload();
-                    }} sx={{fontSize:"2vh"}}>Nuestro enfoque</SimpleButton>
+                    }} sx={{fontSize:"2vh"}}>{getText('general', 'navbar','foc')}</SimpleButton>
 
-                    <ListButton>Nosotros</ListButton>
+                    <ListButton>{getText('general', 'navbar','aboutus')}</ListButton>
                     
                     <GreenBorderButton size="large" onClick={()=> {
                         history.push("/proyecto");
                         window.location.reload();
-                    }} sx={{}}>Tengo un proyecto</GreenBorderButton>
+                    }} sx={{}}>{getText('general', 'navbar','but_proy')}</GreenBorderButton>
 
                     <FormGroup>
                         <FormControlLabel
@@ -75,7 +71,7 @@ const MainMenu = ({ isMobile }) => {
                             control={
                                 <Switch 
                                     color="success"
-                                    onChange={lang.changeLanguage}
+                                    onChange={changeLanguage}
                                     size="large"
                                     defaultChecked
                                     // checked={lang.language ? 'en' : 'es'}

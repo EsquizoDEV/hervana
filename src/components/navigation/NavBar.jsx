@@ -3,7 +3,6 @@ import Stack from '@mui/material/Stack';
 import './index.css'
 import { makeStyles } from '@material-ui/core/styles'
 import MainMenu from './components/MainMenu';
-import SocialMenu from './components/SocialMenu'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {Box} from '@mui/system' 
 import Logo from '../../assets/images/HERVANA LOGO.png'

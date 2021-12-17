@@ -10,7 +10,7 @@ import './index.css'
 import { useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import history from '../../history';
-import Services from '../servicios/Services'
+// import Services from '../servicios/Services'
 import useLanguage from '../../hooks/useLanguage';
 
 const  LandingPage = () => {
@@ -58,6 +58,7 @@ const  LandingPage = () => {
                                     justifyContent:"flex-end",
                                     marginTop:"3vh",
                                     width:'100%',
+                                    overflow:"hidden"
                                 }}>
 
                                     <Button variant="filled" 
@@ -83,14 +84,15 @@ const  LandingPage = () => {
                     </Grid>
                 </Grid>
                 
-                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"20vh"}}  id="pillars-item" item container>
+                {/* <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"20vh"}}  id="pillars-item" item container>
                     <Services landing={true}/>
-                </Grid>
+                </Grid> */}
 
                 <Grid item id="process-item" sx={{
                     width:'auto', 
                     display:'flex', 
                     justifyContent:'center',
+                    marginTop:"10vh"
                     }} container spacing={1}>
                         
                     <Processes href="#procesos" isMobile={isMobile} id="process-component" />

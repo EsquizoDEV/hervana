@@ -6,17 +6,17 @@ import { NavBar } from '../../components/navigation/NavBar';
 import {FocusHeader} from './components/FocusHeader';
 import Pillars from '../../views/landing/components/Pillars'
 import PillarsM from '../../views/landing/components/PillarsM'
-import TextOnImage from './components/TextOnImage'
+// import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
 import paneles from '../../assets/Artboard 63.png'
 import robotica from '../../assets/Artboard 64.png'
 import AI from '../../assets/Artboard 65.png'
 import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
-import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
-import hands from '../../assets/Robótica.png'
-import panelesInvernadero from '../../assets/Creación de páneles de control.png'
-import latam from '../../assets/Inteligencia artificial.png'
-import digital from '../../assets/Artboard 60.png'
+// import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
+// import hands from '../../assets/Robótica.png'
+// import panelesInvernadero from '../../assets/Creación de páneles de control.png'
+// import latam from '../../assets/Inteligencia artificial.png'
+// import digital from '../../assets/Artboard 60.png'
 
 
 //* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)
@@ -141,7 +141,7 @@ const OurFocus = () => {
                     <Grid 
                         container
                         direction="row"
-                        justifyContent="space-evenly"
+                        justifyContent="center"
                     >
                         <Grid item xs={12} md={4}>
                             <Box sx={{
@@ -149,39 +149,35 @@ const OurFocus = () => {
                                 display:"flex", 
                                 flexDirection:"column", 
                                 alignItems:"center",
-                                marginLeft:"5vw"
+                                marginLeft:"5vw",
+                                justifyContent:"center"
                                 }}>
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Creación de dashboards en la nube
                                 </Typography>
+                                <img src={paneles} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
                                 {/* //*Aqui van los svg que no sirven */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                            <Box sx={{width:"100%%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Robótica
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
+                                <img src={robotica} style={{width:"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginRight:"3vw"}}>
-                                <Typography variant="body2" style={{marginRight:"inherit",fontWeight:"bold", fontSize:"4vh"}}>
+                            <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginRight:"3vw", justifyContent:"center"}}>
+                                <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Inteligencia artificial
                                 </Typography>
                                 {/* //*Aqui van los svg que no sirven */}
+                                <img src={AI} style={{width:"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                     </Grid>
-                    <Box>
-                      <Grid container direction="row" justifyContent="space-evenly">
-                        <img src={paneles} style={{width:isMobile ? "60%" :"15%"}} alt="paneles"/>
-                        <img src={robotica} style={{width:"15%"}} alt="paneles"/>
-                        <img src={AI} style={{width:"15%"}} alt="paneles"/>
-                      </Grid>
-
-                    </Box>
                     </Box>
                 
                 <Grid item xs={12}>

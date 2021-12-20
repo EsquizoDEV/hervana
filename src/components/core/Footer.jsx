@@ -17,7 +17,7 @@ export const Footer = ({ isMobile }) => {
                 elevation={3}
                 sx= {{
                     "width": true,
-                    "height": 300,
+                    "height": "100%",
                     "bgcolor": colors.black,
                 }}
             >

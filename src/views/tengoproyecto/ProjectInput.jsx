@@ -181,7 +181,7 @@ const ProjectInput = () => {
             </Modal>
      
         
-        <Grid sx={{justifyContent:"center", alignItems:"center", height:"70%"}} container>
+        <Grid sx={{display:"flex",justifyContent:"center", alignItems:"center", height:"70%"}} container>
                   <Box component="form"
                       onSubmit={handleSend}
                       sx={
@@ -190,9 +190,10 @@ const ProjectInput = () => {
                           display:"flex", 
                           flexDirection:"column",
                           justifyContent:"space-between",
+                          alignItems:"center",
                           backgroundColor:"#2D302E",
                           alignItems:"center",
-                          width:"50%"
+                          width:isMobile ? "100%" : "50%"
                       }
                       }
                   >
@@ -202,11 +203,12 @@ const ProjectInput = () => {
                       variant="h1" 
                       style={
                         {
+                          textAlign:"center",
                           fontSize:"3vh",
-                          width:"35%",
+                          width:isMobile ? "80%" : "100%",
                           fontWeight:"bold", 
                           color:"white",
-                          marginTop:"5vh",
+                          marginTop:isMobile ? "2vh" :  "5vh",
                         }
                     }> {getText('proyecto', 'input', 'title')} </Typography>
                     <TextField 

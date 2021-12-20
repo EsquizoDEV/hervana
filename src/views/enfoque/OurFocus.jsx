@@ -8,15 +8,11 @@ import Pillars from '../../views/landing/components/Pillars'
 import PillarsM from '../../views/landing/components/PillarsM'
 // import TextOnImage from './components/TextOnImage'
 import { Footer } from '../../components/core/Footer';
-import paneles from '../../assets/Artboard 63.png'
+import dashboard from '../../assets/Artboard 63.png'
 import robotica from '../../assets/Artboard 64.png'
-import AI from '../../assets/Artboard 65.png'
+import ai from '../../assets/Artboard 65.png'
 import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
-// import transDigital from '../../assets/svg/Transformación digital (Nuestro enfoque).svg'
-// import hands from '../../assets/Robótica.png'
-// import panelesInvernadero from '../../assets/Creación de páneles de control.png'
-// import latam from '../../assets/Inteligencia artificial.png'
-// import digital from '../../assets/Artboard 60.png'
+import useLanguage from '../../hooks/useLanguage';
 
 
 //* Los svg (AI, ROBOT, PANELES) no sirven!!, corregir archivos (Tony)
@@ -24,6 +20,7 @@ import bi from '../../assets/svg/Business intelligence (nuestro enfoque).svg'
 
 const OurFocus = () => {
   let theme = useTheme();
+  const {getText} = useLanguage()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
@@ -42,7 +39,7 @@ const OurFocus = () => {
                 </Grid>
 
 
-                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center'}}  id="pillars-item" container>
+                <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"-20vh"}}  id="pillars-item" container>
                     {isMobile 
                         ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
                         :   <Pillars isMobile={isMobile} id="pillars-component" />
@@ -50,7 +47,7 @@ const OurFocus = () => {
                 </Grid>
                 
                 
-                  <Box sx={{marginBottom:"10vh"}}>
+                  {/* <Box sx={{marginBottom:"10vh"}}>
                     <Grid 
                         container
                         direction="row"
@@ -68,7 +65,6 @@ const OurFocus = () => {
                                     Creación de dashboards en la nube
                                 </Typography>
                                 <img src={paneles} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
-                                {/* //*Aqui van los svg que no sirven */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
@@ -76,8 +72,7 @@ const OurFocus = () => {
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Robótica
                                 </Typography>
-                                {/* //*Aqui van los svg que no sirven */}
-                                <img src={robotica} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
+                                <img src={robotica} style={{width:"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
@@ -85,11 +80,137 @@ const OurFocus = () => {
                                 <Typography variant="body2" style={{fontWeight:"bold", fontSize:"4vh"}}>
                                     Inteligencia artificial
                                 </Typography>
-                                {/* //*Aqui van los svg que no sirven */}
-                                <img src={AI} style={{width:isMobile ? "60%" :"50%"}} alt="paneles"/>
+                                <img src={AI} style={{width:"50%"}} alt="paneles"/>
                             </Box>
                         </Grid>
                     </Grid>
+                    </Box> */}
+
+                    <Box sx={
+                      {
+                        paddingLeft:"5vw",
+                        paddingRight:"5vw"
+                      }}
+                    >
+                      <Box sx={
+                        {
+                          display:"flex",
+                          justifyContent:"space-evenly",
+                          height:"50vh",
+                          marginBottom:"3vh"
+                        }
+                      }>
+                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center",
+                              justifyContent:"center", 
+                              height:"10vh",
+                            }
+                          }>
+                            
+                            <Typography
+                            variant="body2"
+                            sx={
+                              {
+                                fontSize:isMobile ? "8vw" : "2vw",
+                                fontWeight:"bold",
+                                display:"flex",
+                                alignItems:"center",
+                                justifyContent:"center"
+                              }}
+                            >
+                              {getText('ourfocus','focus', 'cloud')}
+                            </Typography>
+                          </div>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center", 
+                              justifyContent:"center", 
+                              height:"40vh",
+                            }
+                          }>
+                            
+                            <img style={
+                              {
+                              }} alt="dashboards_cloud" src={dashboard}/>
+                          </div>
+                        </Box>
+                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center",
+                              justifyContent:"center", 
+                              height:"10vh"
+                            }
+                          }>
+                            
+                            <Typography
+                            variant="body2"
+                            sx={
+                              {
+                                fontSize:isMobile ? "8vw" : "2vw",
+                                fontWeight:"bold",
+                                display:"flex",
+                                alignItems:"center",
+                                justifyContent:"center"
+                              }}
+                            >
+                              {getText('ourfocus','focus', 'robotics')}
+                            </Typography>
+                          </div>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center", 
+                              justifyContent:"center", 
+                              height:"40vh",
+                            }
+                          }>
+                            
+                            <img alt="robotics" src={robotica}/>
+                          </div>
+                        </Box>
+                        <Box sx={{display:"flex", flexDirection:"column", width:"33%"}}>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center",
+                              justifyContent:"center", 
+                              height:"10vh",
+                            }
+                          }>
+                            
+                            <Typography
+                            variant="body2"
+                            sx={
+                              {
+                                fontSize:isMobile ? "8vw" : "2vw",
+                                fontWeight:"bold",
+                                display:"flex",
+                                alignItems:"center",
+                                justifyContent:"center"
+                              }}
+                            >
+                              {getText('ourfocus','focus', 'ai')}
+                            </Typography>
+                          </div>
+                          <div style={
+                            {
+                              display:"flex", 
+                              alignItems:"center", 
+                              justifyContent:"center", 
+                              height:"40vh",
+                            }
+                          }>
+                            
+                            <img  alt="ai" src={ai}/>
+                          </div>
+                        </Box>
+                      </Box>
                     </Box>
                 
                 <Grid item xs={12}>
@@ -99,8 +220,7 @@ const OurFocus = () => {
                         fontSize:isMobile ? "8vw" : "2vw",
                         fontWeight:"bold", 
                         paddingLeft:isMobile ? "12%" : "5%", 
-                        marginTop:"50px", 
-                        marginBottom:"20px"
+                    marginBottom:"20px"
                       }
                     }>
                       Business intelligence

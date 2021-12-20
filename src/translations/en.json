@@ -84,6 +84,11 @@
             "i_4":"Switch to digital.",
             "i_5":"Cannabis Latam.",
             "i_6":"Sustainability."
+        },
+        "focus":{
+            "cloud":"Cloud dashboards development",
+            "robotics":"Robotics",
+            "ai":"Artificial intelligence"
         }
     },
     "team": {
@@ -145,6 +150,10 @@
             "aboutus": "About us",
             "team": "Our team",
             "proc": "Our process"
+        },
+        "listButton": {
+            "history":"Our history",
+            "team":"Our team"
         }
     }
 }

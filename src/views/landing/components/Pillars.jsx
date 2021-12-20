@@ -42,7 +42,7 @@ const Pillars = ({ isMobile }) => {
                     }}
                 >
                     <Typography style={{fontSize:"6vh",fontWeight: 'bold', color:"black", width:"27vw", marginLeft:"6vw"}} gutterBottom variant="h3" component="div">
-                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
+                        <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
                     </Typography>
                     
                     <ImgInfoCard 
@@ -169,7 +169,7 @@ const Pillars = ({ isMobile }) => {
                 data-aos="fade-right"
                 sx={{position:"relative", bottom:"45vh"}}>
                     <Typography style={{fontSize:"6vh",fontWeight: 'bold', color:"black",display:"flex", justifyContent:"end", marginRight:"3vw"}} gutterBottom variant="h3" component="div">
-                        <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
+                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
                     </Typography>
                     <ImgInfoCard
                     content={` Definimos la estrategia de transformación

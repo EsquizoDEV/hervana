@@ -35,7 +35,7 @@ const PillarsM = ({ isMobile }) => {
                     sx={{width:"80vw"}}
                 >
                     <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"100%"}}  variant="h3" component="div">
-                        <div style={{backgroundColor:"#1CF445"}}>Enfoque hacia la digitalización </div>
+                    <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Agtech</div>
                     </Typography>
                     
                     <ImgInfoCard
@@ -136,7 +136,7 @@ const PillarsM = ({ isMobile }) => {
                     sx={{width:"80vw"}}
                 >
                     <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"90%",display:"flex", justifyContent:"end"}}  variant="h3" component="div">
-                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Agtech</div>
+                        <div style={{backgroundColor:"#1CF445"}}>Enfoque hacia la digitalización </div>
                     </Typography>
                     
                     <ImgInfoCard

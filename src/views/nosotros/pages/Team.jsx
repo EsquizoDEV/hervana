@@ -43,14 +43,14 @@ const Team = () => {
                     <NavBar isMobile={isMobile}/>
 
                     <Grid id="letras-intro" item xs={12} sx={{backgroundColor:"black", marginBottom:"10hv", height:"50vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
-                            <Typography sx={{padding:"50px", marginTop:"5vh", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
+                            <Typography sx={{padding:isMobile ? "" : "50px", marginTop:"5vh", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
                                 {getText('team', 'header', 'title')}
                             </Typography>
                     </Grid>
                     
                     <Grid item xs={12} id="intro-texto" sx={{width:"100%", height:"auto"}}>
-                        <Box sx={{marginBottom:"50px",marginTop:"100px",paddingLeft:"15vw",paddingRight:"15vw", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                            <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:"25px", color:"black"}}>
+                        <Box sx={{marginBottom:"50px",marginTop:"100px",paddingLeft:isMobile ? "5vw" : "15vw",paddingRight:isMobile ? "5vw" : "15vw", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
+                            <Typography variant="body2" sx={{width:"100%", marginBottom:"40px ",fontSize:isMobile ? "4vw" : "1.2vw", color:"black"}}>
                                 {getText('team','mainText', 'text')}
                             </Typography>
                             {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -247,7 +247,7 @@ const Team = () => {
                     </Grid>
                     <Grid id="equipo2" item xs={12}>
                         <Box sx={{marginBottom:"10vh",width:"100%",display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <Typography variant="h2" style={{fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
+                            <Typography variant="h2" style={{textAlign:"center",fontWeight:"bold", fontSize:"6vh", marginBottom:"10vh"}}>
                                 {getText('team', 'advisors', 'title')}
                             </Typography>
                             <Grid 

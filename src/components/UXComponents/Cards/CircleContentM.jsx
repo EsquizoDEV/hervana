@@ -29,12 +29,12 @@ export const ImgInfoCard = (props) => {
       <Card 
         elevation={0}
         sx={props.side === "right" 
-        ? {
-                display:'flex', 
-                maxWidth: "90%",
-                marginBottom: '10px',
+        ? 
+        {
+          display:'flex', 
         } 
-        : {display:'flex'}
+        : 
+        {display:'flex'}
         } 
       >
       {props.side === "left" ? 
@@ -44,11 +44,8 @@ export const ImgInfoCard = (props) => {
               borderColor:"white", 
               backgroundColor:'#2D302E',
               borderRadius:"50%",
-              width:400,
-              height:400,
-              position:'relative',
-              left:280,
-              top:220
+              width:"30vw",
+              height:"30vw",
               
             }}
             component="img"
@@ -57,14 +54,12 @@ export const ImgInfoCard = (props) => {
           />
       : null
       }
-    <CardContent sx={{opacity:"1", width:"100%"}}>
+    <CardContent sx={{opacity:"1", width:"100%", padding:"0", marginTop:"5%"}}>
         <Box sx={{
             display:'flex', 
             flexDirection:'column', 
             maxWidth: "auto",
-            position:'relative',
-            left: props.side === "left" ? (props.isMobile ? 50 : 20) : (props.isMobile ? 160 : 140),
-            width: props.side === "left" ? 320 : 320,
+            width: "100%",
         }}>
             <Typography style={{color:"black"}} variant="body2" color="text.secondary">
                 {props.content}
@@ -90,11 +85,8 @@ export const ImgInfoCard = (props) => {
               borderColor:"white", 
               backgroundColor:'#2D302E',
               borderRadius:"50%",
-              width:400,
-              height:400,
-              position:'relative',
-              right:90,
-              top:220
+              width:"30vw",
+              height:"30vw",
             }}
             component="img"
             alt="right-image"

@@ -18,8 +18,6 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: `1px solid #101111`,
         fontWeight: "bold",
         padding: "0px 20px",
-        boxSizing: "border-box",
-        cursor:"pointer",
         zIndex:999,
     }
 }))
@@ -33,7 +31,8 @@ export const NavBar = ({ isMobile, theme }) => {
                 <Stack 
                     id="items-container" 
                     direction="row"
-                    justifyContent={isMobile ? "flex-start" : "space-around"}
+                    justifyContent={isMobile ? "" : "space-around"}
+                    display={isMobile ? "flex" : "flex"}
                     alignItems="center"
                     className={classes.container}
                     sx={{width: "100%"}}

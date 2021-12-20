@@ -27,13 +27,12 @@ const OurFocus = () => {
           </Grid>
 
 
-          <Grid sx={{maxWidth:'100%', display:'flex', alignItems: 'center', justifyContent:'center', marginBottom:"-20vh"}}  id="pillars-item" container>
-              {isMobile 
-                  ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
-                  :   <Pillars isMobile={isMobile} id="pillars-component" />
-              }
-          </Grid>
-          
+        <Box sx={{display:isMobile ? "" : "flex", justifyContent:isMobile ? "" : "center", alignItems:isMobile ? "" : "center"}}>
+          {isMobile 
+              ?   <PillarsM  isMobile={isMobile} id="pillars-component" />
+              :   <Pillars isMobile={isMobile} id="pillars-component" />
+          }
+        </Box>
           {/* //* Renderiza los hexágonos */}
           <HexagonsDesk/>
           
@@ -42,7 +41,7 @@ const OurFocus = () => {
               {
                 fontSize:isMobile ? "4vw" : "2vw",
                 fontWeight:"bold", 
-                paddingLeft:isMobile ? "12%" : "5%", 
+                paddingLeft:"5%", 
                 marginBottom:"20px"
               }
             }>

@@ -17,140 +17,141 @@ const PillarsM = ({ isMobile }) => {
     },[])
 
     return (
-        <Box sx={{
-        }}>
-            {/* Circulo de adorno 1*/}
+        <Box id="container_pillars" sx={{
+            
+        }}> 
+            {/* //*Circulo de adorno 1*/}
             <Box id="PillarRightImage" 
-            data-aos="fade-left"
             sx={{
-                border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
-                width: "400px",
-                height: "400px",
-                position:'relative',
-                right:0,
-                top:"240px"
+                width: "30vw",
+                height: "30vw",
+                margin:"5vh",
+                display:"table"
             }}>
+                <Box 
+                    data-aos="fade-left"
+                    sx={{width:"80vw"}}
+                >
+                    <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"100%"}}  variant="h3" component="div">
+                        <div style={{backgroundColor:"#1CF445"}}>Enfoque hacia la digitalización </div>
+                    </Typography>
+                    
+                    <ImgInfoCard
+                    isMobile={true}
+                    
+                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    
+                    media={Img1}
+                    side="right"
+                />
+                </Box>
             </Box>
-            <Box 
-                data-aos="fade-left"
-                sx={{position:"relative", bottom:"30px",marginBottom:"290px"}}
+
+            {/* //*Circulo de adorno 2 */}
+            <Box id="PillarRightImage" 
+            sx={{
+                backgroundColor:'',
+                borderRadius:"50%",
+                width: "30vw",
+                height: "30vw",
+                margin:"5vh",
+                display:"table"
+            }}>
+                <Box 
+                    data-aos="fade-right"
+                    sx={{width:"80vw"}}
+                >
+                    <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"90%", display:"flex", justifyContent:"end"}}  variant="h3" component="div">
+                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Sustentabilidad</div>
+                    </Typography>
+                    
+                    <ImgInfoCard
+                    isMobile={true}
+                    
+                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    
+                    media={Img2}
+                    side="left"
+                />
+                </Box>
+            </Box>
+
+             {/* //*Circulo de adorno 3*/}
+             <Box id="PillarRightImage" 
+                sx={{
+                    backgroundColor:'',
+                    borderRadius:"50%",
+                    width: "30vw",
+                    height: "30vw",
+                    margin:"5vh",
+                    display:"table"
+                }}
             >
-                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", maxWidth:"90%", marginLeft:"22%"}} gutterBottom variant="h3" component="div">
-                    <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Enfoque hacia la</div> <br/> <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>digitalización</div>
-                </Typography>
-                
-                <ImgInfoCard
-                isMobile={true}
-                
-                content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
-                
-                media={Img1}
-                side="right"
-              />
+                <Box 
+                    data-aos="fade-left"
+                    sx={{width:"80vw"}}
+                >
+                    <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"90%"}}  variant="h3" component="div">
+                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Cannabis Latam</div>
+                    </Typography>
+                    
+                    <ImgInfoCard
+                    isMobile={true}
+                    
+                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    
+                    media={Img3}
+                    side="right"
+                />
+                </Box>
             </Box>
 
-            {/* Circulo de adorno 2*/}
-            <Box id="PillarLeftImage" 
-            data-aos="fade-right"
+
+             {/* //*Circulo de adorno 4*/}
+             <Box id="PillarRightImage" 
             sx={{
-                border:'solid 1px', 
                 backgroundColor:'',
                 borderRadius:"50%",
-                width:"400px",
-                height:"400px",
-                position:'relative',
-                left:"400px",
+                width: "30vw",
+                height: "30vw",
+                margin:"5vh",
+                display:"table"
             }}>
-            </Box>
-            <Box 
-            data-aos="fade-right"
-            sx={{position:"relative", bottom:"300px", right:180, marginBottom:"250px"}}>
-                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", display:"flex", justifyContent:"end",}} gutterBottom variant="h3" component="div">
-                    <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Sustentabilidad</div>
-                </Typography>
-                <ImgInfoCard
-                content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
-                
-                media={Img2}
-
-                side="left"
+                <Box 
+                    data-aos="fade-right"
+                    sx={{width:"80vw"}}
+                >
+                    <Typography style={{fontSize:"4vh",fontWeight: 'bold', color:"black", maxWidth:"90%",display:"flex", justifyContent:"end"}}  variant="h3" component="div">
+                        <div style={{backgroundColor:"#1CF445",display:"inline-block"}}>Agtech</div>
+                    </Typography>
+                    
+                    <ImgInfoCard
+                    isMobile={true}
+                    
+                    content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
+                    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
+                    
+                    media={Img1}
+                    side="left"
                 />
-            </Box>
-
-            {/* Circulo de adorno 3*/}
-            <Box id="PillarRightImage" 
-            data-aos="fade-left"
-            sx={{
-                border:'solid 1px', 
-                backgroundColor:'',
-                borderRadius:"50%",
-                width:"400px",
-                height:"400px",
-                position:'relative',
-                right:"70px",
-                bottom:"270px"
-            }}>
-            </Box>
-            <Box 
-            data-aos="fade-left"
-            sx={{position:"relative", bottom:"570px", marginBottom:"280px"}}>
-                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black", width:"350px", position: 'relative', left:160}} gutterBottom variant="h3" component="div">
-                    <div style={{ backgroundColor:"#1CF445", display:"inline-block"}}>Cannabis Latam</div>
-                </Typography>
-                <ImgInfoCard
-                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                 exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                 ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
-                 isMobile={true}
-                 media={Img3}
- 
-                 side="right"
-                />
-            </Box>
-
-             {/* Circulo de adorno 4*/}
-            <Box id="PillarLeftImage" 
-            data-aos="fade-right"
-            sx={{
-                border:'solid 1px', 
-                backgroundColor:'',
-                borderRadius:"50%",
-                width:"400px",
-                height:"400px",
-                position:'relative',
-                left:"400px",
-                bottom:"550px"
-            }}>
-            </Box>
-            <Box 
-            data-aos="fade-right"
-            sx={{position:"relative", bottom:"870px", display:"block", right:170}}>
-                <Typography style={{fontSize:"40px",fontWeight: 'bold', color:"black",display:"flex", justifyContent:"end"}} gutterBottom variant="h3" component="div">
-                    <div style={{backgroundColor:"#1CF445", display:"inline-block"}}>Agtech</div>
-                </Typography>
-                <ImgInfoCard
-                 content={` Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                 exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                 ea commodo consequat. Duis autem vel eum iriure dolor in hen`}
-                 
-                 media={Img4}
- 
-                 side="left"
-                />
+                </Box>
             </Box>
         </Box>
     )

@@ -39,15 +39,25 @@ export const Footer = ({ isMobile }) => {
                 <div style={
                     {
                         display:"flex", 
-                        alignItems:"flex-start", 
+                        alignItems:"flex-start",
+                        flexDirection:isMobile ? "column" : "", 
                         justifyContent:"center",
-                        height:"70%",
+                        height:isMobile ? "90%" : "70%",
                         width:"100%"
                     }}
                 >
-                    <Box id="container_interno" sx={{marginTop:"5vh",display:"flex",justifyContent:"space-evenly", width:"100%"}}>
+                    <Box id="container_interno" sx={
+                        {
+                            marginTop:"5vh",
+                            display:"flex",
+                            justifyContent:isMobile ? "center" : "space-evenly", 
+                            width:"100%",
+                            flexDirection:isMobile ? "column" : "",
+                            alignItems:isMobile ? "center" : ""
+                        }
+                    }>
                         <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
-                            <Typography variant="body1" sx={{color: colors.white,fontSize:isMobile ? "4vw" : "1.2vw", alignSelf:"center"}}>{getText('general', 'footer', 'contact_us')}</Typography>
+                            <Typography variant="body1" sx={{color: colors.white,fontSize:isMobile ? "2vh" : "1.2vw", alignSelf:"center"}}>{getText('general', 'footer', 'contact_us')}</Typography>
                             <SocialMenu />
                         </Box>
                         
@@ -56,15 +66,15 @@ export const Footer = ({ isMobile }) => {
                                 history.push('services')
                                 window.location.reload()
                             }}>
-                                <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'serv')}</Typography>
+                                <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "1.2vw" : "1.2vw"}}>{getText('general', 'footer', 'serv')}</Typography>
                             </Button>
                         </ThemeProvider>
-                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'priv')}</Typography>
-                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "4vw" : "1.2vw"}}>{getText('general', 'footer', 'tyc')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "1.2vw" : "1.2vw"}}>{getText('general', 'footer', 'priv')}</Typography>
+                        <Typography variant="body1" sx={{color: colors.white, fontSize: isMobile ? "1.2vw" : "1.2vw"}}>{getText('general', 'footer', 'tyc')}</Typography>
                     </Box>
                 </div>
                 <div style={{width:"100%", height:"20%", display:"flex", justifyContent:"center"}}>
-                    <img style={{height:"100%", width:"auto"}} alt="logo" src={Logo}/>
+                    <img style={{height:"5vh", width:"auto"}} alt="logo" src={Logo}/>
                 </div>
             </Box>
         </div>

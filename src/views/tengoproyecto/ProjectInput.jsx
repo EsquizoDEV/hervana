@@ -181,7 +181,7 @@ const ProjectInput = () => {
             </Modal>
      
         
-        <Grid sx={{display:"flex",justifyContent:"center", alignItems:"center", height:"70%"}} container>
+        <Grid sx={{display:"flex",justifyContent:"center", alignItems:"center", height:isMobile ? "80%" : "70%"}} container>
                   <Box component="form"
                       onSubmit={handleSend}
                       sx={
@@ -215,7 +215,7 @@ const ProjectInput = () => {
                     variant="filled" 
                     sx={
                       {
-                        width:"40%", 
+                        width:isMobile ? "80%" : "40%", 
                         backgroundColor:"white", 
                         borderRadius:"0"
                         }
@@ -224,7 +224,7 @@ const ProjectInput = () => {
                     variant="filled" 
                     sx={
                       {
-                        width:"40%", 
+                        width:isMobile ? "80%" : "40%", 
                         backgroundColor:"white", 
                         borderRadius:"0"
                         }
@@ -239,7 +239,7 @@ const ProjectInput = () => {
                     variant="filled" 
                     sx={
                       {
-                        width:"40%", 
+                        width:isMobile ? "80%" : "40%", 
                         backgroundColor:"white", 
                         borderRadius:"0"
                         }
@@ -250,7 +250,7 @@ const ProjectInput = () => {
                     variant="filled" 
                     sx={
                       {
-                        width:"40%", 
+                        width:isMobile ? "80%" : "40%", 
                         backgroundColor:"white", 
                         borderRadius:"0"
                       }

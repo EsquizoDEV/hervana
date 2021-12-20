@@ -29,19 +29,38 @@ const NuestraHistoria = () => {
     return (
         <div>
             <Box sx={{flexGrow:0}}>
-                <Grid container spacing={0}>
+                <Grid container>
                     <NavBar isMobile={isMobile}/>
 
                     <Grid container sx={{backgroundColor:"black", height:"40vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
                         <Grid item sx={{marginTop:"40px"}}>
-                            <Typography sx={{padding:"50px", color:"white", fontSize:"6vh", fontWeight:"bold"}} variant="h1">
+                            <Typography sx={
+                                {
+                                    padding:isMobile ? "" : "50px", 
+                                    color:"white", 
+                                    fontSize:"6vh", 
+                                    fontWeight:"bold"
+                                }
+                            } variant="h1">
                                {getText('historia','header', 'title')}
                             </Typography>
                         </Grid>
                     </Grid>
                     
-                    <Box sx={{marginBottom:"50px",marginTop:"50px",paddingLeft:"25vw",paddingRight:"25vw",width:"100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:"25px", color:"black"}}>
+                    <Box sx={
+                        {
+                            marginBottom:"50px",
+                            marginTop:"50px",
+                            paddingLeft:isMobile ? "5vw" : "25vw",
+                            paddingRight:isMobile ? "5vw" : "25vw",
+                            width:"100%", 
+                            display:"flex", 
+                            flexDirection:"column", 
+                            alignItems:"center", 
+                            justifyContent:"center"
+                        }
+                    }>
+                        <Typography variant="body2" sx={{marginBottom:"40px ",fontSize:isMobile ? "2vh" : "1.2vw", color:"black"}}>
                             {getText('historia','mainText', 'text')}
                         </Typography>
                         {/* <Accordion sx={{border:"4px solid black"}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -67,29 +86,27 @@ const NuestraHistoria = () => {
                     </Box>
 
                     <Box sx={{display:"flex", flexDirection:isMobile ? "column" : "row", width:"100%"}}>
-                        <Box sx={{borderRight:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
-                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText('historia', 'mision', 'title')}</Typography>
-                            <Typography variant="body1" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "2vw" : "1.2vw"}}>
+                        <Box sx={{borderBottom:isMobile ? "1px solid white" : "", borderRight:isMobile ? "" : "2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
+                            <Typography variant="h2" sx={{marginBottom:isMobile ? "2vh" : "",color:"white", fontSize:"6vh"}}>{getText('historia', 'mision', 'title')}</Typography>
+                            <Typography variant="body1" sx={{paddingLeft:isMobile ? "5vw" : "10vw", paddingRight:isMobile ? "5vw" : "10vw",color:"white", fontSize:isMobile ? "4vw" : "1.2vw"}}>
                                 {getText('historia', 'mision', 'text')}
                             </Typography>
                         </Box>
-                        {isMobile ? <div><br /></div> : null}
-                        <Box sx={{borderLeft:"2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
-                            <Typography variant="h2" sx={{color:"white", fontSize:"6vh"}}>{getText('historia', 'vision', 'title')}</Typography>
-                            <Typography variant="body2" sx={{paddingLeft:"10vw", paddingRight:"10vw",color:"white", fontSize:isMobile ? "2vw" : "1.2vw"}}>
+                        {/* {isMobile ? <div><br /></div> : null} */}
+                        <Box sx={{borderTop:isMobile ? "1px solid white" : "",borderLeft:isMobile ? "" : "2px solid white",height:"60vh",width:isMobile ? "100%" : "50%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
+                            <Typography variant="h2" sx={{marginBottom:isMobile ? "2vh" : "",color:"white", fontSize:"6vh"}}>{getText('historia', 'vision', 'title')}</Typography>
+                            <Typography variant="body2" sx={{paddingLeft:isMobile ? "5vw" : "10vw", paddingRight:isMobile ? "5vw" : "10vw",color:"white", fontSize:isMobile ? "4vw" : "1.2vw"}}>
                                 {getText('historia','vision', 'text')}
                             </Typography>
                         </Box>
                     </Box>
-                    {/*             La foto no corresponde. No está en los archivos            */}
-                    <Box sx={{width:"100%", height:"60vh"}}>
-                        <img src={Amsterdam} style={{width:"100%", height:"100%"}} alt="amsterdam"/>
+
+                    <Box sx={{width:"100%", height:isMobile ? "auto" : "60vh"}}>
+                        <img src={Amsterdam} style={{width:isMobile ? "100%" : "100%", height:isMobile ? "auto" : "100%"}} alt="amsterdam"/>
                     </Box>
-                    <Grid item xs={12} md={12} lg={12} xl={12}>
-                        <Footer isMobile={isMobile}/>
-                    </Grid>
                 </Grid>
             </Box>
+            <Footer isMobile={isMobile}/>
         </div>
     )
 }
